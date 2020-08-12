@@ -6,6 +6,7 @@ Windows Privilege Escalation by @nickvourd
 - [Unattend Answer Files](#unattend-answer-files)
 - [Windows Kernel Exploits](#windows-kernel-exploits)
 - [Applications and Drivers Exploits](#applications-and-drivers-exploits)
+- DLL Injection
 - [Insecure File or Folder Permissions](#insecure-file-or-folder-permissions)
 - [Unquoted Service Path](#unquoted-service-path)
 - [Always Install Elevated](#always-install-elevated)
