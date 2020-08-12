@@ -191,7 +191,7 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
     * msiexec /quiet /qn /i C:\<path>\1.msi
 
   * net localgroup administrators
-  * users should exists
+  * user should exists
 
 
 # Insecure Service Permissions
