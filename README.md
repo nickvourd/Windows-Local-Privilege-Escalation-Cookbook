@@ -155,6 +155,7 @@ Windows Privilege Escalation Methodology
 When you will open you will have evil to administrators groups:
  *  net localgroup Administrators
 
+## Insecure Service Permissions
 ## Token Manipulation
 * whoami /priv
 * More info here: https://hackinparis.com/data/slides/2019/talks/HIP2019-Andrea_Pierini-Whoami_Priv_Show_Me_Your_Privileges_And_I_Will_Lead_You_To_System.pdf
