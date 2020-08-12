@@ -34,6 +34,7 @@ Windows Privilege Escalation Methodology
 
 * wmic product get name, version, vendor > apps_versions.txt
 * DRIVERQUERY
+* mountvol
 
 * accesschk-2008-vista.exe /accepteula
 * accesschk-2008-vista.exe -uws "Everyone" "C:\Program Files"
