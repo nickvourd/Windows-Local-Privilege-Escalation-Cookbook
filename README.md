@@ -2,7 +2,7 @@
 Windows Privilege Escalation Methodology
 
 # Categories
-* Stored Credentials
+* [Go to #Stored Credentials]Stored Credentials
 * Unattend Answer Files
 * Windows Kernel Exploit
 * Applications/Drivers Exploits
