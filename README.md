@@ -6,7 +6,6 @@ Windows Privilege Escalation Methodology
 * Windows Kernel Exploit
 * Applications/Drivers Exploits
 * DLL Injection
-* Unattended Answer File
 * Insecure File/Folder Permissions
 * Insecure Service Permissions
 * DLL Hijacking
@@ -69,13 +68,16 @@ Windows Privilege Escalation Methodology
 
   * runas /savecred /user:<Domain>\<user> C:\<path>\<exefile>
 
-* Stored as plaintext or base64
+* Unattended Installs allow for the deployment of Windows with little-to-no active involvement from an administrator.  This solution is ideal in larger organizations where it would be too labor and time-intensive to perform wide-scale deployments manually.  If administrators fail to clean up after this process, an EXtensible Markup Language (XML) file called Unattend is left on the local system.  This file contains all the configuration settings that were set during the installation process, some of which can include the configuration of local accounts, to include Administrator accounts!
+* While it’s a good idea to search the entire drive, Unattend files are likely to be found within the following folders:
   * C:\unattend.xml
   * C:\Windows\Panther\Unattend.xml
   * C:\Windows\Panther\Unattend\Unattend.xml
   * C:\Windows\system32\sysprep.inf
   * C:\Windows\system32\sysprep\sysprep.xml
-  
+
+->  If you find one open it and search for <UserAccounts> tag. Stored as plaintext or base64.
+
 * If system is running an IIS web server the web.config file:
   * C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
   * C:\inetpub\wwwroot\web.config
