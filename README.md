@@ -8,11 +8,17 @@ Windows Privilege Escalation by @nickvourd
 - [Applications and Drivers Exploits](#applications-and-drivers-exploits)
 - DLL Injection
 - [Insecure File or Folder Permissions](#insecure-file-or-folder-permissions)
+- Group Policy Preferences
 - [Unquoted Service Path](#unquoted-service-path)
 - [Always Install Elevated](#always-install-elevated)
 - [Insecure Service Permissions](#insecure-service-permissions)
+- DLL Hijacking
+- Insecure Registry Permissions
 - [Token Manipulation](#token-manipulation)
 - [Autologon User Credentials](#autologon-user-credentials)
+- User Account Control (UAC) Bypass
+- Insecure Named Pipes Permissions
+
 
 # General Commands
 * systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Processor(s)" /C:"System Locale" /C:"Input Locale" /C:"Domain" /C:"Hotfix(s)"
