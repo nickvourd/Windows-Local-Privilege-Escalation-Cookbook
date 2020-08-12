@@ -81,7 +81,7 @@ Windows Privilege Escalation Methodology
    * Fow older than windows 10 download zip version of watson v.1: https://github.com/rasta-mouse/Watson/tree/486ff207270e4f4cadc94ddebfce1121ae7b5437
    * Build exe to visual studio
 
-# Applications/Drivers Exploits
+## Applications/Drivers Exploits
 * wmic product get name, version, vendor > install_apps.txt
   * searchsploit
   * google
@@ -91,3 +91,6 @@ Windows Privilege Escalation Methodology
 * powershell and specific word: Get-WmiObject Win32_PnPSignedDriver | Select-Object DeviceName, DriverVersion, Manufacturer | Where-Object {$_.DeviceName -like "*VMware*"}
   * searchsploit
   * google
+  
+
+## Insecure File/Folder Permissions
