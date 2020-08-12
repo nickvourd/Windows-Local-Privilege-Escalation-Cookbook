@@ -1,6 +1,23 @@
 # Win_Priv_Esc_Method
 Windows Privilege Escalation Methodology
 
+# Categories
+* Stored Credentials
+* Windows Kernel Exploit
+* DLL Injection
+* Unattended Answer File
+* Insecure File/Folder Permissions
+* Insecure Service Permissions
+* DLL Hijacking
+* Group Policy Preferences
+* Unquoted Service Path
+* Always Install Elevated
+* Token Manipulation
+* Insecure Registry Permissions
+* Autologon User Credential
+* User Account Control (UAC) Bypass
+* Insecure Named Pipes Permissions
+
 ## General
 * systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Processor(s)" /C:"System Locale" /C:"Input Locale" /C:"Domain" /C:"Hotfix(s)"
 * WMIC CPU Get DeviceID,NumberOfCores,NumberOfLogicalProcessors
