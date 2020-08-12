@@ -269,3 +269,7 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
 1) https://0x1.gitlab.io/exploit/Windows-Privilege-Escalation/#juicy-potato-abusing-the-golden-privileges 
 2) https://hunter2.gitbook.io/darthsidious/privilege-escalation/juicy-potato#:~:text=Juicy%20potato%20is%20basically%20a,this%2C%20we%20achieve%20privilege%20escalation.
 * Use: https://github.com/ohpe/juicy-potato
+
+## Autologon User Credentials
+* use the following command and if return output take autologon user credentials from regisrty:
+  * reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword"
