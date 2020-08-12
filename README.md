@@ -1,5 +1,5 @@
-Windows Privilege Escalation by NCV
-===================================
+Windows Privilege Escalation by @nickvourd
+==========================================
 
 - [General Commands](#general-commands)
 - [Stored Credentials](#stored-credentials)
