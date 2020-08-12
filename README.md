@@ -38,3 +38,6 @@ Windows Privilege Escalation Methodology
 
 * accesschk-2008-vista.exe /accepteula
 * accesschk-2008-vista.exe -uws "Everyone" "C:\Program Files"
+
+* reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer
+* reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
