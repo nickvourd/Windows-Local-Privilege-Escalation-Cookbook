@@ -61,6 +61,8 @@ Windows Privilege Escalation Methodology
 * reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
 
 ## Stored Crendentials
+* net user
+* net user <user>
 * cmdkey /list
   -> if interactive module enabled 100% runas as other user
   -> if domain and user exist try again runas as other user
