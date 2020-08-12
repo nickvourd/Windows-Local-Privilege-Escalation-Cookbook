@@ -4,6 +4,7 @@ Windows Privilege Escalation Methodology
 # Categories
 * Stored Credentials
 * Windows Kernel Exploit
+* Applications/Drivers Exploits
 * DLL Injection
 * Unattended Answer File
 * Insecure File/Folder Permissions
