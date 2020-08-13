@@ -16,6 +16,7 @@ Windows Privilege Escalation by @nickvourd
 - [Insecure Registry Permissions](#insecure-registry-permissions)
 - [Token Manipulation](#token-manipulation)
 - [Autologon User Credentials](#autologon-user-credentials)
+- [Autoruns](#autoruns)
 - User Account Control (UAC) Bypass
 - Insecure Named Pipes Permissions
 
@@ -299,3 +300,4 @@ Windows stores all the necessary data that is related to services in the registr
 * use the following command and if return output take autologon user credentials from regisrty:
   * reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword"
   
+# Autoruns
