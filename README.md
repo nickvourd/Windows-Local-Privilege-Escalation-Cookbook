@@ -18,6 +18,7 @@ Windows Privilege Escalation by @nickvourd
 - [Autologon User Credentials](#autologon-user-credentials)
 - [Autoruns](#autoruns)
 - [Passwords Registy](#passwords-registry)
+- [Security Account Manager Passwords](#security-account-manager-passwords)
 - User Account Control (UAC) Bypass
 - Insecure Named Pipes Permissions
 
@@ -334,3 +335,5 @@ Windows stores all the necessary data that is related to services in the registr
    
 * On Kali, use the winexe command to spawn a command prompt running with the admin privileges (update the password with the one you found):
    * winexe -U 'admin%password' //ip_of_victim cmd.exe
+   
+ # Security Account Manager Passwords (SAM)
