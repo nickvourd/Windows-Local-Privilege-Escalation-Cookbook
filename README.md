@@ -226,9 +226,9 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
 # Insecure Registry Permissions
 Windows stores all the necessary data that is related to services in the registry key location below:
 
-* req query HKLM\SYSTEM\CurrentControlSet\Services
+* reg query HKLM\SYSTEM\CurrentControlSet\Services
   * If you find a vulnerable service use the follwing command to see its details:
-    * req query HKLM\SYSTEM\CurrentControlSet\Services\<servicename>
+    * req query HKLM\SYSTEM\CurrentControlSet\Services\\\<servicename>
 
  * Find from which group is accessible this service
     * accesschk.exe –kvusw hklm\System\CurrentControleSet\Service
