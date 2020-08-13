@@ -312,4 +312,4 @@ Windows stores all the necessary data that is related to services in the registr
  
 * Start a listener on Kali and then restart the Windows VM. Open up a new RDP session to trigger a reverse shell running with admin privileges. You should not have to authenticate to trigger it.
 
-  * rdesktop <ip>
+  * rdesktop \<ip>
