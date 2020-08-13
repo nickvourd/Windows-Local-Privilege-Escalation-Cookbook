@@ -240,6 +240,11 @@ Windows stores all the necessary data that is related to services in the registr
  
  * Overweight the imagepath subkey of the valuable services with the path of the custom binary 
    * reg add HKLM\System\CurrentControleSet\Service\<Service nam> /v ImagePath /t REG_EXPAND_SZ /d <path_to_exe> /f 
+   
+ * start service:
+   * net start <servicename>
+ 
+ * take reverse shell
 
 # Token Manipulation
 * whoami /priv
