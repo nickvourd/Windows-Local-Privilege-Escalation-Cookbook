@@ -306,3 +306,5 @@ Windows stores all the necessary data that is related to services in the registr
   
 * Using accesschk.exe, note that one of the AutoRun executables is writable by everyone:
   * accesschk.exe /accepteula -wvu "\\\<path>\\\<file.exe>"
+
+* copy \\<path>\\\<file.exe> "\\\<path>\\\<file.exe>" /Y
