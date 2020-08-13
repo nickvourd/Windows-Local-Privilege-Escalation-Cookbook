@@ -162,7 +162,7 @@ When you will open you will have evil to administrators groups:
 
 # Unquoted Service Path
 * Discover all the services that are running on the target host and identify those that are not enclosed inside quotes:
-  * wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\\" |findstr /i /v """
+  * wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\\\" |findstr /i /v """
 
 * The next step is to try to identify the level of privilege that this service is running. This can be identified easily:
   * sc qc "\<service name>"
