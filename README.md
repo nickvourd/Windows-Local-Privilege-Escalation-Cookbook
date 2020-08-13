@@ -164,7 +164,7 @@ When you will open you will have evil to administrators groups:
   * wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """
 
 * The next step is to try to identify the level of privilege that this service is running. This can be identified easily:
-  * sc qc "<service name>"
+  * sc qc "\<service name>"
   
 * Now we need to check the folder in which we can write to. Checking the same using icacls progressively into the folders:
   * icacls c:\<path>\
