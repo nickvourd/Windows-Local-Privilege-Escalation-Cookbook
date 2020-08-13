@@ -301,3 +301,8 @@ Windows stores all the necessary data that is related to services in the registr
   * reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword"
   
 # Autoruns
+* Find auto tun executables:
+  * reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+  
+* Using accesschk.exe, note that one of the AutoRun executables is writable by everyone:
+  * accesschk.exe /accepteula -wvu "\\\<path>\\\<file.exe>"
