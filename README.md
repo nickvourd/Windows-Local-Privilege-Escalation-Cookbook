@@ -290,3 +290,4 @@ Windows stores all the necessary data that is related to services in the registr
 # Autologon User Credentials
 * use the following command and if return output take autologon user credentials from regisrty:
   * reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword"
+  
