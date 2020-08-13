@@ -336,4 +336,4 @@ Windows stores all the necessary data that is related to services in the registr
 * On Kali, use the winexe command to spawn a command prompt running with the admin privileges (update the password with the one you found):
    * winexe -U 'admin%password' //ip_of_victim cmd.exe
    
- # Security Account Manager Passwords (SAM)
+ # Security Account Manager Passwords
