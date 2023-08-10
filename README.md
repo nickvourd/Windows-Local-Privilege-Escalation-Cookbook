@@ -6,21 +6,16 @@ Windows Privilege Escalation by @nickvourd
 - [Unattend Answer Files](#unattend-answer-files)
 - [Windows Kernel Exploits](#windows-kernel-exploits)
 - [Applications and Drivers Exploits](#applications-and-drivers-exploits)
-- DLL Injection
 - [Insecure File or Folder Permissions](#insecure-file-or-folder-permissions)
-- Group Policy Preferences
 - [Unquoted Service Path](#unquoted-service-path)
 - [Always Install Elevated](#always-install-elevated)
 - [Insecure Service Permissions](#insecure-service-permissions)
-- DLL Hijacking
 - [Insecure Registry Permissions](#insecure-registry-permissions)
 - [Token Manipulation](#token-manipulation)
 - [Autologon User Credentials](#autologon-user-credentials)
 - [Autoruns](#autoruns)
 - [Passwords Registy](#passwords-registry)
 - [Security Account Manager Passwords](#security-account-manager-passwords)
-- User Account Control (UAC) Bypass
-- Insecure Named Pipes Permissions
 
 
 # General Commands
