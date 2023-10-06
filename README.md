@@ -26,7 +26,7 @@ I hope to find this cheatsheet useful and learn new stuff 😉.
   - [Description (Keynote)](#description-keynote)
   - [Table of Contents](#table-of-contents)
   - [Useful Tools](#useful-tools)
-  - [vulnerabilities](#vulnerabilities)
+  - [Vulnerabilities](#vulnerabilities)
     - [AlwaysInstallElevated](#alwaysinstallelevated)
       - [Description](#description)
   - [References](#references)
