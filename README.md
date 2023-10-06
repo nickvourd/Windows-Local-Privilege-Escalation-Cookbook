@@ -26,8 +26,9 @@ I hope to find this cheatsheet useful and learn new stuff 😉.
   - [Description (Keynote)](#description-keynote)
   - [Table of Contents](#table-of-contents)
   - [Useful Tools](#useful-tools)
-  - [AlwaysInstallElevated](#alwaysinstallelevated)
-    - [Description](#description)
+  - [vulnerabilities](#vulnerabilities)
+    - [AlwaysInstallElevated](#alwaysinstallelevated)
+      - [Description](#description)
   - [References](#references)
 
 ## Useful Tools
@@ -41,9 +42,15 @@ In the following table, some popular and useful tools for Windows local privileg
 | [BeRoot](https://github.com/AlessandroZ/BeRoot) | Python | BeRoot(s) is a post exploitation tool to check common Windows misconfigurations to find a way to escalate our privilege |
 | [Privesc](https://github.com/enjoiz/Privesc) | PowerShell | Windows PowerShell script that finds misconfiguration issues which can lead to privilege escalation |
 
-## AlwaysInstallElevated
+## Vulnerabilities
 
-### Description
+This cheatsheet presents the following Windows vulnerabilities:
+
+- [AlwaysInstallElevated](#alwaysinstallelevated)
+
+### AlwaysInstallElevated
+
+#### Description
 
 ## References
 
