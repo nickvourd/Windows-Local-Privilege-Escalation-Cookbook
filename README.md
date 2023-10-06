@@ -1,15 +1,15 @@
-# Windows Local Privilege Escalation CheatSheet
+# Windows Local Privilege Escalation CookBook
 <p align="center">
   <img src="/Pictures/Windows-Funny.jpg">
 </p>
 
 ## Description (Keynote)
 
-This cheatsheet was created with the main purpose of helping people understand local privilege escalation techniques on Windows environments. Moreover, it can be used for both attacking and defensive purposes.
+This CookBook was created with the main purpose of helping people understand local privilege escalation techniques on Windows environments. Moreover, it can be used for both attacking and defensive purposes.
 
-:information_source: This cheatsheet focuses only on misconfiguration vulnerabilities on Windows workstations.
+:information_source: This CookBook focuses only on misconfiguration vulnerabilities on Windows workstations.
 
-The main structure of this cheatsheet includes the following sections:
+The main structure of this CookBook includes the following sections:
 
 - Description (of the vulnerability)
 - Lab Setup
@@ -18,11 +18,11 @@ The main structure of this cheatsheet includes the following sections:
 - Detection
 - (Useful) References
 
-I hope to find this cheatsheet useful and learn new stuff 😉.
+I hope to find this CookBook useful and learn new stuff 😉.
 
 ## Table of Contents
 
-- [Windows Local Privilege Escalation CheatSheet](#windows-local-privilege-escalation-cheatsheet)
+- [Windows Local Privilege Escalation CookBook](#windows-local-privilege-escalation-cookbook)
   - [Description (Keynote)](#description-keynote)
   - [Table of Contents](#table-of-contents)
   - [Useful Tools](#useful-tools)
@@ -45,7 +45,7 @@ In the following table, some popular and useful tools for Windows local privileg
 
 ## Vulnerabilities
 
-This cheatsheet presents the following Windows vulnerabilities:
+This CookBook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](#alwaysinstallelevated)
 
