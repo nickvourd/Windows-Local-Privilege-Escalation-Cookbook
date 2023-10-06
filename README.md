@@ -21,5 +21,5 @@ I hope to find this cheatsheet useful and learn new stuff 😉.
 ## Table of Contents
 
 - [Windows Local Privilege Escalation CheatSheet](#windows-local-privilege-escalation-cheatsheet)
-  - [Description](#description-keynote)
+  - [Description (Keynote)](#description-keynote)
   - [Table of Contents](#table-of-contents)
