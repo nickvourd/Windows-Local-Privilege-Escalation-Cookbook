@@ -29,6 +29,7 @@ I hope to find this cheatsheet useful and learn new stuff 😉.
   - [Vulnerabilities](#vulnerabilities)
     - [AlwaysInstallElevated](#alwaysinstallelevated)
       - [Description](#description)
+      - [Lab Setup](#lab-setup)
   - [References](#references)
 
 ## Useful Tools
@@ -51,6 +52,12 @@ This cheatsheet presents the following Windows vulnerabilities:
 ### AlwaysInstallElevated
 
 #### Description
+
+The "AlwaysInstallElevated" is a Windows vulnerability that stems from a misconfiguration in the Windows Installer service. This vulnerability occurs when the "AlwaysInstallElevated" registry key is set to "1" in the Windows Registry.
+
+When this registry key is enabled, it allows non-administrator users to install software packages with elevated privileges. In other words, users who shouldn't have administrative rights can exploit this vulnerability to execute arbitrary code with elevated permissions, potentially compromising the security of the system.
+
+#### Lab Setup
 
 ## References
 
