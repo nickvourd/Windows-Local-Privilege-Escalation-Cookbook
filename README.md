@@ -23,3 +23,6 @@ I hope to find this cheatsheet useful and learn new stuff 😉.
 - [Windows Local Privilege Escalation CheatSheet](#windows-local-privilege-escalation-cheatsheet)
   - [Description (Keynote)](#description-keynote)
   - [Table of Contents](#table-of-contents)
+  - [AlwaysInstallElevated](#alwaysinstallelevated)
+
+## AlwaysInstallElevated
