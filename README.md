@@ -53,7 +53,7 @@ This cheatsheet presents the following Windows vulnerabilities:
 
 #### Description
 
-The "AlwaysInstallElevated" is a Windows vulnerability that stems from a misconfiguration in the Windows Installer service. This vulnerability occurs when the "AlwaysInstallElevated" registry key is set to "1" in the Windows Registry.
+"AlwaysInstallElevated" is a Windows Registry setting that affects the behavior of the Windows Installer service. The vulnerability arises when the "AlwaysInstallElevated" registry key is configured with a value of "1" in the Windows Registry.
 
 When this registry key is enabled, it allows non-administrator users to install software packages with elevated privileges. In other words, users who shouldn't have administrative rights can exploit this vulnerability to execute arbitrary code with elevated permissions, potentially compromising the security of the system.
 
