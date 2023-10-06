@@ -3,7 +3,7 @@
   <img src="/Pictures/Windows-Funny.jpg">
 </p>
 
-## Description
+## Description (Keynote)
 
 This cheatsheet was created with the main purpose of helping people understand local privilege escalation techniques on Windows environments. Moreover, it can be used for both attacking and defensive purposes.
 
@@ -21,5 +21,5 @@ I hope to find this cheatsheet useful and learn new stuff 😉.
 ## Table of Contents
 
 - [Windows Local Privilege Escalation CheatSheet](#windows-local-privilege-escalation-cheatsheet)
-  - [Description](#description)
+  - [Description](#description-keynote)
   - [Table of Contents](#table-of-contents)
