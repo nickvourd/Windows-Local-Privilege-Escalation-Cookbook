@@ -17,3 +17,9 @@ The main structure of this cheatsheet includes the following sections:
 - (Useful) References
 
 I hope to find this cheatsheet useful and learn new stuff 😉.
+
+## Table of Contents
+
+- [Windows Local Privilege Escalation CheatSheet](#windows-local-privilege-escalation-cheatsheet)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
