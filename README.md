@@ -13,6 +13,7 @@ The main structure of this CookBook includes the following sections:
 
 - Description (of the vulnerability)
 - Lab Setup
+- Enumeration (Manually/Tool)
 - Attacking
 - Mitigation
 - Detection
