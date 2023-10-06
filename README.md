@@ -16,4 +16,4 @@ The main structure of this cheatsheet includes the following sections:
 - Detection
 - (Useful) References
 
-I hope to find this cheatsheet useful and learn new stuff 😉
+I hope to find this cheatsheet useful and learn new stuff 😉.
