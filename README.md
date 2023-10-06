@@ -27,6 +27,7 @@ I hope to find this cheatsheet useful and learn new stuff 😉.
   - [Table of Contents](#table-of-contents)
   - [Useful Tools](#useful-tools)
   - [AlwaysInstallElevated](#alwaysinstallelevated)
+    - [Description](#description)
   - [References](#references)
 
 ## Useful Tools
@@ -41,6 +42,8 @@ In the following table, some popular and useful tools for Windows local privileg
 | [Privesc](https://github.com/enjoiz/Privesc) | PowerShell | Windows PowerShell script that finds misconfiguration issues which can lead to privilege escalation |
 
 ## AlwaysInstallElevated
+
+### Description
 
 ## References
 
