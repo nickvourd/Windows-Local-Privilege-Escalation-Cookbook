@@ -1,2 +1,2 @@
-Windows Local Privilege Escalation by [@nickvourd](https://twitter.com/nickvourd)
+## Windows Local Privilege Escalation CheatSheet by [@nickvourd](https://twitter.com/nickvourd)
 
