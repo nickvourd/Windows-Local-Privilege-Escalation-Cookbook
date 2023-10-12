@@ -16,7 +16,6 @@ The main structure of this CookBook includes the following sections:
 - Enumeration (Manually/Tool)
 - Attacking
 - Mitigation
-- Detection
 - (Useful) References
 
 I hope to find this CookBook useful and learn new stuff 😉.
@@ -59,6 +58,20 @@ This CookBook presents the following Windows vulnerabilities:
 When this registry key is enabled, it allows non-administrator users to install software packages with elevated privileges. In other words, users who shouldn't have administrative rights can exploit this vulnerability to execute arbitrary code with elevated permissions, potentially compromising the security of the system.
 
 #### Lab Setup
+
+Open a cmd with administrator privileges and type **gpedit.msc** to open the Local Group Policy Editor.
+
+Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components\Windows Installer**.
+
+![AlwaysInstallElevated-Computer-Configuratior-1](/Pictures/AllwaysInstallElevated-Computer-1.png)
+
+Enable the **Always install with elevated privileges** policy.
+
+![AlwaysInstallElevated-Computer-Configuratior-2](/Pictures/AllwaysInstallElevated-Computer-2.png)
+
+Confirm that the **Always install with elevated privileges** policy is set to **Enabled**.
+
+![AlwaysInstallElevated-Computer-Configuratior-3](/Pictures/AllwaysInstallElevated-Computer-3.png)
 
 ## References
 
