@@ -30,6 +30,7 @@ I hope to find this CookBook useful and learn new stuff 😉.
     - [AlwaysInstallElevated](#alwaysinstallelevated)
       - [Description](#description)
       - [Lab Setup](#lab-setup)
+      - [Enumeration](#enumeration)
   - [References](#references)
 
 ## Useful Tools
@@ -100,6 +101,12 @@ Open a PowerShelll with local Administrator privileges and run the script:
 Outcome:
 
 ![AlwaysInstallElevated-Lab-Setup-Script](/Pictures/AllwaysInstallElevated-Lab-Setup-Script.png)
+
+#### Enumeration
+
+##### Manual Enumeration
+
+##### Tool Enumeration
 
 ## References
 
