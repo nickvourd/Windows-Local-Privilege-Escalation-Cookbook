@@ -97,6 +97,10 @@ Open a PowerShelll with local Administrator privileges and run the script:
 .\AlwaysInstallElevated.ps1
 ```
 
+Outcome:
+
+![AlwaysInstallElevated-Lab-Setup-Script](/Pictures/AllwaysInstallElevated-Lab-Setup-Script.png)
+
 ## References
 
 - [Privilege Escalation Wikipedia](https://en.wikipedia.org/wiki/Privilege_escalation)
