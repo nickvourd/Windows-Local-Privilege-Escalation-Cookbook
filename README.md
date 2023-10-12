@@ -61,15 +61,15 @@ When this registry key is enabled, it allows non-administrator users to install 
 
 Open a cmd with administrator privileges and type **gpedit.msc** to open the Local Group Policy Editor.
 
-Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components\Windows Installer**.
+Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components\Windows Installer**:
 
 ![AlwaysInstallElevated-Computer-Configuratior-1](/Pictures/AllwaysInstallElevated-Computer-1.png)
 
-Enable the **Always install with elevated privileges** policy.
+Enable the **Always install with elevated privileges** policy:
 
 ![AlwaysInstallElevated-Computer-Configuratior-2](/Pictures/AllwaysInstallElevated-Computer-2.png)
 
-Confirm that the **Always install with elevated privileges** policy is set to **Enabled**.
+Confirm that the **Always install with elevated privileges** policy is set to **Enabled**:
 
 ![AlwaysInstallElevated-Computer-Configuratior-3](/Pictures/AllwaysInstallElevated-Computer-3.png)
 
