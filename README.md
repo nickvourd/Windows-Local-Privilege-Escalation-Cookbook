@@ -63,19 +63,37 @@ When this registry key is enabled, it allows non-administrator users to install 
 
 Open a cmd with Administrator privileges and type **gpedit.msc** to open the Local Group Policy Editor.
 
-Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components\Windows Installer**:
+1) Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Windows Installer**:
 
 ![AlwaysInstallElevated-Computer-Configuratior-1](/Pictures/AllwaysInstallElevated-Computer-1.png)
 
-Enable the **Always install with elevated privileges** policy:
+2) Enable the "**Always install with elevated privileges**" policy:
 
 ![AlwaysInstallElevated-Computer-Configuratior-2](/Pictures/AllwaysInstallElevated-Computer-2.png)
 
-Confirm that the **Always install with elevated privileges** policy is set to **Enabled**:
+3) Confirm that the "**Always install with elevated privileges**" policy is set to **Enabled**:
 
 ![AlwaysInstallElevated-Computer-Configuratior-3](/Pictures/AllwaysInstallElevated-Computer-3.png)
 
+4) Then, navigate to **User Configuration** -> **Administrative Templates** -> **Windows Components** -> **Windows Installer**:
+
+![AlwaysInstallElevated-User-Configuratior-4](/Pictures/AllwaysInstallElevated-User-4.png)
+
+5) Enable the "**Always install with elevated privileges**" policy:
+
+![AlwaysInstallElevated-User-Configuratior-5](/Pictures/AllwaysInstallElevated-User-5.png)
+
+6) Confirm that the "**Always install with elevated privileges**" policy is set to **Enabled**:
+
+![AlwaysInstallElevated-User-Configuratior-6](/Pictures/AllwaysInstallElevated-User-6.png)
+
 ##### Lab Setup PowerShell Script
+
+Another way to set up the lab with the 'AlwaysInstallElevated' vulnerability is by using the custom PowerShell script named [AlwaysInstallElevated.ps1]().
+
+Open a PowerShelll with Administrator privileges and run the script:
+
+
 
 ## References
 
