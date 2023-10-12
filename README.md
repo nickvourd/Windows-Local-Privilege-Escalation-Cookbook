@@ -61,7 +61,7 @@ When this registry key is enabled, it allows non-administrator users to install 
 
 ##### Lab Setup Manually
 
-Open a cmd with Administrator privileges and type **gpedit.msc** to open the Local Group Policy Editor.
+Open a cmd with Administrator privileges and type `gpedit.msc` to open the Local Group Policy Editor.
 
 1) Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Windows Installer**:
 
