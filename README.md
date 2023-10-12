@@ -59,7 +59,9 @@ When this registry key is enabled, it allows non-administrator users to install 
 
 #### Lab Setup
 
-Open a cmd with administrator privileges and type **gpedit.msc** to open the Local Group Policy Editor.
+##### Lab Setup Manually
+
+Open a cmd with Administrator privileges and type **gpedit.msc** to open the Local Group Policy Editor.
 
 Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components\Windows Installer**:
 
@@ -72,6 +74,8 @@ Enable the **Always install with elevated privileges** policy:
 Confirm that the **Always install with elevated privileges** policy is set to **Enabled**:
 
 ![AlwaysInstallElevated-Computer-Configuratior-3](/Pictures/AllwaysInstallElevated-Computer-3.png)
+
+##### Lab Setup PowerShell Script
 
 ## References
 
