@@ -61,7 +61,7 @@ When this registry key is enabled, it allows non-administrator users to install 
 
 ##### Lab Setup Manually
 
-Open a cmd with Administrator privileges and type `gpedit.msc` to open the Local Group Policy Editor.
+Open a cmd with local Administrator privileges and type `gpedit.msc` to open the Local Group Policy Editor.
 
 1) Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Windows Installer**:
 
@@ -89,11 +89,13 @@ Open a cmd with Administrator privileges and type `gpedit.msc` to open the Local
 
 ##### Lab Setup PowerShell Script
 
-Another way to set up the lab with the 'AlwaysInstallElevated' vulnerability is by using the custom PowerShell script named [AlwaysInstallElevated.ps1]().
+Another way to set up the lab with the 'AlwaysInstallElevated' vulnerability is by using the custom PowerShell script named [AlwaysInstallElevated.ps1](/Lab-Setup-Scripts/AlwaysInstallElevated.ps1).
 
-Open a PowerShelll with Administrator privileges and run the script:
+Open a PowerShelll with local Administrator privileges and run the script:
 
-
+```
+.\AlwaysInstallElevated.ps1
+```
 
 ## References
 
