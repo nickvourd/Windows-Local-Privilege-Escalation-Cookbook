@@ -274,15 +274,25 @@ msiexec /q /n /uninstall nickvourd.msi
 
 To mitigate the `AlwaysInstallElevated` vulnerability, it is recommended to set the `AlwaysInstallElevated` value to `0` in both the `HKEY_LOCAL_MACHINE` and `HKEY_CURRENT_USER` hives in the Windows Registry.
 
+### Autoruns (Registry Run Keys)
+
+### Autoruns (Startup Folder)
+
+### Scheduled Task/Job
+
 ### SeBackupPrivilege
 
 ### SeImpersonatePrivilege
+
+### Stored Credentials (Runas)
 
 ### Unquoted Service Path
 
 ### Weak Service Binary Permissions
 
 ### Weak Service Permissions
+
+### Weak Registry Permissions
 
 ## References
 
