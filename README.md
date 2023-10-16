@@ -223,6 +223,12 @@ msiexec /quiet /qn /i NCVInstaller.msi
 
 ![Elevated-Privileges-Confirmation](/Pictures/Elevated-Privileges-Confirmation.png)
 
+:information_source: In order to remove the malicious MSI file from the victim, run the following command (in a unprivilege session):
+
+```
+msiexec /q /n /uninstall NCVInstaller.msi
+```
+
 ##### Tool Exploitation
 
 1) To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
@@ -256,6 +262,12 @@ Outcome:
 5) Confirm that the new session is with elevated privileges:
 
 ![AlwaysInstallElevated-Elevated-Privileges](/Pictures/AlwaysInstallElevated-Elevated-Privileges.png)
+
+:information_source: In order to remove MSI file from the victim, run the following command (in a unprivilege session):
+
+```
+msiexec /q /n /uninstall nickvourd.msi
+```
 
 ## References
 
