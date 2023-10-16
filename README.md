@@ -36,7 +36,7 @@ I hope to find this CookBook useful and learn new stuff 😉.
       - [Exploitation](#exploitation)
       - [Mitigation](#mitigation)
     - [Cached GPPPassword](#cached-gpppassword)
-      -[Description](#description-1)
+      - [Description](#description-1)
   - [References](#references)
 
 ## Useful Tools
