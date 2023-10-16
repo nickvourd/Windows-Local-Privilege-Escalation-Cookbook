@@ -88,6 +88,16 @@ Open a cmd with local Administrator privileges and type `gpedit.msc` to open the
 
 ![AlwaysInstallElevated-User-Configuratior-6](/Pictures/AllwaysInstallElevated-User-6.png)
 
+7) Back to command prompt with local Administrator privileges and run this command to update computer policy:
+
+```
+gpupdate /force
+```
+
+Outcome:
+
+![Update-Computer-Policy](/Pictures/Update-Computer-Policy.png)
+
 ##### PowerShell Script Lab Setup 
 
 Another way to set up the lab with the 'AlwaysInstallElevated' vulnerability is by using the custom PowerShell script named [AlwaysInstallElevated.ps1](/Lab-Setup-Scripts/AlwaysInstallElevated.ps1).
