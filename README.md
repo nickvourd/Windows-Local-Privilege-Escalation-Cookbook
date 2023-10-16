@@ -35,6 +35,7 @@ I hope to find this CookBook useful and learn new stuff 😉.
       - [Enumeration](#enumeration)
       - [Exploitation](#exploitation)
       - [Mitigation](#mitigation)
+    - [Autoruns (Registry Run Keys)](#autoruns-registry-run-keys)
   - [References](#references)
 
 ## Useful Tools
@@ -53,6 +54,7 @@ In the following table, some popular and useful tools for Windows local privileg
 This CookBook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](#alwaysinstallelevated)
+- [Autoruns (Registry Run Keys)](#autoruns-registry-run-keys)
 
 ### AlwaysInstallElevated
 
