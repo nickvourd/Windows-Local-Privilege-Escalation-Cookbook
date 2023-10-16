@@ -155,6 +155,9 @@ Outcome:
 
 ##### Manual Exploitation
 
+1) Open Visual studio, select **Create a new project** and type **installer** into search box. Select the **Setup Wizard** project and click **Next**.
+
+
 ##### Tool Exploitation
 
 1) To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
