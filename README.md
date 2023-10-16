@@ -35,8 +35,6 @@ I hope to find this CookBook useful and learn new stuff 😉.
       - [Enumeration](#enumeration)
       - [Exploitation](#exploitation)
       - [Mitigation](#mitigation)
-    - [Cached GPPPassword](#cached-gpppassword)
-      - [Description](#description-1)
   - [References](#references)
 
 ## Useful Tools
@@ -55,7 +53,6 @@ In the following table, some popular and useful tools for Windows local privileg
 This CookBook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](#alwaysinstallelevated)
-- [Cached GPPPassword](#cached-gpppassword)
 
 ### AlwaysInstallElevated
 
@@ -277,9 +274,15 @@ msiexec /q /n /uninstall nickvourd.msi
 
 To mitigate the `AlwaysInstallElevated` vulnerability, it is recommended to set the `AlwaysInstallElevated` value to `0` in both the `HKEY_LOCAL_MACHINE` and `HKEY_CURRENT_USER` hives in the Windows Registry.
 
-### Cached GPPPassword
+### SeBackupPrivilege
 
-#### Description
+### SeImpersonatePrivilege
+
+### Unquoted Service Path
+
+### Weak Service Binary Permissions
+
+### Weak Service Permissions
 
 ## References
 
