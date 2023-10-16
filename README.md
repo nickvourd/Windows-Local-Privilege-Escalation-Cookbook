@@ -7,7 +7,7 @@
 
 This CookBook was created with the main purpose of helping people understand local privilege escalation techniques on Windows environments. Moreover, it can be used for both attacking and defensive purposes.
 
-:information_source: This CookBook focuses only on misconfiguration vulnerabilities on Windows workstations.
+:information_source: This CookBook focuses only on misconfiguration vulnerabilities on Windows workstations/servers/machines.
 
 The main structure of this CookBook includes the following sections:
 
@@ -122,18 +122,34 @@ To perform manual enumeration and identify whether a Windows workstation is vuln
 reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
 ```
 
+and
+
 ```
 reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
 ```
 
 Outcome:
 
-![AlwaysInstallElevated=Manual-Enumeration](/Pictures/AlwaysInstallElevated-Manual-Enumeration.png)
+![AlwaysInstallElevated-Manual-Enumeration](/Pictures/AlwaysInstallElevated-Manual-Enumeration.png)
 
-:information_source:  If either command returns a value of 1, it indicates a potential vulnerability, enabling non-administrative users to install software with elevated privileges. 
+:information_source: If either command returns a value of 1, it indicates a potential vulnerability, enabling non-administrative users to install software with elevated privileges. 
 
 ##### Tool Enumeration
+
+To run the [SharpUp](https://github.com/GhostPack/SharpUp) tool and perform an enumeration of the `AlwaysInstallElevated` vulnerability, you can execute the following command with appropriate arguments:
+
+```
+SharpUp.exe audit AlwaysInstallElevated
+```
+
+Outcome:
+
+![AlwaysInstallElevated-SharpUp](/Pictures/AlwaysInstallElevated-SharpUp.png)
+
+:information_source: Moreover, you can use `SharpUp.exe audit` to perform a comprehensive enumeration of all misconfigurations and vulnerabilities on the specified machine.
 
 ## References
 
 - [Privilege Escalation Wikipedia](https://en.wikipedia.org/wiki/Privilege_escalation)
+- [Microsoft AlwaysInstallElevated](https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated)
+- [SharpCollection GitHub by Flangvik](https://github.com/Flangvik/SharpCollection)
