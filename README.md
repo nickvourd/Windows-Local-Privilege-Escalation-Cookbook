@@ -155,8 +155,51 @@ Outcome:
 
 ##### Manual Exploitation
 
-1) Open Visual studio, select **Create a new project** and type **installer** into search box. Select the **Setup Wizard** project and click **Next**.
+:information_source: In order to create a MSI file with Visual Studio, you should have pre-installed the extension named **Mictosoft Visual Studio Installer Projects 2022**.
 
+Go to **Extensions** tab -> **Manage extensions** in Visual Studio. Go to the Online section, look for the extension, and download it. 
+
+![Add-Exetnsion-In-Visual-Studio](/Pictures/Add-Exetension-Visula-Studio.png)
+
+The installation will be scheduled after you close Visual Studio. When you reopen it, the extension will be ready to use.
+
+:warning: If the extension is already pre-installed, please disregard the above steps.
+
+To create a malicious MSI in Visual Studio foolow the below steps:
+
+1) Open Visual studio, select **Create a new project** and type **installer** into search box. Select the **Setup Wizard** project and click **Next**:
+
+![Visual-Studio-MSI-1](/Pictures/Visual-Studio-MSI-1.png)
+
+2) Provide the project with a name, for example, **NCVInstaller**. Choose a location, for example, **C:\Payloads**, opt for **placing the solution and project in the same directory**, and then click on **Create**:
+
+![Visual-Studio-MSI-2](/Pictures/Visual-Studio-MSI-2.png)
+
+3) Keep clicking **Next** button until you get to step 3 of 4 (choose files to include). Click **Add** and select a malicous payload (i.e, an exe from msfvenom). Then click **Finish**:
+
+![Visual-Studio-MSI-3](/Pictures/Visual-Studio-MSI-3.png)
+
+4) Highlight the **NCVInstaller** project in the **Solution Explorer** and in the **Properties**, change the **TargetPlatform** from **x86** to **x64**:
+
+![Visual-Studio-MSI-4](/Pictures/Visual-Studio-MSI-4.png)
+
+5) Now right-click on the project and select **View** > **Custom Actions**:
+
+![Visual-Studio-MSI-5](/Pictures/Visual-Studio-MSI-5.png)
+
+6) Right-click on **Install** option and select **Add Custom Action**:
+
+![Visual-Studio-MSI-6](/Pictures/Visual-Studio-MSI-6.png)
+
+7) Double-click on **Application Folder**, select your malicious executable file (i.e, nickvourd.exe) and click **OK**. This will ensure that the malicious payload is executed as soon as the installer is run.
+
+![Visual-Studio-MSI-7](/Pictures/Visual-Studio-MSI-7.png)
+
+8) Change **Run64Bit** option from **False** to **True**:
+
+![Visual-Studio-MSI-8](/Pictures/Visual-Studio-MSI-8.png)
+
+9)  Build the solution.
 
 ##### Tool Exploitation
 
