@@ -106,6 +106,22 @@ Outcome:
 
 ##### Manual Enumeration
 
+To perform manual enumeration and identify whether a Windows workstation is vulnerable to the AlwaysInstallElevated issue, you can use the following commands from a command prompt:
+
+```
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+```
+
+```
+reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+```
+
+Outcome:
+
+![AlwaysInstallElevated=Manual-Enumeration](/Pictures/AlwaysInstallElevated-Manual-Enumeration.png)
+
+:information_source:  If either command returns a value of 1, it indicates a potential vulnerability, enabling non-administrative users to install software with elevated privileges. 
+
 ##### Tool Enumeration
 
 ## References
