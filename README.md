@@ -281,6 +281,8 @@ To mitigate the `AlwaysInstallElevated` vulnerability, it is recommended to set 
 
 ### Autoruns (Startup Folder)
 
+### Leaked Credentials (PowerShell History)
+
 ### Scheduled Task/Job
 
 ### SeBackupPrivilege
