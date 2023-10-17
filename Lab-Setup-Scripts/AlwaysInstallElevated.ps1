@@ -1,5 +1,4 @@
-﻿#Global Variables
-$global:version = "1.0.0"
+﻿$global:version = "1.0.0"
 
 $ascii = @"
 
