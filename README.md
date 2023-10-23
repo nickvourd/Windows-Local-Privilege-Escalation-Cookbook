@@ -303,25 +303,26 @@ However, if this privilege is not properly managed or if it is granted to unauth
 net user ncv Passw0rd! /add
 ```
 
-Outcome:
-
-2) Run the following comman to enable the WinRM service:
+2) Run the following command to enable the WinRM service:
 
 ```
 Enable-PSRemoting -Force
 ```
 
-Outcome:
-
-
-:information_source: If you are encountering this error and WinRM is not functioning, please follow these steps:
+:information_source: If you are encountering an error in enabling of WinRM and WinRM is not functioning, please follow these steps:
 
 - Go to Settings > Network & Internet.
 - Choose either "Ethernet" or "Wi-Fi," depending on your current network connection.
 - Under the network profile, set the location to "Private."
 - Lastly, execute the following command with Local Administrator privileges to enable PS remoting: `Set-WSManQuickConfig`.
 
-3) Run the following commands to install and import the Carbon module:
+3) Run the following command to add new user to "Remote Management Users" Group:
+
+```
+net localgroup "Remote Management Users" ncv /add
+```
+
+4) Run the following commands to install and import the Carbon module:
 
 ```
 Install-Module -Name carbon -Force
@@ -333,9 +334,7 @@ Install-Module -Name carbon -Force
  Import-Module carbon
  ```
 
-Outcome:
-
- 4) Use the following cmdlets to grant the SeBackupPrivilege to the new user and verify the privilege:
+ 5) Use the following cmdlets to grant the SeBackupPrivilege to the new user and verify the privilege:
 
  ```
  Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
@@ -348,6 +347,8 @@ Outcome:
  ```
 
 Outcome:
+
+![SebackupPrivilege-Manual-Setup](/Pictures/SeBackUp-Manual-Setup.png)
 
 ##### PowerShell Script Lab Setup 
 
@@ -374,7 +375,7 @@ whoami /priv
 
 Outcome:
 
-
+![SeBackupPrivilege-Manual-Enumeration](/Pictures/SeBackUp-Manual-Enum.png)
 
 ##### Tool Enumeration
 
