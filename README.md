@@ -370,6 +370,12 @@ Outcome:
 
 ![SeBackup-Script](/Pictures/SeBackUp-Script.png)
 
+#### Enumeration
+
+##### Manual Enumeration
+
+To perform manual enumeration...
+
 ### SeImpersonatePrivilege
 
 ### Stored Credentials (Runas)
