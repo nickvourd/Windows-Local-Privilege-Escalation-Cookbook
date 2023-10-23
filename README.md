@@ -313,6 +313,14 @@ Enable-PSRemoting -Force
 
 Outcome:
 
+
+:information_source: If you are encountering this error and WinRM is not functioning, please follow these steps:
+
+- Go to Settings > Network & Internet.
+- Choose either "Ethernet" or "Wi-Fi," depending on your current network connection.
+- Under the network profile, set the location to "Private."
+- Lastly, execute the following command with Local Administrator privileges to enable PS remoting: `Set-WSManQuickConfig`.
+
 3) Run the following commands to install and import the Carbon module:
 
 ```
