@@ -297,34 +297,7 @@ However, if this privilege is not properly managed or if it is granted to unauth
 
 ##### Manual Lab Setup
 
-1) Open a PowerShell with local Administrator privileges and type the following command to create a new user:
-
-```
-net user ncv Passw0rd! /add
-```
-
-Outcome:
-
-![SeBackUpPrivilege-Add-New-User](/Pictures/SeBackUp-Add-User.png)
-
-2) Type the following command to eneble the WinRM service.
-
-```
-Enable-PSRemoting -Force
-```
-
-Outcome:
-
-![SeBackUpPrivilege-Enable-WinRM](/Pictures/SeBackUp-Enable-WinRM.png)
-
-:information_source: If you are encountering this error and WinRM is not functioning, please follow these steps:
-
-- Go to Settings > Network & Internet.
-- Choose either "Ethernet" or "Wi-Fi," depending on your current network connection.
-- Under the network profile, set the location to "Private."
-- Lastly, execute the following command with Local Administrator privileges to enable PS remoting: `Set-WSManQuickConfig`.
-
-3) Run the following commands to install and import the Carbon module:
+1) Open a PowerShell with local Administrator privileges and run the following commands to install and import the Carbon module:
 
 ```
 Install-Module -Name carbon
@@ -338,23 +311,27 @@ Install-Module -Name carbon
 
 Outcome:
 
-![SeBackUpPrivilege-Add-Carbon](/Pictures/SeBackUp-Add-Carbon.png)
+2) Set a new local variable for username of the current user:
 
- 4) Use the following cmdlets to grant the SeBackupPrivilege to the new user and verify the privilege:
+```
+$user = $env:USERNAME
+```
+
+ 3) Use the following cmdlets to grant the SeBackupPrivilege to the current user and verify the privilege:
 
  ```
- Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
+ Grant-CPrivilege -Identity $user -Privilege SeBackupPrivilege
  ```
 
  and
 
  ```
- Test-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
+ Test-CPrivilege -Identity $user -Privilege SeBackupPrivilege
  ```
 
 Outcome:
 
-![SeBackUpPrivilege-Give-Priv](/Pictures/SeBackUp-Give-Priv.png)
+
 
 ##### PowerShell Script Lab Setup 
 
@@ -368,13 +345,17 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
-![SeBackup-Script](/Pictures/SeBackUp-Script.png)
 
 #### Enumeration
 
 ##### Manual Enumeration
 
-To perform manual enumeration...
+To perform manual enumeration, you can open a command prompt and use the following command to enumerate the current privileges of the user:
+
+```
+whoami /priv
+```
+
 
 ##### Tool Enumeration
 
