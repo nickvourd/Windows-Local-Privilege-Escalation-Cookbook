@@ -54,8 +54,17 @@ In the following table, some popular and useful tools for Windows local privileg
 This CookBook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](#alwaysinstallelevated)
+- [Autoruns (Registry Run Keys)](#autoruns-registry-run-keys)
+- [Autoruns (Startup Folder)](#autoruns-startup-folder)
+- [Leaked Credentials (PowerShell History)](#leaked-credentials-powershell-history)
+- [Scheduled Task/Job](#scheduled-taskjob)
 - [SeBackupPrivilege](#sebackupprivilege)
+- [SeImpersonatePrivilege](#seimpersonateprivilege)
 - [Stored Credentials (Runas)](#stored-credentials-runas)
+- [Unquoted Service Path](#unquoted-service-path)
+- [Weak Service Binary Permissions](#weak-service-binary-permissions)
+- [Weak Service Permissions](#weak-service-permissions)
+- [Weak Registry Permissions](#weak-registry-permissions)
 
 ### AlwaysInstallElevated
 
