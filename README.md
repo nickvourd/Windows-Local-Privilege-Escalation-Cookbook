@@ -311,7 +311,7 @@ Install-Module -Name carbon
 
 Outcome:
 
-2) Set a new local variable for username of the current user:
+2) Set a new local variable for the username of the current user:
 
 ```
 $user = $env:USERNAME
