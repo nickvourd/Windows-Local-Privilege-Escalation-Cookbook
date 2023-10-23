@@ -35,7 +35,6 @@ I hope to find this CookBook useful and learn new stuff 😉.
       - [Enumeration](#enumeration)
       - [Exploitation](#exploitation)
       - [Mitigation](#mitigation)
-    - [Autoruns (Registry Run Keys)](#autoruns-registry-run-keys)
   - [References](#references)
 
 ## Useful Tools
@@ -56,6 +55,7 @@ This CookBook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](#alwaysinstallelevated)
 - [Autoruns (Registry Run Keys)](#autoruns-registry-run-keys)
+- [SeBackupPrivilege](#sebackupprivilege)
 
 ### AlwaysInstallElevated
 
@@ -286,6 +286,66 @@ To mitigate the `AlwaysInstallElevated` vulnerability, it is recommended to set 
 ### Scheduled Task/Job
 
 ### SeBackupPrivilege
+
+#### Description
+
+The SeBackupPrivilege is a Windows privilege that provides a user or process with the ability to read files and directories, regardless of the security settings on those objects. This privilege can be used by certain backup programs or processes that require the capability to back up or copy files that would not normally be accessible to the user. However, if this privilege is not properly managed or if it is granted to unauthorized users or processes, it can lead to a privilege escalation vulnerability. The SeBackupPrivilege vulnerability can be exploited by malicious actors to gain unauthorized access to sensitive files and data on a system.
+
+##### Lab Setup
+
+##### Manual Lab Setup
+
+1) Open a PowerShell with local Administrator privileges and type the following command to create a new user:
+
+```
+net user ncv Passw0rd! /add
+```
+
+Outcome:
+
+![SeBackUpPrivilege-Add-New-User](/Pictures/SeBackUp-Add-User.png)
+
+2) Type the following command to eneble the WinRM service.
+
+```
+Enable-PSRemoting -Force
+```
+
+Outcome:
+
+![SeBackUpPrivilege-Enable-WinRM](/Pictures/SeBackUp-Enable-WinRM.png)
+
+3) Run the following commands to install and import the Carbon module:
+
+```
+Install-Module -Name carbon
+```
+
+ and 
+
+ ```
+ Import-Module carbon
+ ```
+
+Outcome:
+
+![SeBackUpPrivilege-Add-Carbon](/Pictures/SeBackUp-Add-Carbon.png)
+
+ 4) Use the following cmdlets to grant the SeBackupPrivilege to the new user and verify the privilege:
+
+ ```
+ Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
+ ```
+
+ and
+
+ ```
+ Test-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
+ ```
+
+Outcome:
+
+![SeBackUpPrivilege-Give-Priv](/Pictures/SeBackUp-Give-Priv.png)
 
 ### SeImpersonatePrivilege
 
