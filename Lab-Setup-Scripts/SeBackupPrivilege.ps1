@@ -26,9 +26,9 @@ Write-Host "[+] Enabling WinRM service`n"
 #Enable WinRM service
 Enable-PSRemoting -Force
 
-Write-Host "Add the new user to Remote Management Users group`n"
+Write-Host "[+] Add the new user to Remote Management Users group`n"
 #Add the new user to Remote Management Group
-net localgroup "Add the new user to Remote Management Users" ncv /add
+net localgroup "Remote Management Users" ncv /add
 
 Write-Host "[+] Installing Carbon module`n"
 #Install Carbon module

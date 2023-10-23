@@ -362,6 +362,7 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
+![SebackupPrivilege-Script-Setup](/Pictures/SeBackUp-Script.png)
 
 #### Enumeration
 
@@ -378,6 +379,18 @@ Outcome:
 ![SeBackupPrivilege-Manual-Enumeration](/Pictures/SeBackUp-Manual-Enum.png)
 
 ##### Tool Enumeration
+
+To run the [SharpUp](https://github.com/GhostPack/SharpUp) tool and perform an enumeration of the `SeBackupPrivilege` vulnerability, you can execute the following command with appropriate arguments:
+
+```
+SharpUp.exe audit TokenPrivileges
+```
+
+Outcome:
+
+![SeBackupPrivilege-Tool-Enumeration](/Pictures/SeBackUp-Tool-Enum.png)
+
+#### Exploitation
 
 ### SeImpersonatePrivilege
 
