@@ -458,4 +458,4 @@ Outcome:
 - [Windows Installer Microsoft](https://learn.microsoft.com/en-us/windows/win32/msi/windows-installer-portal)
 - [How to Create the Windows Installer File (*.msi) Microsoft](https://learn.microsoft.com/en-us/mem/configmgr/develop/apps/how-to-create-the-windows-installer-file-msi)
 - [Metasploit Website](https://www.metasploit.com/)
-- [Evil-WinRM GitHub](https://github.com/Hackplayers/evil-winrm)
+- [Evil-WinRM GitHub by Hackplayers](https://github.com/Hackplayers/evil-winrm)
