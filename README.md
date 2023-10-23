@@ -438,6 +438,18 @@ Outcome:
 
 #### Mitigation
 
+Follow the steps below to remove the `SeBackupPrivilege` from a user:
+
+1) Press Win + R to open the Run dialog, type `secpol.msc`, and hit Enter. This will open the Local Security Policy editor.
+
+2) In the Local Security Policy editor, navigate to **Local Policies** > **User Rights Assignment**.
+
+3) Look for the **Back up files and directories** policy (which corresponds to SeBackupPrivilege).
+
+4) Double-click the policy, and a properties window will appear.
+
+5) In the properties window, you can remove the user or group from the list to revoke the privilege. Click **Apply** and then **OK** to save the changes.
+
 ### SeImpersonatePrivilege
 
 ### Stored Credentials (Runas)
