@@ -376,6 +376,8 @@ Outcome:
 
 To perform manual enumeration...
 
+##### Tool Enumeration
+
 ### SeImpersonatePrivilege
 
 ### Stored Credentials (Runas)
