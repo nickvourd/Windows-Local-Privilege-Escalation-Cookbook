@@ -300,7 +300,7 @@ However, if this privilege is not properly managed or if it is granted to unauth
 1) Open a PowerShell with local Administrator privileges and run the following commands to install and import the Carbon module:
 
 ```
-Install-Module -Name carbon
+Install-Module -Name carbon -Force
 ```
 
  and 
@@ -309,9 +309,7 @@ Install-Module -Name carbon
  Import-Module carbon
  ```
 
-Outcome:
-
-2) Set a new local variable for the username of the current user:
+2) Set a new local variable the current user's username:
 
 ```
 $user = $env:USERNAME
@@ -331,7 +329,7 @@ $user = $env:USERNAME
 
 Outcome:
 
-
+![SeBackupPrivilege-Manual-Setup](/Pictures/SeBackUp-Manual-Setup.png)
 
 ##### PowerShell Script Lab Setup 
 
@@ -345,6 +343,7 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
+![SeBackupPrivilege-Script-Setup](/Pictures/SeBackUp-Script.png)
 
 #### Enumeration
 
@@ -355,6 +354,9 @@ To perform manual enumeration, you can open a command prompt and use the followi
 ```
 whoami /priv
 ```
+
+Outcome:
+
 
 
 ##### Tool Enumeration
