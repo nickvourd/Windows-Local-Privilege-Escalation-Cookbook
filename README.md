@@ -297,7 +297,23 @@ However, if this privilege is not properly managed or if it is granted to unauth
 
 ##### Manual Lab Setup
 
-1) Open a PowerShell with local Administrator privileges and run the following commands to install and import the Carbon module:
+1) Open a PowerShell with local Administrator privileges and run the following command to create a new user:
+
+```
+net user ncv Passw0rd! /add
+```
+
+Outcome:
+
+2) Run the following comman to enable the WinRM service:
+
+```
+Enable-PSRemoting -Force
+```
+
+Outcome:
+
+3) Run the following commands to install and import the Carbon module:
 
 ```
 Install-Module -Name carbon -Force
@@ -309,27 +325,21 @@ Install-Module -Name carbon -Force
  Import-Module carbon
  ```
 
-2) Set a new local variable the current user's username:
+Outcome:
 
-```
-$user = $env:USERNAME
-```
-
- 3) Use the following cmdlets to grant the SeBackupPrivilege to the current user and verify the privilege:
+ 4) Use the following cmdlets to grant the SeBackupPrivilege to the new user and verify the privilege:
 
  ```
- Grant-CPrivilege -Identity $user -Privilege SeBackupPrivilege
+ Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
  ```
 
  and
 
  ```
- Test-CPrivilege -Identity $user -Privilege SeBackupPrivilege
+ Test-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
  ```
 
 Outcome:
-
-![SeBackupPrivilege-Manual-Setup](/Pictures/SeBackUp-Manual-Setup.png)
 
 ##### PowerShell Script Lab Setup 
 
@@ -343,7 +353,6 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
-![SeBackupPrivilege-Script-Setup](/Pictures/SeBackUp-Script.png)
 
 #### Enumeration
 
