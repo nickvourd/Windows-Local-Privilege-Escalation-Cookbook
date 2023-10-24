@@ -9,7 +9,7 @@ This CookBook was created with the main purpose of helping people understand loc
 
 :information_source: This CookBook focuses only on misconfiguration vulnerabilities on Windows workstations/servers/machines.
 
-:warning: Evasion techniques to bypass security protections, endpoints, and antivirus are not included in this cookbook.
+:warning: Evasion techniques to bypass security protections, endpoints, and antivirus are not included in this cookbook. I created this PowerShell script, [TurnOffAV.ps1](/Lab-Setup-Scripts/TurnOffAV.ps1), which permanently disables Windows Defender. Run this with local Administrator privileges.
 
 The main structure of this CookBook includes the following sections:
 
