@@ -32,4 +32,3 @@ net localgroup "Remote Desktop Users" nikos /add
 Write-Host "[+] Enabling Remote Desktop Service`n"
 #Enable Remote Desktop Service
 Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
-
