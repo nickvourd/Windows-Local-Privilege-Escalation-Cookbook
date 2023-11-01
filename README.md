@@ -377,7 +377,17 @@ Attackers can exploit pre-configured tasks associated with privileged accounts t
 
 ![Create-A-New-Task-3](/Pictures/Taskscheduler-4.png)
 
-5) 
+5) Configure the task schedule trigger to recur:
+
+![Create-A-New-Task-4](/Pictures/Taskscheduler-5.png)
+
+6) Specify the action that will occur when your task starts:
+
+![Create-A-New-Task-5](/Pictures/Taskscheduler-6.png)
+
+7) Specify the type of action to be performed by a scheduled task:
+
+
 
 ### SeBackupPrivilege
 
