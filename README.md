@@ -351,6 +351,34 @@ Clear-Content -Path "C:\Users\<User>\AppData\Roaming\Microsoft\Windows\PowerShel
 
 ### Scheduled Task/Job
 
+#### Description
+
+The Task Scheduler is a Windows feature that enables users to automate the execution of tasks or programs at specific times or under particular conditions.
+
+Attackers can exploit pre-configured tasks associated with privileged accounts to gain elevated access. By manipulating these tasks, they can run unauthorized programs, scripts, or commands, thereby exerting more control over the system than intended.
+
+#### Lab Setup
+
+##### Manual Lab Setup
+
+1) Open a cmd and run this command `taskschd.msc` to open task scheduler:
+
+![Open-Task-Scheduler](/Pictures/Taskscheduler-1.png)
+
+2) Create a new task on Task Scheduler:
+
+![Create-A-New-Task](/Pictures/Taskscheduler-2.png)
+
+3) Assign a task to the logged-in user to be executed with the highest privileges:
+
+![Create-A-New-Task-2](/Pictures/Taskscheduler-3.png)
+
+4) Select the trigger tab to initiate a scheduled task:
+
+![Create-A-New-Task-3](/Pictures/Taskscheduler-4.png)
+
+5) 
+
 ### SeBackupPrivilege
 
 #### Description
