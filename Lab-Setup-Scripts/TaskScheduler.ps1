@@ -64,10 +64,10 @@ Get-ScheduledTask -TaskName $taskName
 
 Write-Host "[+] Scheduled Task has been set successfully`n"
 
-# Add permission for all users to write to Monitor_AMD64.exe
-$acl = Get-Acl $filePath
-$rule = New-Object System.Security.AccessControl.FileSystemAccessRule("Users","Write","Allow")
+# Add permission for all built-in users to write to C:\Jobs folder
+$acl = Get-Acl $folderPath
+$rule = New-Object System.Security.AccessControl.FileSystemAccessRule("BUILTIN\Users","Write","Allow")
 $acl.SetAccessRule($rule)
-Set-Acl -Path $filePath -AclObject $acl
+Set-Acl -Path $folderPath -AclObject $acl
 
-Write-Host "[+] Permission has been granted to all users to write to Monitor_AMD64.exe`n"
+Write-Host "[+] Permission has been granted to all built-in users to write to C:\Jobs folder`n"
