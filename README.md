@@ -361,35 +361,47 @@ Attackers can exploit pre-configured tasks associated with privileged accounts t
 
 ##### Manual Lab Setup 
 
-1) Open a cmd and run this command `taskschd.msc` to open task scheduler:
+1) Create a folder named 'Jobs' in the C:\ directory.
 
-![Open-Task-Scheduler](/Pictures/Taskscheduler-1.png)
+2) Download the file [Monitor_AMD64.exe](/Lab-Setup-Binary/Monitor_AMD64.exe) to the 'C:\Jobs' directory.
 
-2) Create a new task on Task Scheduler:
+3) Open a Command Prompt with local Administrator privileges and run the following command to grant write permissions to all built-in users for the 'C:\Jobs' directory:
+
+```
+icacls "C:\Jobs" /grant Users:(OI)(CI)M
+```
+
+Outcome:
+
+![Grant-Write-Permissions-To-All-Built-in-Users](/Pictures/Taskscheduler-0.png)
+
+4) Then, run this command `taskschd.msc` to open the Task Scheduler.
+
+5) Create a new task on Task Scheduler:
 
 ![Create-A-New-Task](/Pictures/Taskscheduler-2.png)
 
-3) Assign a task to the logged-in user to be executed with the highest privileges:
+6) Assign a task to the logged-in user to be executed with the highest privileges:
 
 ![Create-A-New-Task-2](/Pictures/Taskscheduler-3.png)
 
-4) Select the trigger tab to initiate a scheduled task:
+7) Select the trigger tab to initiate a scheduled task:
 
 ![Create-A-New-Task-3](/Pictures/Taskscheduler-4.png)
 
-5) Configure the task schedule trigger to recur:
+8) Configure the task schedule trigger to recur:
 
 ![Create-A-New-Task-4](/Pictures/Taskscheduler-5.png)
 
-6) Specify the action that will occur when your task starts:
+9) Specify the action that will occur when your task starts:
 
 ![Create-A-New-Task-5](/Pictures/Taskscheduler-6.png)
 
-7) Specify the type of action to be performed by a scheduled task:
+10) Specify the type of action to be performed by a scheduled task:
 
 ![Create-A-New-Task-6](/Pictures/Taskscheduler-7.png)
 
-8) Verify the schedule task:
+11) Verify the schedule task:
 
 ![Verify-New-Task](/Pictures/Taskscheduler-8.png)
 
