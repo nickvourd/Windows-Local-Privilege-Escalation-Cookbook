@@ -405,6 +405,20 @@ Outcome:
 
 #### Enumeration
 
+To find all scheduled tasks of the current user using the Command Prompt, you can use the `schtasks` command:
+
+```
+schtasks /query /fo LIST /v
+```
+
+Outcome:
+
+![Task-Scheduler-Enumeration](/Pictures/Taskscheduler-Enumeration.png)
+
+#### Exploitaion
+
+#### Mitigation
+
 ### SeBackupPrivilege
 
 #### Description
