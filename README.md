@@ -54,8 +54,8 @@ In the following table, some popular and useful tools for Windows local privileg
 This CookBook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](#alwaysinstallelevated)
-- [Autoruns (Registry Run Keys)](#autoruns-registry-run-keys)
-- [Autoruns (Startup Folder)](#autoruns-startup-folder)
+- [Logon Autostart Execution (Registry Run Keys)](#logon-autostart-execution-registry-run-keys)
+- [Logon Autostart Execution (Startup Folder)](#logon-autostart-execution-startup-folder)
 - [Leaked Credentials (PowerShell History)](#leaked-credentials-powershell-history)
 - [Scheduled Task/Job](#scheduled-taskjob)
 - [SeBackupPrivilege](#sebackupprivilege)
@@ -286,9 +286,9 @@ msiexec /q /n /uninstall nickvourd.msi
 
 To mitigate the `AlwaysInstallElevated` vulnerability, it is recommended to set the `AlwaysInstallElevated` value to `0` in both the `HKEY_LOCAL_MACHINE` and `HKEY_CURRENT_USER` hives in the Windows Registry.
 
-### Autoruns (Registry Run Keys)
+### Logon Autostart Execution (Registry Run Keys)
 
-### Autoruns (Startup Folder)
+### Logon Autostart Execution (Startup Folder)
 
 ### Leaked Credentials (PowerShell History)
 
