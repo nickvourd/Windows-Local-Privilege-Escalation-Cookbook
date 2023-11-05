@@ -443,6 +443,8 @@ Outcome:
 
 #### Mitigation
 
+Set the scheduled tasks to execute with the least privileged account capable of fulfilling the task's requirements. Avoid using system-level or administrator-level accounts unless absolutely necessary. Additionally, regularly review and manage user access control lists (ACLs) to ensure that only authorized users have the ability to create, modify, or delete scheduled tasks.
+
 ### SeBackupPrivilege
 
 #### Description
