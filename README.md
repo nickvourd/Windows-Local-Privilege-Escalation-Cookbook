@@ -359,8 +359,6 @@ Attackers can exploit pre-configured tasks associated with privileged accounts t
 
 #### Lab Setup
 
-##### Manual Lab Setup 
-
 1) Create a folder named 'Jobs' in the C:\ directory.
 
 2) Download the file [Monitor_AMD64.exe](/Lab-Setup-Binary/Monitor_AMD64.exe) to the 'C:\Jobs' directory.
@@ -404,20 +402,6 @@ Outcome:
 11) Verify the schedule task:
 
 ![Verify-New-Task](/Pictures/Taskscheduler-8.png)
-
-##### PowerShell Script Lab Setup
-
-Another way to set up the lab with the 'Schedule Task/Job' scenario is by using the custom PowerShell script named [TaskScheduler.ps1](/Lab-Setup-Scripts/TaskScheduler.ps1).
-
-Open a PowerShelll with local Administrator privileges and run the script:
-
-```
-.\TaskScheduler.ps1
-```
-
-Outcome:
-
-![Task-Scheduler-Lab-Setup-Script](/Pictures/Taskscheduler-9.png)
 
 #### Enumeration
 
