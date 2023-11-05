@@ -359,7 +359,7 @@ Attackers can exploit pre-configured tasks associated with privileged accounts t
 
 #### Lab Setup
 
-##### Manual Lab Setup
+##### Manual Lab Setup 
 
 1) Open a cmd and run this command `taskschd.msc` to open task scheduler:
 
@@ -387,7 +387,11 @@ Attackers can exploit pre-configured tasks associated with privileged accounts t
 
 7) Specify the type of action to be performed by a scheduled task:
 
+![Create-A-New-Task-6](/Pictures/Taskscheduler-7.png)
 
+8) Verify the schedule task:
+
+![Verify-New-Task](/Pictures/Taskscheduler-8.png)
 
 ### SeBackupPrivilege
 
