@@ -417,6 +417,10 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
+![Task-Scheduler-Lab-Setup-Script](/Pictures/Taskscheduler-9.png)
+
+#### Enumeration
+
 ### SeBackupPrivilege
 
 #### Description
