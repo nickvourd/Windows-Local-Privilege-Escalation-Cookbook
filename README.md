@@ -399,7 +399,15 @@ Outcome:
 
 ![Create-A-New-Task-6](/Pictures/Taskscheduler-7.png)
 
-11) Verify the schedule task:
+11) In the tab named "Conditions," uncheck all the boxes:
+
+![Create-A-New-Task-7](/Pictures/Taskscheduler-12.png)
+
+12) In the tab named "Settings," check the following boxes as shown in the picture:
+
+![Create-A-New-Task-8](/Pictures/Taskscheduler-13.png)
+
+13) Verify the new schedule task:
 
 ![Verify-New-Task](/Pictures/Taskscheduler-8.png)
 
