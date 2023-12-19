@@ -1,5 +1,15 @@
 # AlwaysInstallElevated
 
+## Table of Contents
+
+- [AlwaysInstallElevated](#alwaysinstallelevated)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Lab Setup](#lab-setup)
+  - [Enumeration](#enumeration)
+  - [Exploitation](#exploitation)
+  - [Mitigation](#mitigation)
+
 ## Description
 
 "AlwaysInstallElevated" is a Windows Registry setting that affects the behavior of the Windows Installer service. The vulnerability arises when the "AlwaysInstallElevated" registry key is configured with a value of "1" in the Windows Registry.
