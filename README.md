@@ -66,17 +66,17 @@ This CookBook presents the following Windows vulnerabilities:
 - [Weak Service Permissions](#weak-service-permissions)
 - [Weak Registry Permissions](#weak-registry-permissions)
 
-### AlwaysInstallElevated
+## AlwaysInstallElevated
 
-#### Description
+### Description
 
 "AlwaysInstallElevated" is a Windows Registry setting that affects the behavior of the Windows Installer service. The vulnerability arises when the "AlwaysInstallElevated" registry key is configured with a value of "1" in the Windows Registry.
 
 When this registry key is enabled, it allows non-administrator users to install software packages with elevated privileges. In other words, users who shouldn't have administrative rights can exploit this vulnerability to execute arbitrary code with elevated permissions, potentially compromising the security of the system.
 
-#### Lab Setup
+### Lab Setup
 
-##### Manual Lab Setup
+#### Manual Lab Setup
 
 Open a cmd with local Administrator privileges and type `gpedit.msc` to open the Local Group Policy Editor.
 
@@ -114,7 +114,7 @@ Outcome:
 
 ![Update-Computer-Policy](/Pictures/Update-Computer-Policy.png)
 
-##### PowerShell Script Lab Setup 
+#### PowerShell Script Lab Setup 
 
 Another way to set up the lab with the 'AlwaysInstallElevated' vulnerability is by using the custom PowerShell script named [AlwaysInstallElevated.ps1](/Lab-Setup-Scripts/AlwaysInstallElevated.ps1).
 
@@ -128,9 +128,9 @@ Outcome:
 
 ![AlwaysInstallElevated-Lab-Setup-Script](/Pictures/AllwaysInstallElevated-Lab-Setup-Script.png)
 
-#### Enumeration
+### Enumeration
 
-##### Manual Enumeration
+#### Manual Enumeration
 
 To perform manual enumeration and identify whether a Windows workstation is vulnerable to the AlwaysInstallElevated issue, you can use the following commands from a command prompt:
 
@@ -150,7 +150,7 @@ Outcome:
 
 :information_source: If either command returns a value of 1, it indicates a potential vulnerability, enabling non-administrative users to install software with elevated privileges. 
 
-##### Tool Enumeration
+#### Tool Enumeration
 
 To run the [SharpUp](https://github.com/GhostPack/SharpUp) tool and perform an enumeration of the `AlwaysInstallElevated` vulnerability, you can execute the following command with appropriate arguments:
 
@@ -164,9 +164,9 @@ Outcome:
 
 :information_source: Moreover, you can use `SharpUp.exe audit` to perform a comprehensive enumeration of all misconfigurations vulnerabilities on the specified machine.
 
-#### Exploitation
+### Exploitation
 
-##### Manual Exploitation
+#### Manual Exploitation
 
 :information_source: In order to create a MSI file with Visual Studio, you should have pre-installed the extension named **Mictosoft Visual Studio Installer Projects 2022**.
 
@@ -242,7 +242,7 @@ msiexec /quiet /qn /i NCVInstaller.msi
 msiexec /q /n /uninstall NCVInstaller.msi
 ```
 
-##### Tool Exploitation
+#### Tool Exploitation
 
 1) To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
 
@@ -282,29 +282,29 @@ Outcome:
 msiexec /q /n /uninstall nickvourd.msi
 ```
 
-#### Mitigation
+### Mitigation
 
 To mitigate the `AlwaysInstallElevated` vulnerability, it is recommended to set the `AlwaysInstallElevated` value to `0` in both the `HKEY_LOCAL_MACHINE` and `HKEY_CURRENT_USER` hives in the Windows Registry.
 
-### Logon Autostart Execution (Registry Run Keys)
+## Logon Autostart Execution (Registry Run Keys)
 
-#### Description
+### Description
 
 Logon Autostart Execution through Registry Run Keys is a Windows feature that enables specific programs or scripts to launch automatically when a user logs into the system. This feature allows these programs or scripts to launch automatically without any manual action from the user when the operating system starts up. 
 
 Attackers may exploit the Logon Autostart Execution feature by inserting malicious software into the Registry Run Keys. This enables the malicious code to automatically launch during system startup, potentially granting it elevated privileges. 
 
-#### Lab Setup
+### Lab Setup
 
-### Logon Autostart Execution (Startup Folder)
+## Logon Autostart Execution (Startup Folder)
 
-### Leaked Credentials (PowerShell History)
+## Leaked Credentials (PowerShell History)
 
-#### Description
+### Description
 
 PowerShell history records previously run commands, including any sensitive data such as passwords. Unauthorized access to this history could lead to credential leaks, and might to privilege escalation.
 
-#### Lab Setup
+### Lab Setup
 
 1) Open a Powershell with local Administrator privileges and run the following command to create a new user:
 
@@ -333,19 +333,19 @@ Outcome:
 
 ![Leaked-Creds-PS-History-Manual-Lab-Setup](/Pictures/Leaked-Credentials-PS-Manual-Lab-setup.png)
 
-#### Enumeration
+### Enumeration
 
 To observe the leaked credentials, you should read the `C:\Users\<User>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` PowerShell history file.
 
 ![Leaked-Creds-PS-History-Enumeration](/Pictures/Leaked-Credentials-PS-Enumeration.png)
 
-#### Exploitation
+### Exploitation
 
 Use these credentials to connect to a remote service or application. In this scenario, you can use these credentials to connect as "nikos" (Administrator group) via RDP to the victim's machine.
 
 ![Leaked-Creds-PS-History-Exploitation](/Pictures/Leaked-Credentials-PS-Exploitation.png)
 
-#### Mitigation
+### Mitigation
 
 To clear the PowerShell history file, you can delete the content of the file directly:
 
@@ -357,17 +357,17 @@ To clear the PowerShell history file, you can delete the content of the file dir
 Clear-Content -Path "C:\Users\<User>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
 ```
 
-### Scheduled Task/Job
+## Scheduled Task/Job
 
-#### Description
+### Description
 
 The Task Scheduler is a Windows feature that enables users to automate the execution of tasks or programs at specific times or under particular conditions.
 
 Attackers can exploit pre-configured tasks associated with privileged accounts to gain elevated access. By manipulating these tasks, they can run unauthorized programs, scripts, or commands, thereby exerting more control over the system than intended.
 
-#### Lab Setup
+### Lab Setup
 
-##### Manual Lab Setup
+#### Manual Lab Setup
 
 1) Create a folder named 'Jobs' in the C:\ directory.
 
@@ -435,7 +435,7 @@ Outcome:
 
 ![Create-A-New-Task-Script-Setup](/Pictures/Taskscheduler-14.png)
 
-#### Enumeration
+### Enumeration
 
 To find all scheduled tasks of the current user using the Command Prompt, you can use the `schtasks` command:
 
@@ -447,7 +447,7 @@ Outcome:
 
 ![Task-Scheduler-Enumeration](/Pictures/Taskscheduler-Enumeration.png)
 
-#### Exploitaion
+### Exploitaion
 
 1) Use msfvenom to generate a malicious executable (exe) file that can be executed via the 'MagicTask' scheduled task:
 
@@ -473,21 +473,21 @@ Outcome:
 
 ![Task-Scheduler-Verify-Reverse-Shell](/Pictures/Taskscheduler-11.png)
 
-#### Mitigation
+### Mitigation
 
 Set the scheduled tasks to execute with the least privileged account capable of fulfilling the task's requirements. Avoid using system-level or administrator-level accounts unless absolutely necessary. Additionally, regularly review and manage user access control lists (ACLs) to ensure that only authorized users have the ability to create, modify, or delete scheduled tasks.
 
-### SeBackupPrivilege
+## SeBackupPrivilege
 
-#### Description
+### Description
 
 The SeBackupPrivilege is a Windows privilege that provides a user or process with the ability to read files and directories, regardless of the security settings on those objects. This privilege can be used by certain backup programs or processes that require the capability to back up or copy files that would not normally be accessible to the user. 
 
 However, if this privilege is not properly managed or if it is granted to unauthorized users or processes, it can lead to a privilege escalation vulnerability. The SeBackupPrivilege vulnerability can be exploited by malicious actors to gain unauthorized access to sensitive files and data on a system.
 
-#### Lab Setup
+### Lab Setup
 
-##### Manual Lab Setup
+#### Manual Lab Setup
 
 1) Open a PowerShell with local Administrator privileges and run the following command to create a new user:
 
@@ -556,9 +556,9 @@ Outcome:
 
 ![SebackupPrivilege-Script-Setup](/Pictures/SeBackUp-Script.png)
 
-#### Enumeration
+### Enumeration
 
-##### Manual Enumeration
+#### Manual Enumeration
 
 To perform manual enumeration, you can open a command prompt and use the following command to enumerate the current privileges of the user:
 
@@ -570,7 +570,7 @@ Outcome:
 
 ![SeBackupPrivilege-Manual-Enumeration](/Pictures/SeBackUp-Manual-Enum.png)
 
-##### Tool Enumeration
+#### Tool Enumeration
 
 To run the [SharpUp](https://github.com/GhostPack/SharpUp) tool and perform an enumeration of the `SeBackupPrivilege` vulnerability, you can execute the following command with appropriate arguments:
 
@@ -582,7 +582,7 @@ Outcome:
 
 ![SeBackupPrivilege-Tool-Enumeration](/Pictures/SeBackUp-Tool-Enum.png)
 
-#### Exploitation
+### Exploitation
 
 To abuse this vulnerability you should follow these steps:
 
@@ -628,7 +628,7 @@ Outcome:
 
 ![SeBackupPrivilege-Exploitation-Evil-WinRM-Pass-The-Hash](/Pictures/SeBackUp-Exploitation-3.png)
 
-#### Mitigation
+### Mitigation
 
 Follow the steps below to remove the `SeBackupPrivilege` from a user:
 
@@ -642,19 +642,19 @@ Follow the steps below to remove the `SeBackupPrivilege` from a user:
 
 5) In the properties window, you can remove the user or group from the list to revoke the privilege. Click **Apply** and then **OK** to save the changes.
 
-### SeImpersonatePrivilege
+## SeImpersonatePrivilege
 
-### Stored Credentials (Runas)
+## Stored Credentials (Runas)
 
-#### Description
+### Description
 
 The Credentials Manager is a feature in Windows that securely stores usernames and passwords for websites, applications, and network resources. This component is particularly helpful for users who want to manage and retrieve their login information easily without having to remember each set of credentials.
 
 In a scenario where an attacker has compromised an account with access to the Windows Credentials Manager and has obtained stored credentials from an elevated account, he can potentially use the "runas" command to elevate his privileges and gain unauthorized access. 
 
-#### Lab Setup
+### Lab Setup
 
-##### Manual Lab Setup
+#### Manual Lab Setup
 
 1) Open a command-prompt with local Administrator privileges and create a new user with the following command:
 
@@ -682,7 +682,7 @@ Outcome:
 
 ![Stored-Creds-Verify-New-Windows-Creds](/Pictures/Stored-Creds-Control-Panel-4.png)
 
-##### PowerShell Script Lab Setup
+#### PowerShell Script Lab Setup
 
 Another way to set up the lab with the 'Stored Credentials (Runas)' scenario is by using the custom PowerShell script named [StoredCredentialsRunas.ps1](/Lab-Setup-Scripts/StoredCredentialsRunas.ps1).
 
@@ -698,7 +698,7 @@ Outcome:
 
 ![Stored-Creds-Tool-Lab-Setup](/Pictures/Stored-Creds-Tool-Lab-Set-Up.png)
 
-#### Enumeration
+### Enumeration
 
 To perform enumeration, you can open a command prompt and use the following command to enumerate the stored credentials in the Windows Credentials Manager:
 
@@ -710,7 +710,7 @@ Outcome:
 
 ![Stored-Creds-Enum](/Pictures/Stored-Creds-Enum.png)
 
-#### Exploitaion
+### Exploitaion
 
 To abuse this scenario you should follow these steps:
 
@@ -748,7 +748,7 @@ Outcome:
 
 ![Stored-Creds-Exploitation-Attacker-Side](/Pictures/Stored-Creds-Exploitation-2.png)
 
-#### Mitigation
+### Mitigation
 
 To mitigate stored credentials from Windows Credentials manager. Please follow these steps:
 
@@ -768,13 +768,13 @@ To mitigate stored credentials from Windows Credentials manager. Please follow t
 
 ![Stored-Creds-Remove-Creds-Verification](/Pictures/Stored-Creds-Control-Panel-5.png)
 
-### Unquoted Service Path
+## Unquoted Service Path
 
-### Weak Service Binary Permissions
+## Weak Service Binary Permissions
 
-### Weak Service Permissions
+## Weak Service Permissions
 
-### Weak Registry Permissions
+## Weak Registry Permissions
 
 ## References
 
