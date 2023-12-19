@@ -29,12 +29,12 @@ I hope to find this CookBook useful and learn new stuff 😉.
   - [Table of Contents](#table-of-contents)
   - [Useful Tools](#useful-tools)
   - [Vulnerabilities](#vulnerabilities)
-    - [AlwaysInstallElevated](#alwaysinstallelevated)
-      - [Description](#description)
-      - [Lab Setup](#lab-setup)
-      - [Enumeration](#enumeration)
-      - [Exploitation](#exploitation)
-      - [Mitigation](#mitigation)
+  - [AlwaysInstallElevated](#alwaysinstallelevated)
+    - [Description](#description)
+    - [Lab Setup](#lab-setup)
+    - [Enumeration](#enumeration)
+    - [Exploitation](#exploitation)
+    - [Mitigation](#mitigation)
   - [References](#references)
 
 ## Useful Tools
