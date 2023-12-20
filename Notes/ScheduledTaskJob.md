@@ -25,7 +25,7 @@ Attackers can exploit pre-configured tasks associated with privileged accounts t
 
 1) Create a folder named 'Jobs' in the C:\ directory.
 
-2) Download the file [Monitor_AMD64.exe](/Lab-Setup-Binary/Monitor_AMD64.exe) in the 'C:\Jobs' directory.
+2) Download the file [Monitor_AMD64.exe](/Lab-Setup-Binary/Monitor_AMD64.exe) to the 'C:\Jobs' directory.
 
 3) Open a Command Prompt with local Administrator privileges and run the following command to grant write permissions to all built-in users for the 'C:\Jobs' directory:
 

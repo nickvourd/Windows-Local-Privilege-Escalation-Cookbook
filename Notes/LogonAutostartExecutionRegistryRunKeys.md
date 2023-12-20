@@ -32,7 +32,13 @@ Outcome:
 
 ![Autostart-Registry-Keys-Create-Directory](/Pictures/AutostartRegistryKeys-LabSetup-Part1.png)
 
-2) Download the file [NCV_AMD64.exe](/Lab-Setup-Binary/NCV_ADM64.exe) in the 'C:\Program Files\NickvourdSrv' directory.
+2) Download the file [NCV_AMD64.exe](/Lab-Setup-Binary/NCV_ADM64.exe) to the 'C:\Program Files\NickvourdSrv' directory.
+
+3) Modify the permissions of the 'C:\Program Files\NickvourdSrv' directory to allow Full Control for all users.
+
+Outcome:
+
+![Autostart-Registry-Keys-Modify-Directory-Permissions](/Pictures/AutostartRegistryKeys-LabSetup-Part2.png)
 
 ## Enumeration
 
