@@ -35,13 +35,13 @@ I hope to find this CookBook useful and learn new stuff 😉.
 
 In the following table, some popular and useful tools for Windows local privilege escalation are presented:
 
-| Name | Language | Description |
-| ---- |:-----------:|:-----------:|
-| [SharpUp](https://github.com/GhostPack/SharpUp) | C# | SharpUp is a C# port of various PowerUp functionality |
-| [PowerUp](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1) | PowerShell | PowerUp aims to be a clearinghouse of common Windows privilege escalation |
-| [BeRoot](https://github.com/AlessandroZ/BeRoot) | Python | BeRoot(s) is a post exploitation tool to check common Windows misconfigurations to find a way to escalate our privilege |
-| [Privesc](https://github.com/enjoiz/Privesc) | PowerShell | Windows PowerShell script that finds misconfiguration issues which can lead to privilege escalation |
-| [Winpeas](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS/winPEASexe) | C# | Windows local Privilege Escalation Awesome Script |
+| Name | Language | Author | Description |
+|:-----------:|:-----------:|:-----------:|:-----------:|
+| [SharpUp](https://github.com/GhostPack/SharpUp) | C# | [@harmj0y](https://twitter.com/harmj0y) | SharpUp is a C# port of various PowerUp functionality |
+| [PowerUp](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1) | PowerShell | [@harmj0y](https://twitter.com/harmj0y) | PowerUp aims to be a clearinghouse of common Windows privilege escalation |
+| [BeRoot](https://github.com/AlessandroZ/BeRoot) | Python | [AlessandroZ](https://github.com/AlessandroZ) | BeRoot(s) is a post exploitation tool to check common Windows misconfigurations to find a way to escalate our privilege |
+| [Privesc](https://github.com/enjoiz/Privesc) | PowerShell | [enjoiz](https://github.com/enjoiz) | Windows PowerShell script that finds misconfiguration issues which can lead to privilege escalation |
+| [Winpeas](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS/winPEASexe) | C# | [@hacktricks_live](https://twitter.com/hacktricks_live) | Windows local Privilege Escalation Awesome Script |
 
 ## Vulnerabilities
 
@@ -67,3 +67,4 @@ This CookBook presents the following Windows vulnerabilities:
 - [Metasploit Website](https://www.metasploit.com/)
 - [Evil-WinRM GitHub by Hackplayers](https://github.com/Hackplayers/evil-winrm)
 - [Windows Privilege Escalation Youtube Playlist by Conda](https://www.youtube.com/watch?v=WWE7VIpgd5I&list=PLDrNMcTNhhYrBNZ_FdtMq-gLFQeUZFzWV&index=13)
+- [Seatbelt GitHub by GhostPack](https://github.com/GhostPack/Seatbelt)
