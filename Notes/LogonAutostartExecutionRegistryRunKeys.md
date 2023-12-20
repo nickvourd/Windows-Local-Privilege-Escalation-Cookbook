@@ -25,10 +25,14 @@ Attackers may exploit the Logon Autostart Execution feature by inserting malicio
 1) Open a Command Prompt with local Administrator privileges and run the following command to create a new folder:
 
 ```
-mkdir C:\Program Files\NickvourdSrv
+mkdir "C:\Program Files\NickvourdSrv"
 ```
 
 Outcome:
+
+![Autostart-Registry-Keys-Create-Directory](/Pictures/AutostartRegistryKeys-LabSetup-Part1.png)
+
+2) Download the file [NCV_AMD64.exe](/Lab-Setup-Binary/NCV_AMD64.exe) in the 'C:\Program Files\NickvourdSrv' directory.
 
 ## Enumeration
 
