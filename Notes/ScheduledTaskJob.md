@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Scheduled Task/Job](#scheduled-task-Job)
+- [Scheduled Task/Job](#scheduled-task/Job)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Lab Setup](#lab-setup)
