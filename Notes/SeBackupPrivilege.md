@@ -1,5 +1,20 @@
 # SeBackupPrivilege
 
+## Table of Contents
+
+- [SeBackupPrivilege](#SeBackupPrivilege)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Lab Setup](#lab-setup)
+    - [Manual Lab Setup](#manual-lab-setup)
+    - [PowerShell Script Lab Setup](#powershell-script-lab-setup)
+  - [Enumeration](#enumeration)
+    - [Manual Enumeration](#manual-enumeration)
+    - [Tool Enumeration](#tool-enumeration)
+  - [Exploitation](#exploitation)
+  - [Mitigation](#mitigation)
+  - [References](#references)
+
 ## Description
 
 The SeBackupPrivilege is a Windows privilege that provides a user or process with the ability to read files and directories, regardless of the security settings on those objects. This privilege can be used by certain backup programs or processes that require the capability to back up or copy files that would not normally be accessible to the user. 
@@ -162,3 +177,7 @@ Follow the steps below to remove the `SeBackupPrivilege` from a user:
 4) Double-click the policy, and a properties window will appear.
 
 5) In the properties window, you can remove the user or group from the list to revoke the privilege. Click **Apply** and then **OK** to save the changes.
+
+## References
+
+- [Special privileges assigned to new logon Microsoft](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4672)
