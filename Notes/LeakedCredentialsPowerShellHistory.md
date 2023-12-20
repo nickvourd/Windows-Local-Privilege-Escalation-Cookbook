@@ -46,7 +46,13 @@ Outcome:
 
 ## Enumeration
 
-To observe the leaked credentials, you should read the `C:\Users\<User>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` PowerShell history file.
+To observe the leaked credentials, you should read the `C:\Users\<User>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` PowerShell history file:
+
+```
+type C:\Users\<User>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+```
+
+Outcome:
 
 ![Leaked-Creds-PS-History-Enumeration](/Pictures/Leaked-Credentials-PS-Enumeration.png)
 
