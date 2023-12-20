@@ -121,7 +121,7 @@ Outcome:
 
 7) Reboot the victim's machine and login as Adminstrator:
 
-![Reboot-victim-machine](/Pictures/Reboot-victim-machine2.png)
+![Reboot-victim-machine](/Pictures/Reboot-Victim-Machine2.png)
 
 8) Verify the reverse shell on your Kali machine:
 
