@@ -73,7 +73,7 @@ Outcome:
 
 ### Manual Enumeration
 
-To perform manual enumeration and identify whether a Windows workstation is vulnerable to the RegistryAutoruns issue, you can use the following commands from a command prompt:
+To perform manual enumeration and identify whether a Windows workstation is vulnerable to the RegistryAutoruns issue, you can use the following command from a command prompt:
 
 ```
 reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
