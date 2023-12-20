@@ -1,4 +1,4 @@
-# Windows Local Privilege Escalation Cookbook (On Progress)
+# Windows Local Privilege Escalation Cookbook (In Progress)
 <p align="center">
   <img src="/Pictures/Windows-Funny.jpg">
 </p>
