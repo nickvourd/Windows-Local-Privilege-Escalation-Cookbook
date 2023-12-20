@@ -1,5 +1,18 @@
 # Stored Credentials (Runas)
 
+## Table of Contents
+
+- [Stored Credentials (Runas)](#stored-credentials-runas)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Lab Setup](#lab-setup)
+    - [Manual Lab Setup](#manual-lab-setup)
+    - [PowerShell Script Lab Setup](#powershell-script-lab-setup)
+  - [Enumeration](#enumeration)
+  - [Exploitation](#exploitation)
+  - [Mitigation](#mitigation)
+  - [References](#references)
+
 ## Description
 
 The Credentials Manager is a feature in Windows that securely stores usernames and passwords for websites, applications, and network resources. This component is particularly helpful for users who want to manage and retrieve their login information easily without having to remember each set of credentials.
