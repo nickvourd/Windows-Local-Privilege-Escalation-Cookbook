@@ -553,8 +553,6 @@ To mitigate stored credentials from Windows Credentials manager. Please follow t
 
 - [Privilege Escalation Wikipedia](https://en.wikipedia.org/wiki/Privilege_escalation)
 - [SharpCollection GitHub by Flangvik](https://github.com/Flangvik/SharpCollection)
-- [Windows Installer Microsoft](https://learn.microsoft.com/en-us/windows/win32/msi/windows-installer-portal)
-- [How to Create the Windows Installer File (*.msi) Microsoft](https://learn.microsoft.com/en-us/mem/configmgr/develop/apps/how-to-create-the-windows-installer-file-msi)
 - [Metasploit Website](https://www.metasploit.com/)
 - [Evil-WinRM GitHub by Hackplayers](https://github.com/Hackplayers/evil-winrm)
 - [Windows Privilege Escalation Youtube Playlist by Conda](https://www.youtube.com/watch?v=WWE7VIpgd5I&list=PLDrNMcTNhhYrBNZ_FdtMq-gLFQeUZFzWV&index=13)
