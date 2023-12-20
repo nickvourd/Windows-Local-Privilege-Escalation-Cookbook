@@ -22,7 +22,7 @@ Attackers may exploit the Logon Autostart Execution feature by inserting malicio
 
 ### Manual Lab Setup
 
-1) Open a Command Prompt with local Administrator privileges and run the following command to create a new folder:
+1) Open a PowerShell with local Administrator privileges and run the following command to create a new folder:
 
 ```
 mkdir "C:\Program Files\NickvourdSrv"
@@ -34,11 +34,23 @@ Outcome:
 
 2) Download the file [NCV_AMD64.exe](/Lab-Setup-Binary/NCV_ADM64.exe) to the 'C:\Program Files\NickvourdSrv' directory.
 
-3) Modify the permissions of the 'C:\Program Files\NickvourdSrv' directory to allow Full Control for all users.
-
-Outcome:
+3) Modify the permissions of the 'C:\Program Files\NickvourdSrv' directory to allow Full Control for all users:
 
 ![Autostart-Registry-Keys-Modify-Directory-Permissions](/Pictures/AutostartRegistryKeys-LabSetup-Part2.png)
+
+4) Open a PowerShell with local Administrator privileges and run the following command to edit registry key:
+
+```
+regedit
+```
+
+5) Navigate to `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run` and create new String Value `NickvourdSrv`:
+
+![Autostart-Registry-Keys-Create-Registry-key-String-Value](/Pictures/AutostartRegistryKeys-LabSetup-Part4.png)
+
+6) Modify the key string named `NickvourdSrv` with value data `C:\Program Files\NickvourdSrv\NCV_AMD64.exe`:
+
+![Autostart-Registry-Keys-Modify-Registry-key-String-Value](/Pictures/AutostartRegistryKeys-LabSetup-Part6.png)
 
 ## Enumeration
 

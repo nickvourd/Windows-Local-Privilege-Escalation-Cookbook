@@ -22,6 +22,7 @@ PowerShell history records previously run commands, including any sensitive data
 ```
 net user nikos Passw0rd! /add
 ```
+
 2) Add the new user to Administrators group:
 
 ```
