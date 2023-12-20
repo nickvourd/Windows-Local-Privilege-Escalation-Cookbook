@@ -119,12 +119,13 @@ Outcome:
 
 6) Open a listener on your Kali machine.
 
-7) Reboot the victim's machine:
+7) Reboot the victim's machine and login as Adminstrator:
 
-![Reboot-victim-machine](/Pictures/Reboot-victim-machine.png)
+![Reboot-victim-machine](/Pictures/Reboot-victim-machine2.png)
 
 8) Verify the reverse shell on your Kali machine:
 
+![Reverse-Shell-As-Admin-RegistryAutoRuns](/Pictures/Reverse-Shell-As-Admin-RegistryAutoRuns.png)
 
 ## Mitigation
 
