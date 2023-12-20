@@ -101,7 +101,7 @@ Outcome:
 
 ![Task-Scheduler-Enumeration](/Pictures/Taskscheduler-Enumeration.png)
 
-## Exploitaion
+## Exploitation
 
 1) Use msfvenom to generate a malicious executable (exe) file that can be executed via the 'MagicTask' scheduled task:
 

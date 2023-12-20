@@ -119,6 +119,13 @@ Outcome:
 
 6) Open a listener on your Kali machine.
 
+7) Reboot the victim's machine:
+
+![Reboot-victim-machine](/Pictures/Reboot-victim-machine.png)
+
+8) Verify the reverse shell on your Kali machine:
+
+
 ## Mitigation
 
 ## References
