@@ -29,6 +29,7 @@ I hope to find this CookBook useful and learn new stuff 😉.
   - [Table of Contents](#table-of-contents)
   - [Useful Tools](#useful-tools)
   - [Vulnerabilities](#vulnerabilities)
+  - [References](#references)
 
 ## Useful Tools
 
