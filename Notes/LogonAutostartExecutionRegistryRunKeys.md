@@ -129,6 +129,14 @@ Outcome:
 
 ## Mitigation
 
+To defend against Registry auto-run vulnerabilities, adjust permissions on folders containing executables initiated through this mechanism. This limits unauthorized access and strengthens security measures.
+
+Moreover, to delete a specific auto-run key value from the Windows Registry, you can use the following command in Command Prompt with local Administrator privileges:
+
+```
+reg delete "HKLM\Software\Microsoft\Windows\CurrentVersion\Run" /v "<KeyName>" /f
+```
+
 ## References
 
 - [Run and RunOnce Registry Keys Microsoft](https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys)
