@@ -15,6 +15,7 @@
     - [Manual Exploitation](#manual-exploitation)
     - [Tool Exploitation](#tool-Exploitation)
   - [Mitigation](#mitigation)
+  - [References](#references)
 
 ## Description
 
@@ -233,3 +234,5 @@ msiexec /q /n /uninstall nickvourd.msi
 ## Mitigation
 
 To mitigate the `AlwaysInstallElevated` vulnerability, it is recommended to set the `AlwaysInstallElevated` value to `0` in both the `HKEY_LOCAL_MACHINE` and `HKEY_CURRENT_USER` hives in the Windows Registry.
+
+## References
