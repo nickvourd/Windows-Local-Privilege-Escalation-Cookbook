@@ -11,7 +11,6 @@
   - [Mitigation](#mitigation)
   - [References](#references)
 
-
 ## Description
 
 PowerShell history records previously run commands, including any sensitive data such as passwords. Unauthorized access to this history could lead to credential leaks, and might to privilege escalation.
@@ -68,3 +67,8 @@ To clear the PowerShell history file, you can delete the content of the file dir
 ```
 Clear-Content -Path "C:\Users\<User>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
 ```
+
+## References
+
+- [Powershell Wikipedia](https://en.wikipedia.org/wiki/PowerShell)
+- [PowerShell History Microsoft](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_history?view=powershell-7.4)
