@@ -121,3 +121,7 @@ To mitigate stored credentials from Windows Credentials manager. Please follow t
 4) Verify that the stored credentials have been successfully removed from the Windows Credentials Manager:
 
 ![Stored-Creds-Remove-Creds-Verification](/Pictures/Stored-Creds-Control-Panel-5.png)
+
+## References
+
+- [Interactive Logon Authentication Microsoft](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-authsod/bfc67803-2c41-4fde-8519-adace79465f6)
