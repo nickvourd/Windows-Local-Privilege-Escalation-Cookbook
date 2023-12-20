@@ -552,7 +552,6 @@ To mitigate stored credentials from Windows Credentials manager. Please follow t
 ## References
 
 - [Privilege Escalation Wikipedia](https://en.wikipedia.org/wiki/Privilege_escalation)
-- [AlwaysInstallElevated Microsoft](https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated)
 - [SharpCollection GitHub by Flangvik](https://github.com/Flangvik/SharpCollection)
 - [Windows Installer Microsoft](https://learn.microsoft.com/en-us/windows/win32/msi/windows-installer-portal)
 - [How to Create the Windows Installer File (*.msi) Microsoft](https://learn.microsoft.com/en-us/mem/configmgr/develop/apps/how-to-create-the-windows-installer-file-msi)
