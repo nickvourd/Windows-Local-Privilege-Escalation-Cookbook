@@ -22,6 +22,14 @@ Attackers may exploit the Logon Autostart Execution feature by inserting malicio
 
 ### Manual Lab Setup
 
+1) Open a Command Prompt with local Administrator privileges and run the following command to create a new folder:
+
+```
+mkdir C:\Program Files\NickvourdSrv
+```
+
+Outcome:
+
 ## Enumeration
 
 ## Exploitation
