@@ -9,6 +9,8 @@
     - [Manual Lab Setup](#manual-lab-setup)
     - [PowerShell Script Lab Setup](#powershell-script-lab-setup)
   - [Enumeration](#enumeration)
+    - [Manual Enumeration](#manual-enumeration)
+    - [Tool Enumeration](#tool-enumeration)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
   - [References](#references)
@@ -68,6 +70,32 @@ Outcome:
 ![Autostart-Registry-Keys-PowerShell-Lab-Setup-Script](/Pictures/AutostartRegistryKeys-LabSetup-Part7.png)
 
 ## Enumeration
+
+### Manual Enumeration
+
+To perform manual enumeration and identify whether a Windows workstation is vulnerable to the RegistryAutoruns issue, you can use the following commands from a command prompt:
+
+```
+reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+```
+
+Outcome:
+
+![RegistryAutoruns-Manual-Enumeration](/Pictures/RegistryAutoruns-Manual.png)
+
+### Tool Enumeration
+
+To run the SharpUp tool and perform an enumeration of the `RegistryAutoruns` vulnerability, you can execute the following command with appropriate arguments:
+
+```
+SharpUp.exe audit RegistryAutoruns
+```
+
+Outcome:
+
+![RegistryAutoruns-SharpUp](/Pictures/RegistryAutoruns-SharpUp.png)
+
+:information_source: Moreover, you can use `SharpUp.exe audit` to perform a comprehensive enumeration of all misconfigurations vulnerabilities on the specified machine.
 
 ## Exploitation
 
