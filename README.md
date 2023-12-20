@@ -204,4 +204,3 @@ To mitigate stored credentials from Windows Credentials manager. Please follow t
 - [Evil-WinRM GitHub by Hackplayers](https://github.com/Hackplayers/evil-winrm)
 - [Windows Privilege Escalation Youtube Playlist by Conda](https://www.youtube.com/watch?v=WWE7VIpgd5I&list=PLDrNMcTNhhYrBNZ_FdtMq-gLFQeUZFzWV&index=13)
 - [Interactive Logon Authentication Microsoft](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-authsod/bfc67803-2c41-4fde-8519-adace79465f6)
-- [Task Scheduler for developers Microsoft](https://learn.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page)
