@@ -1,5 +1,17 @@
 # Leaked Credentials (PowerShell History)
 
+## Table of Contents
+
+- [Leaked Credentials (PowerShell History)](#leaked-redentials-(powerShell-history))
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Lab Setup](#lab-setup)
+  - [Enumeration](#enumeration)
+  - [Exploitation](#exploitation)
+  - [Mitigation](#mitigation)
+  - [References](#references)
+
+
 ## Description
 
 PowerShell history records previously run commands, including any sensitive data such as passwords. Unauthorized access to this history could lead to credential leaks, and might to privilege escalation.
