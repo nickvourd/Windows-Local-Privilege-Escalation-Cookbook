@@ -102,3 +102,6 @@ Outcome:
 ## Mitigation
 
 ## References
+
+- [Run and RunOnce Registry Keys Microsoft](https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys)
+- [Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder Mitre](https://attack.mitre.org/techniques/T1547/001/)
