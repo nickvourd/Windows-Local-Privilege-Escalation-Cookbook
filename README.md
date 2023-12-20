@@ -50,7 +50,7 @@ This CookBook presents the following Windows vulnerabilities:
 - [AlwaysInstallElevated](/Notes/AlwaysInstallElevated.md)
 - [Logon Autostart Execution (Registry Run Keys)](#logon-autostart-execution-registry-run-keys)
 - [Logon Autostart Execution (Startup Folder)](#logon-autostart-execution-startup-folder)
-- [Leaked Credentials (PowerShell History)](#leaked-credentials-powershell-history)
+- [Leaked Credentials (PowerShell History)](/Notes/LeakedCredentialsPowerShellHistory.md)
 - [Scheduled Task/Job](#scheduled-taskjob)
 - [SeBackupPrivilege](#sebackupprivilege)
 - [SeImpersonatePrivilege](#seimpersonateprivilege)
