@@ -7,6 +7,7 @@
   - [Description](#description)
   - [Lab Setup](#lab-setup)
     - [Manual Lab Setup](#manual-lab-setup)
+    - [PowerShell Script Lab Setup](#powershell-script-lab-setup)
   - [Enumeration](#enumeration)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
@@ -51,6 +52,20 @@ regedit
 6) Modify the key string named `NickvourdSrv` with value data `C:\Program Files\NickvourdSrv\NCV_AMD64.exe`:
 
 ![Autostart-Registry-Keys-Modify-Registry-key-String-Value](/Pictures/AutostartRegistryKeys-LabSetup-Part6.png)
+
+### PowerShell Script Lab Setup 
+
+Another way to set up the lab with the 'Logon Autostart Execution (Registry Run Keys)' scenario is by using the custom PowerShell script named [LogonAutostartExecutionRegistryRunKeys.ps1](/Lab-Setup-Scripts/LogonAutostartExecutionRegistryRunKeys.ps1).
+
+Open a PowerShelll with local Administrator privileges and run the script:
+
+```
+.\LogonAutostartExecutionRegistryRunKeys.ps1
+```
+
+Outcome:
+
+![Autostart-Registry-Keys-PowerShell-Lab-Setup-Script](/Pictures/AutostartRegistryKeys-LabSetup-Part7.png)
 
 ## Enumeration
 
