@@ -48,17 +48,17 @@ In the following table, some popular and useful tools for Windows local privileg
 This CookBook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](/Notes/AlwaysInstallElevated.md)
-- [Logon Autostart Execution (Registry Run Keys)](#logon-autostart-execution-registry-run-keys)
-- [Logon Autostart Execution (Startup Folder)](#logon-autostart-execution-startup-folder)
+- [Logon Autostart Execution (Registry Run Keys)](/Notes/LogonAutostartExecutionRegistryRunKeys.md)
+- [Logon Autostart Execution (Startup Folder)](#)
 - [Leaked Credentials (PowerShell History)](/Notes/LeakedCredentialsPowerShellHistory.md)
 - [Scheduled Task/Job](/Notes/ScheduledTaskJob.md)
 - [SeBackupPrivilege](/Notes/SeBackupPrivilege.md)
-- [SeImpersonatePrivilege](#seimpersonateprivilege)
+- [SeImpersonatePrivilege](#)
 - [Stored Credentials (Runas)](#stored-credentials-runas)
-- [Unquoted Service Path](#unquoted-service-path)
-- [Weak Service Binary Permissions](#weak-service-binary-permissions)
-- [Weak Service Permissions](#weak-service-permissions)
-- [Weak Registry Permissions](#weak-registry-permissions)
+- [Unquoted Service Path](#)
+- [Weak Service Binary Permissions](#)
+- [Weak Service Permissions](#)
+- [Weak Registry Permissions](#)
 
 ## Stored Credentials (Runas)
 
