@@ -5,13 +5,13 @@
 
 ## Description (Keynote)
 
-This CookBook was created with the main purpose of helping people understand local privilege escalation techniques on Windows environments. Moreover, it can be used for both attacking and defensive purposes.
+This Cookbook was created with the main purpose of helping people understand local privilege escalation techniques on Windows environments. Moreover, it can be used for both attacking and defensive purposes.
 
-:information_source: This CookBook focuses only on misconfiguration vulnerabilities on Windows workstations/servers/machines.
+:information_source: This Cookbook focuses only on misconfiguration vulnerabilities on Windows workstations/servers/machines.
 
 :warning: Evasion techniques to bypass security protections, endpoints, and antivirus are not included in this cookbook. I created this PowerShell script, [TurnOffAV.ps1](/Lab-Setup-Scripts/TurnOffAV.ps1), which permanently disables Windows Defender. Run this with local Administrator privileges.
 
-The main structure of this CookBook includes the following sections:
+The main structure of this Cookbook includes the following sections:
 
 - Description (of the vulnerability)
 - Lab Setup
@@ -24,7 +24,7 @@ I hope to find this CookBook useful and learn new stuff 😉.
 
 ## Table of Contents
 
-- [Windows Local Privilege Escalation CookBook](#windows-local-privilege-escalation-cookbook)
+- [Windows Local Privilege Escalation Cookbook](#windows-local-privilege-escalation-cookbook)
   - [Description (Keynote)](#description-keynote)
   - [Table of Contents](#table-of-contents)
   - [Useful Tools](#useful-tools)
@@ -45,7 +45,7 @@ In the following table, some popular and useful tools for Windows local privileg
 
 ## Vulnerabilities
 
-This CookBook presents the following Windows vulnerabilities:
+This Cookbook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](/Notes/AlwaysInstallElevated.md)
 - [Logon Autostart Execution (Registry Run Keys)](/Notes/LogonAutostartExecutionRegistryRunKeys.md)*
