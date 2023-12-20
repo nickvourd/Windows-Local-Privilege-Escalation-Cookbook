@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Leaked Credentials (PowerShell History)](#leaked-credentials-powerShell-history)
+- [Leaked Credentials (PowerShell History)](#leaked-credentials-powershell-history)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Lab Setup](#lab-setup)
