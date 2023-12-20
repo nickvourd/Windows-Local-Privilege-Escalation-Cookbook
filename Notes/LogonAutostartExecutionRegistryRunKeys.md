@@ -6,6 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Lab Setup](#lab-setup)
+    - [Manual Lab Setup](#manual-lab-setup)
   - [Enumeration](#enumeration)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
@@ -18,6 +19,8 @@ Logon Autostart Execution through Registry Run Keys is a Windows feature that en
 Attackers may exploit the Logon Autostart Execution feature by inserting malicious software into the Registry Run Keys. This enables the malicious code to automatically launch during system startup, potentially granting it elevated privileges. 
 
 ## Lab Setup
+
+### Manual Lab Setup
 
 ## Enumeration
 
