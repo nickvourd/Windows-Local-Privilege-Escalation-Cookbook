@@ -119,7 +119,7 @@ Outcome:
 
 :information_source: In order to create a MSI file with Visual Studio, you should have pre-installed the extension named **Mictosoft Visual Studio Installer Projects 2022**.
 
-Go to **Extensions** tab -> **Manage extensions** in Visual Studio. Go to the Online section, look for the extension, and download it. 
+Open an existing random project-> go to **Extensions** tab -> **Manage extensions** in Visual Studio. Go to the Online section, look for the extension, and download it. 
 
 ![Add-Exetnsion-In-Visual-Studio](/Pictures/Add-Exetension-Visula-Studio.png)
 
