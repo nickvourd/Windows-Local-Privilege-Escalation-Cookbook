@@ -1,6 +1,6 @@
 # Logon Autostart Execution (Startup Folder)
 
-## Table of Content
+## Table of Contents
 
 - [Table of Contents](#table-of-contents)
   - [Description](#description)
