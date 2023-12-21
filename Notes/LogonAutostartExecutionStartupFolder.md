@@ -2,7 +2,8 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
+- [Logon Autostart Execution (Startup Folder)](#logon-autostart-execution-startup-folder)
+  - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Lab Setup](#lab-setup)
   - [Enumeration](#enumeration)
