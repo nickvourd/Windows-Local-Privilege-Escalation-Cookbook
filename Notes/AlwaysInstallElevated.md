@@ -183,7 +183,7 @@ Outcome:
 
 14) Verify the reverse shell on your Kali machine:
 
-![Elevated-Privileges-Confirmation](/Pictures/Elevated-Privileges-Confirmation.png)
+![Elevated-Privileges-Confirmation](/Pictures/Elevated-Privileges-Confirmation1.png)
 
 :information_source: In order to remove the malicious MSI file from the victim, run the following command (in a unprivilege session):
 
