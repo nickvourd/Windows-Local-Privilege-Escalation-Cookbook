@@ -59,6 +59,8 @@ regedit
 
 ### PowerShell Script Lab Setup 
 
+:warning: To proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.
+
 Another way to set up the lab with the 'Logon Autostart Execution (Registry Run Keys)' scenario is by using the custom PowerShell script named [LogonAutostartExecutionRegistryRunKeys.ps1](/Lab-Setup-Scripts/LogonAutostartExecutionRegistryRunKeys.ps1).
 
 Open a PowerShelll with local Administrator privileges and run the script:
