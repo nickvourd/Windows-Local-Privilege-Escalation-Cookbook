@@ -25,7 +25,9 @@ Attackers may exploit the Logon Autostart Execution feature by inserting malicio
 
 ### Manual Lab Setup
 
+```
 :warning: To proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.
+```
 
 1) Open a PowerShell with local Administrator privileges and run the following command to create a new folder:
 
