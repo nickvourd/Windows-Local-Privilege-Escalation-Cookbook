@@ -7,6 +7,7 @@
   - [Description](#description)
   - [Lab Setup](#lab-setup)
     - [Manual Lab Setup](#manual-lab-setup)
+    - [PowerShell Script Lab Setup](#powershell-script-lab-setup)
   - [Enumeration](#enumeration)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
@@ -45,6 +46,8 @@ Outcome:
 4) Assign Full Control or Read and Write permissions to the Users group and then press "Apply" button:
 
 ![Logon-Autostart-Execution-Startup-Folder-Lab-Setup-Part-4](/Pictures/AutostartStartupFolder-LabSetup-Part4.png)
+
+### PowerShell Script Lab Setup 
 
 ## Enumeration
 
