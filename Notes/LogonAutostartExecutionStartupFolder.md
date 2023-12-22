@@ -19,6 +19,10 @@ Attackers may exploit the Logon Autostart Execution feature by inserting malicio
 
 ## Lab Setup
 
+### Manual Lab Setup
+
+
+
 ## Enumeration
 
 ## Exploitation
