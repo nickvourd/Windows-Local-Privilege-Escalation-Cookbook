@@ -17,33 +17,13 @@ PowerShell history records previously run commands, including any sensitive data
 
 ## Lab Setup
 
-1) Open a Powershell with local Administrator privileges and run the following command to create a new user:
+:warning: <b>If you are usinfg Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+
+Open a Powershell with local Administrator privileges and run the following command to change the passowrd of local Administrator:
 
 ```
-net user nikos Passw0rd! /add
+net user Administrator Passw0rd!
 ```
-
-2) Add the new user to Administrators group:
-
-```
-net localgroup "Administrators" nikos /add
-```
-
-3) Add the new user to Remote Desktop Users group:
-
-```
-net localgroup "Remote Desktop Users" nikos /add
-```
-
-4) Enable Remote Desktop Service:
-
-```
-Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
-```
-
-Outcome:
-
-![Leaked-Creds-PS-History-Manual-Lab-Setup](/Pictures/Leaked-Credentials-PS-Manual-Lab-setup.png)
 
 ## Enumeration
 
