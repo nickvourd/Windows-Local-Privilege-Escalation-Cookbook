@@ -9,6 +9,8 @@
     - [Manual Lab Setup](#manual-lab-setup)
     - [PowerShell Script Lab Setup](#powershell-script-lab-setup)
   - [Enumeration](#enumeration)
+    - [Manual Enumeration](#manual-enumeration)
+    - [Tool Enumeration](#tool-enumeration)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
   - [References](#references)
@@ -64,6 +66,30 @@ Outcome:
 ![Logon-Autostart-Execution-Startup-Folder-Lab-Setup-Script](/Pictures/AutostartStartupFolder-LabSetup-Script.png)
 
 ## Enumeration
+
+### Manual Enumeration
+
+To perform manual enumeration and identify whether a Windows workstation is vulnerable to the Startup Folder Autoruns issue, you can use the following command from a command prompt:
+
+```
+icacls "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
+```
+
+Outcome:
+
+![AutostartStartupFolder-Manual-Enumeration](/Pictures/AutostartStartupFolder-Manual-Enumeration.png)
+
+### Tool Enumeration
+
+To perform an enumeration of the `Startup Folder Autoruns` vulnerability, you can use accesschk.exe or accesschk64.exe from Sysinternals Suite and execute the following command with appropriate arguments:
+
+```
+accesschk.exe /accepteula "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
+```
+
+Outcome:
+
+![AutostartStartupFolder-Tool-Enumeration](/Pictures/AutostartStartupFolder-Tool-Enumeration.png)
 
 ## Exploitation
 

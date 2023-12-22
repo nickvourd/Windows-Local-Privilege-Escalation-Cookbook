@@ -68,3 +68,4 @@ This Cookbook presents the following Windows vulnerabilities:
 - [Evil-WinRM GitHub by Hackplayers](https://github.com/Hackplayers/evil-winrm)
 - [Windows Privilege Escalation Youtube Playlist by Conda](https://www.youtube.com/watch?v=WWE7VIpgd5I&list=PLDrNMcTNhhYrBNZ_FdtMq-gLFQeUZFzWV&index=13)
 - [Seatbelt GitHub by GhostPack](https://github.com/GhostPack/Seatbelt)
+- [Sysinternals Suite Microsoft](https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
