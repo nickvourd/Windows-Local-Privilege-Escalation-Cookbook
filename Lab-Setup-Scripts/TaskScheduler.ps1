@@ -52,7 +52,7 @@ Set-Acl -Path $folderPath -AclObject $acl
 Write-Host "`n[+] Permission has been granted to all built-in users to write to $folderPath`n"
 
 # Get the current username from the environment variable
-$username = $env:USERNAME
+$username = Administrator
 
 # Set the action for the scheduled task
 $action = New-ScheduledTaskAction -Execute "$folderPath\Monitor_AMD64.exe"
