@@ -121,5 +121,13 @@ Outcome:
 
 Properly configured permissions within the Startup Folder act as a preventive measure against unauthorized modifications or executions of files within the directory. This proactive approach effectively reduces the likelihood of malicious programs or scripts launching automatically during system booting.
 
+Moreover, to restore the default permissions of the Startup Folder, utilize the following command with elevated privileges:
+
+```
+icacls "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup" /reset /T /C /Q
+```
 
 ## References
+
+- [Add an app to run automatically at startup in Windows 10 Microsoft](https://support.microsoft.com/en-us/windows/add-an-app-to-run-automatically-at-startup-in-windows-10-150da165-dcd9-7230-517b-cf3c295d89dd)
+- [How To Find the Startup Folder in Windows 10 Softwarekeep](https://softwarekeep.com/help-center/how-to-find-the-startup-folder-in-windows-10)
