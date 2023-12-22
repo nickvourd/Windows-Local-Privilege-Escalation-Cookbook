@@ -129,7 +129,7 @@ Outcome:
 
 7) Wait five minutes and verify the reverse shell on your Kali machine:
 
-![Task-Scheduler-Verify-Reverse-Shell](/Pictures/Taskscheduler-11.png)
+![Task-Scheduler-Verify-Reverse-Shell](/Pictures/Taskscheduler-69.png)
 
 ## Mitigation
 
