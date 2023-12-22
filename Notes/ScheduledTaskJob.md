@@ -23,6 +23,8 @@ Attackers can exploit pre-configured tasks associated with privileged accounts t
 
 ### Manual Lab Setup
 
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+
 1) Create a folder named 'Jobs' in the C:\ directory.
 
 2) Download the file [Monitor_AMD64.exe](/Lab-Setup-Binary/Monitor_AMD64.exe) to the 'C:\Jobs' directory.
@@ -77,7 +79,9 @@ Outcome:
 
 ### PowerShell Script Lab Setup 
 
-Another way to set up the lab with the 'Scheduled Task/Job' scenario is by using the custom PowerShell script named [TaskScheduler.ps1](/Lab-Setup-Scripts/TaskScheduler.ps1).
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+
+To set up the lab with the 'Scheduled Task/Job' scenario is by using the custom PowerShell script named [TaskScheduler.ps1](/Lab-Setup-Scripts/TaskScheduler.ps1).
 
 Open a PowerShelll with local Administrator privileges and run the script:
 
