@@ -121,7 +121,13 @@ Outcome:
 
 Properly configured permissions within the Startup Folder act as a preventive measure against unauthorized modifications or executions of files within the directory. This proactive approach effectively reduces the likelihood of malicious programs or scripts launching automatically during system booting.
 
-Moreover, to restore the default permissions of the Startup Folder, utilize the following command with elevated privileges:
+Moreover, to restore the default permissions of the Startup Folder, utilize the following commands with elevated privileges:
+
+```
+takeown /F "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup" /A /R /D Y
+```
+
+and
 
 ```
 icacls "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup" /reset /T /C /Q
