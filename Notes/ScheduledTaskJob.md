@@ -91,7 +91,7 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
-![Create-A-New-Task-Script-Setup](/Pictures/Taskscheduler-14.png)
+![Create-A-New-Task-Script-Setup](/Pictures/Taskscheduler-9.png)
 
 ### Enumeration
 
