@@ -115,6 +115,8 @@ Outcome:
 
 6) Verify the reverse shell on your Kali machine:
 
+![Reverse-Shell-As-Admin-StartupFolderAutoRuns](/Pictures/Reverse-Shell-As-Admin-RegistryAutoRuns.png)
+
 ## Mitigation
 
 ## References
