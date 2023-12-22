@@ -119,4 +119,7 @@ Outcome:
 
 ## Mitigation
 
+Properly configured permissions within the Startup Folder act as a preventive measure against unauthorized modifications or executions of files within the directory. This proactive approach effectively reduces the likelihood of malicious programs or scripts launching automatically during system booting.
+
+
 ## References
