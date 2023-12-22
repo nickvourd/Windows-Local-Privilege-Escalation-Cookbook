@@ -35,7 +35,7 @@ C:\Users\<User>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleH
 
 Outcome:
 
-![Leaked-Creds-PS-History-Enumeration](/Pictures/Leaked-Credentials-PS-Enumeration.png)
+![Leaked-Creds-PS-History-Enumeration](/Pictures/Leaked-Credentials-PS-Enumeration1.png)
 
 ## Exploitation
 
