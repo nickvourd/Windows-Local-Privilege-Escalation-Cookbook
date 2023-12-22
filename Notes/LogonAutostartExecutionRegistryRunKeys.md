@@ -25,7 +25,7 @@ Attackers may exploit the Logon Autostart Execution feature by inserting malicio
 
 ### Manual Lab Setup
 
-:warning: <b>If you are usinfg Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
 1) Open a PowerShell with local Administrator privileges and run the following command to create a new folder:
 
@@ -59,7 +59,7 @@ regedit
 
 ### PowerShell Script Lab Setup 
 
-:warning: <b>If you are usinfg Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
 To set up the lab with the 'Logon Autostart Execution (Registry Run Keys)' scenario use the custom PowerShell script named [LogonAutostartExecutionRegistryRunKeys.ps1](/Lab-Setup-Scripts/LogonAutostartExecutionRegistryRunKeys.ps1).
 
