@@ -32,9 +32,19 @@ C:\ProgramData\Microsoft\Windows\Start Menu\Programs\
 
 Outcome:
 
+![Logon-Autostart-Execution-Startup-Folder-Lab-Setup-Part-1](/Pictures/AutostartStartupFolder-LabSetup-Part1.png)
 
+2) Right click on Startup folder and choose properties option:
 
-2) 
+![Logon-Autostart-Execution-Startup-Folder-Lab-Setup-Part-2](/Pictures/AutostartStartupFolder-LabSetup-Part2.png)
+
+3) Choose the "Security" tab and select the "Users" group:
+
+![Logon-Autostart-Execution-Startup-Folder-Lab-Setup-Part-3](/Pictures/AutostartStartupFolder-LabSetup-Part3.png)
+
+4) Assign Full Control or Read and Write permissions to the Users group and then press "Apply" button:
+
+![Logon-Autostart-Execution-Startup-Folder-Lab-Setup-Part-4](/Pictures/AutostartStartupFolder-LabSetup-Part4.png)
 
 ## Enumeration
 
