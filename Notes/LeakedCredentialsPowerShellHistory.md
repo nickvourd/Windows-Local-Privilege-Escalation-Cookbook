@@ -39,7 +39,7 @@ Outcome:
 
 ## Exploitation
 
-Use these credentials to connect to a remote service or application. In this scenario, you can use these credentials to connect as Administrator via RDP to the victim's machine.
+Use these credentials to connect to a remote service or application. In this scenario, you can use these credentials to connect as local Administrator via RDP to the victim's machine.
 
 ![Leaked-Creds-PS-History-Exploitation](/Pictures/Leaked-Credentials-PS-Exploitation1.png)
 
