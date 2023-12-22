@@ -61,7 +61,7 @@ $action = New-ScheduledTaskAction -Execute "$folderPath\Monitor_AMD64.exe"
 $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 5) -RepetitionDuration (New-TimeSpan -Hours 24)
 
 # Create the principal with the current user and highest privileges
-$principal = New-ScheduledTaskPrincipal -UserId $username -LogonType Interactive -RunLevel Highest
+$principal = New-ScheduledTaskPrincipal -UserId $username -RunLevel Highest
 
 # Configure the settings for the scheduled task
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit 0 -DisallowHardTerminate -StartWhenAvailable
