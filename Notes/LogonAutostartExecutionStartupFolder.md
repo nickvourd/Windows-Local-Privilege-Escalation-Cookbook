@@ -25,7 +25,7 @@ Attackers may exploit the Logon Autostart Execution feature by inserting malicio
 
 ### Manual Lab Setup
 
-:warning: <b>If you are usinfg Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
 1) Navigate via File Explorer to the directory which contains StartUp Folder using the following path:
 
@@ -51,7 +51,7 @@ Outcome:
 
 ### PowerShell Script Lab Setup 
 
-:warning: <b>If you are usinfg Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
 To set up the lab with the 'Logon Autostart Execution (Startup Folder)' scenario use the custom PowerShell script named [LogonAutostartExecutionStartupFolder.ps1](/Lab-Setup-Scripts/LogonAutostartExecutionStartupFolder.ps1).
 
