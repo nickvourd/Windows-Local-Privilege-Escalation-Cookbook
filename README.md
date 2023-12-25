@@ -52,7 +52,7 @@ This Cookbook presents the following Windows vulnerabilities:
 - [Logon Autostart Execution (Startup Folder)](/Notes/LogonAutostartExecutionStartupFolder.md)
 - [Leaked Credentials (PowerShell History)](/Notes/LeakedCredentialsPowerShellHistory.md)
 - [SeBackupPrivilege](/Notes/SeBackupPrivilege.md)
-- SeImpersonatePrivilege*
+- [SeImpersonatePrivilege](/Notes/SeImpersonatePrivilege.md)*
 - [Stored Credentials (Runas)](/Notes/StoredCredentialsRunas.md)
 - Unquoted Service Path
 - Weak Service Binary Permissions
