@@ -55,3 +55,11 @@ net user ncv2 Passw0rd! /add
 Outcome:
 
 ![SeImpersonatePrivilege-Labsetup-Manual-4](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-4.png)
+
+7) Press "Next" until you reach the "Confirmation" section. In this section, check the checkbox for "Automatically restart":
+
+![SeImpersonatePrivilege-Labsetup-Manual-5](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-5.png)
+
+8) Finally, press the "Install" button.
+
+![SeImpersonatePrivilege-Labsetup-Manual-6](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-6.png)
