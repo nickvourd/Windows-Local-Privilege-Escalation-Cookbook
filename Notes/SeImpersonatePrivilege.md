@@ -35,7 +35,7 @@ However, if not properly managed or granted to unauthorized users or processes, 
 net user ncv2 Passw0rd! /add
 ```
 
-3) Then, open the "Server Manager" and select the option named "":
+3) Then, open the "Server Manager" and select the option named "Add roles and ":
 
 ![SeImpersonatePrivilege-Labsetup-Manual-1](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-1.png)
 
