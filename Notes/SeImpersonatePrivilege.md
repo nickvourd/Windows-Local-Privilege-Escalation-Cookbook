@@ -88,7 +88,7 @@ Outcome:
 
 ### Manual Enumeration
 
-After initial access via Web application as <> user, you can use the following command to find the privileges:
+After initial access via Web application as <> user, to perform manual enumeration, you can use the following command to enumerate the current privileges of the user:
 
 ```
 whoami /priv
