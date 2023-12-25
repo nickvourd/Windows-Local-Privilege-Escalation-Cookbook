@@ -46,3 +46,12 @@ net user ncv2 Passw0rd! /add
 5) Add the role named "Web Server (IIS)" and then press the button named "Add Features":
 
 ![SeImpersonatePrivilege-Labsetup-Manual-3](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-3.png)
+
+6) Press "Next", and in section named "Features" add the followings:
+   - ASP.NET 4.7
+   - WCF Services (1 of 5 installed)
+     - HTTP Activation
+    
+Outcome:
+
+![SeImpersonatePrivilege-Labsetup-Manual-4](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-4.png)
