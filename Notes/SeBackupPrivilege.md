@@ -25,13 +25,9 @@ However, if this privilege is not properly managed or if it is granted to unauth
 
 ### Manual Lab Setup
 
-1) Open a PowerShell with local Administrator privileges and run the following command to create a new user:
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
-```
-net user ncv Passw0rd! /add
-```
-
-2) Run the following command to enable the WinRM service:
+1) Open a PowerShell with local Administrator privileges and run the following command to enable the WinRM service:
 
 ```
 Enable-PSRemoting -Force
@@ -44,13 +40,7 @@ Enable-PSRemoting -Force
 - Under the network profile, set the location to "Private."
 - Lastly, execute the following command with Local Administrator privileges to enable PS remoting: `Set-WSManQuickConfig`.
 
-3) Run the following command to add new user to "Remote Management Users" Group:
-
-```
-net localgroup "Remote Management Users" ncv /add
-```
-
-4) Run the following commands to install and import the Carbon module:
+2) Run the following commands to install and import the Carbon module:
 
 ```
 Install-Module -Name carbon -Force
@@ -65,13 +55,13 @@ Install-Module -Name carbon -Force
  5) Use the following cmdlets to grant the SeBackupPrivilege to the new user and verify the privilege:
 
  ```
- Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
+ Grant-CPrivilege -Identity Administrator -Privilege SeBackupPrivilege
  ```
 
  and
 
  ```
- Test-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
+ Test-CPrivilege -Identity Administrator -Privilege SeBackupPrivilege
  ```
 
 Outcome:
@@ -80,7 +70,9 @@ Outcome:
 
 ### PowerShell Script Lab Setup 
 
-Another way to set up the lab with the 'SeBackupPrivilege' vulnerability is by using the custom PowerShell script named [SeBackupPrivilege.ps1](/Lab-Setup-Scripts/SeBackupPrivilege.ps1).
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+
+To set up the lab with the 'SeBackupPrivilege' vulnerability is by using the custom PowerShell script named [SeBackupPrivilege.ps1](/Lab-Setup-Scripts/SeBackupPrivilege.ps1).
 
 Open a PowerShelll with local Administrator privileges and run the script:
 

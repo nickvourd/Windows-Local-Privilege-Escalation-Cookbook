@@ -18,17 +18,9 @@ $ascii = @"
 Write-Host $ascii`n
 
 
-Write-Host "[+] Createing a new user`n"
-#Create new user
-net user ncv Passw0rd! /add
-
 Write-Host "[+] Enabling WinRM service`n"
 #Enable WinRM service
 Enable-PSRemoting -Force
-
-Write-Host "[+] Add the new user to Remote Management Users group`n"
-#Add the new user to Remote Management Group
-net localgroup "Remote Management Users" ncv /add
 
 Write-Host "[+] Installing Carbon module`n"
 #Install Carbon module
@@ -40,8 +32,4 @@ Import-Module carbon
 
 Write-Host "[+] Granting SeBackupPrivilege to the current user`n"
 #Grant SeBackupPrivilege to the current user
-Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
-
-Write-Host "[+] New user credentials"
-Write-Host "Username: ncv"
-Write-Host "Password: Passw0rd!`n"
+Grant-CPrivilege -Identity Administrator -Privilege SeBackupPrivilege
