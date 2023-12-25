@@ -81,4 +81,9 @@ To set up the lab with the 'SeImpersonatePrivilege' vulnerability is by using th
 ```
 
 Outcome:
+
 ![SeImpersonatePrivilege-Labsetup-Script](/Pictures/SeImpersonatePrivilege-Labsetup-Script.png)
+
+## Enumeration
+
+### Manual Enumeration
