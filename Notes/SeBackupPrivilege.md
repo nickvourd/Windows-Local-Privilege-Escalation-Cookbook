@@ -54,13 +54,13 @@ Install-Module -Name carbon -Force
  4) Use the following cmdlets to grant the SeBackupPrivilege to the current user and verify the privilege:
 
  ```
- Grant-CPrivilege -Identity nickvourd -Privilege SeBackupPrivilege
+ Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
  ```
 
  and
 
  ```
- Test-CPrivilege -Identity nickvourd -Privilege SeBackupPrivilege
+ Test-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
  ```
 
 Outcome:
