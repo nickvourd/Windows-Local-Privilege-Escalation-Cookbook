@@ -24,3 +24,5 @@ However, if not properly managed or granted to unauthorized users or processes, 
 ## Lab Setup
 
 ### Manual Lab Setup
+
+:warning: <b>For this scenario, it is recommended to use Windows Server 2019 (Build 17763) rather than Windows 10/11.</b>
