@@ -69,3 +69,5 @@ Outcome:
 ### PowerShell Script Lab Setup
 
 :warning: <b>For this scenario, it is recommended to use Windows Server 2019 (Build 17763) rather than Windows 10/11.</b>
+
+To set up the lab with the 'SeImpersonatePrivilege' vulnerability is by using the custom PowerShell script named SeImpersonatePrivilege.ps1.
