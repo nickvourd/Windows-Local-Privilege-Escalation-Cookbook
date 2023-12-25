@@ -29,3 +29,9 @@ However, if not properly managed or granted to unauthorized users or processes, 
 
 1) Authenticate to the server as the local Administrator.
 
+2) Open a Command Prompt (cmd) and use the following command to create a new user:
+
+```
+net user ncv Passw0rd! /add
+```
+
