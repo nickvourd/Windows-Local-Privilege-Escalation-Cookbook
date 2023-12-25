@@ -65,3 +65,7 @@ Outcome:
 9) Delete all files from "C:\inetpub\wwwroot" and add the [index.html](/Lab-Setup-Source-Code/index.html) and [cmdasp.aspx](/Lab-Setup-Source-Code/cmdasp.aspx):
 
 ![SeImpersonatePrivilege-Labsetup-Manual-8](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-8.png)
+
+### PowerShell Script Lab Setup
+
+:warning: <b>For this scenario, it is recommended to use Windows Server 2019 (Build 17763) rather than Windows 10/11.</b>
