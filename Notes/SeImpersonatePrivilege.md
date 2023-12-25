@@ -42,3 +42,7 @@ net user ncv2 Passw0rd! /add
 4) Press the "Next" button until you reach the "Server Roles" section:
 
 ![SeImpersonatePrivilege-Labsetup-Manual-2](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-2.png)
+
+5) Add the role named "Web Server (IIS)" and then press the button named "Add Features":
+
+![SeImpersonatePrivilege-Labsetup-Manual-3](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-3.png)
