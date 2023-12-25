@@ -97,3 +97,5 @@ whoami /priv
 Outcome:
 
 ![SeImpersonatePrivilege-Manual-Enum](/Pictures/SeImpersonatePrivilege-Manual-Enum.png)
+
+### Tool Enumeration
