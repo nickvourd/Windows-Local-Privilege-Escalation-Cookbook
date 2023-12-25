@@ -155,6 +155,8 @@ Outcome:
 
 ![SeBackupPrivilege-Exploitation-Evil-WinRM-Pass-The-Hash](/Pictures/SeBackUp-Exploitation-3.png)
 
+5) Last but not least, restart the computer.
+
 ## Mitigation
 
 Follow the steps below to remove the `SeBackupPrivilege` from a user:
