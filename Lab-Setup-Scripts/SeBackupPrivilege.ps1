@@ -17,6 +17,14 @@ $ascii = @"
 
 Write-Host $ascii`n
 
+Write-Host "[+] Creating a new user`n"
+#Create a new user
+net user ncv Passw0rd! /add
+
+Write-Host "[+] Enabling WinRM Service`n"
+#Enable WinRM Service
+Enable PS-Remoting -Force
+
 Write-Host "[+] Installing Carbon module`n"
 #Install Carbon module
 Install-Module -Name carbon -Force
@@ -25,6 +33,6 @@ Write-Host "[+] Importing Carbon module`n"
 #Import Carbon module
 Import-Module carbon
 
-Write-Host "[+] Granting SeBackupPrivilege to the current user`n"
-#Grant SeBackupPrivilege to the current user
-Grant-CPrivilege -Identity nickvourd -Privilege SeBackupPrivilege
+Write-Host "[+] Granting SeBackupPrivilege to the new user`n"
+#Grant SeBackupPrivilege to the new user
+Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
