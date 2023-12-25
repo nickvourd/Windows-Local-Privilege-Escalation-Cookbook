@@ -63,3 +63,7 @@ Outcome:
 8) Finally, press the "Install" button.
 
 ![SeImpersonatePrivilege-Labsetup-Manual-6](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-6.png)
+
+9) Verify that the IIS Web site is working:
+
+![SeImpersonatePrivilege-Labsetup-Manual-7](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-6.png)
