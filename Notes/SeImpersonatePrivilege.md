@@ -88,8 +88,12 @@ Outcome:
 
 ### Manual Enumeration
 
-After initial access via Web application as `iisapppool\defaultapppool` user, to perform manual enumeration, you can use the following command to enumerate the current privileges of the user:
+After initial access via Web application as `iis apppool\defaultapppool` user, to perform manual enumeration, you can use the following command to enumerate the current privileges of the user:
 
 ```
 whoami /priv
 ```
+
+Outcome:
+
+![SeImpersonatePrivilege-Manual-Enum](/Pictures/SeImpersonatePrivilege-Manual-Enum.png)
