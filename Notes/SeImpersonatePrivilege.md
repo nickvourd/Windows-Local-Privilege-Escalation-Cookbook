@@ -99,3 +99,19 @@ Outcome:
 ![SeImpersonatePrivilege-Manual-Enum](/Pictures/SeImpersonatePrivilege-Manual-Enum.png)
 
 ### Tool Enumeration
+
+To run the SharpUp tool and perform an enumeration of the `SeImpersonatePrivilege` vulnerability, you can execute the following command with appropriate arguments:
+
+```
+SharpUp.exe audit TokenPrivileges
+```
+
+Outcome:
+
+![SeImpersonatePrivilege-Tool-Enum](/Pictures/SeImpersonatePrivilege-Tool-Enum.png)
+
+## Exploitation
+
+## Mitigation
+
+## References
