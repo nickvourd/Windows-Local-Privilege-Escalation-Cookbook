@@ -66,4 +66,4 @@ Outcome:
 
 9) Verify that the IIS Web site is working:
 
-![SeImpersonatePrivilege-Labsetup-Manual-7](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-6.png)
+![SeImpersonatePrivilege-Labsetup-Manual-7](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-7.png)
