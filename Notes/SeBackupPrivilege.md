@@ -87,7 +87,7 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
-![SebackupPrivilege-Script-Setup](/Pictures/SeBackUp-Script.png)
+![SebackupPrivilege-Script-Setup](/Pictures/SeBackUp-Script1.png)
 
 ## Enumeration
 
@@ -101,7 +101,7 @@ whoami /priv
 
 Outcome:
 
-![SeBackupPrivilege-Manual-Enumeration](/Pictures/SeBackUp-Manual-Enum.png)
+![SeBackupPrivilege-Manual-Enumeration](/Pictures/SeBackUp-Manual-Enum1.png)
 
 ### Tool Enumeration
 
