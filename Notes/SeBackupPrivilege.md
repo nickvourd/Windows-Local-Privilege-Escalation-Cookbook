@@ -63,6 +63,8 @@ Install-Module -Name carbon -Force
  Test-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
  ```
 
+5) Last but not least, restart the computer.
+
 Outcome:
 
 ![SebackupPrivilege-Manual-Setup](/Pictures/SeBackUp-Manual-Setup1.png)
@@ -154,8 +156,6 @@ evil-winrm -i <ip> -u "Administrator" -H "<hash>"
 Outcome:
 
 ![SeBackupPrivilege-Exploitation-Evil-WinRM-Pass-The-Hash](/Pictures/SeBackUp-Exploitation-3.png)
-
-5) Last but not least, restart the computer.
 
 ## Mitigation
 
