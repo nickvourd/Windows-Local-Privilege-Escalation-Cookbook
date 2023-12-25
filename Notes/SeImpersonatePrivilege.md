@@ -39,3 +39,6 @@ net user ncv2 Passw0rd! /add
 
 ![SeImpersonatePrivilege-Labsetup-Manual-1](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-1.png)
 
+4) Press the "Next" button until you reach the "Server Roles" section:
+
+![SeImpersonatePrivilege-Labsetup-Manual-2](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-2.png)
