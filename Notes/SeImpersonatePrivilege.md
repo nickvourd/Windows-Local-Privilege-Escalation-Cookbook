@@ -35,38 +35,3 @@ However, if not properly managed or granted to unauthorized users or processes, 
 net user ncv2 Passw0rd! /add
 ```
 
-3) Run the following command to enable WinRM service:
-
-```
-Enable-PSRemoting -Force
-```
-
-4) Add the new user to "Remote Management Users" group:
-
-```
-net localgroup "Remote Management Users" ncv2 /add
-```
-  
-5) Then, run the following commands to install and import the Carbon module:
-
-```
-Install-Module -Name carbon -Force
-```
-
- and 
-
- ```
- Import-Module carbon
- ```
-
- 6) Use the following cmdlets to grant the SeImpersonatePrivilege to the current user and verify the privilege:
-
- ```
- Grant-CPrivilege -Identity ncv2 -Privilege SeImpersonatePrivilege
- ```
-
- and
-
- ```
- Test-CPrivilege -Identity ncv2 -Privilege SeImpersonatePrivilege
- ```
