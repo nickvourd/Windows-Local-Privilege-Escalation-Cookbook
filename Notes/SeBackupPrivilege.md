@@ -27,7 +27,19 @@ However, if this privilege is not properly managed or if it is granted to unauth
 
 :warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
-1) Open a PowerShell with local Administrator privileges and run the following commands to install and import the Carbon module:
+1) Open a PowerShell with local Administrator privileges and run the following command to create a new user:
+
+```
+net user ncv Passw0rd! /add
+```
+
+2) Run the following command to enable WinRM service:
+
+```
+Enable-PSRemoting -Force
+```
+
+3) Then, run the following commands to install and import the Carbon module:
 
 ```
 Install-Module -Name carbon -Force
@@ -39,7 +51,7 @@ Install-Module -Name carbon -Force
  Import-Module carbon
  ```
 
- 2) Use the following cmdlets to grant the SeBackupPrivilege to the current user and verify the privilege:
+ 4) Use the following cmdlets to grant the SeBackupPrivilege to the current user and verify the privilege:
 
  ```
  Grant-CPrivilege -Identity nickvourd -Privilege SeBackupPrivilege
