@@ -21,6 +21,10 @@ Write-Host "[+] Creating a new user`n"
 #Create a new user
 net user ncv Passw0rd! /add
 
+Write-Host "[+] Adding the new user to Remote Management Users group`n"
+#Add the new user to Remote Management Users group
+net localgroup "Remote Management Users" ncv /add
+
 Write-Host "[+] Enabling WinRM Service`n"
 #Enable WinRM Service
 Enable PS-Remoting -Force
