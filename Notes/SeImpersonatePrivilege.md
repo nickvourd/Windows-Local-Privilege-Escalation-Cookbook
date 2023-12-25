@@ -62,11 +62,11 @@ Install-Module -Name carbon -Force
  6) Use the following cmdlets to grant the SeImpersonatePrivilege to the current user and verify the privilege:
 
  ```
- Grant-CPrivilege -Identity ncv -Privilege SeImpersonatePrivilege
+ Grant-CPrivilege -Identity ncv2 -Privilege SeImpersonatePrivilege
  ```
 
  and
 
  ```
- Test-CPrivilege -Identity ncv -Privilege SeImpersonatePrivilege
+ Test-CPrivilege -Identity ncv2 -Privilege SeImpersonatePrivilege
  ```
