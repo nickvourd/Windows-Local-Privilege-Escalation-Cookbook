@@ -139,3 +139,6 @@ Follow the steps below to remove the SeImpersonatePrivilege from a user:
 ## References
 
 - [Special privileges assigned to new logon Microsoft](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4672)
+- [Windows Potatoes by jlajara](https://jlajara.gitlab.io/Potatoes_Windows_Privesc)
+- [LocalPotato by decoder-it](https://github.com/decoder-it/LocalPotato)
+- [decoder-it blog](https://decoder.cloud)
