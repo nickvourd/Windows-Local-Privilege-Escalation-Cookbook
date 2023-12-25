@@ -35,3 +35,6 @@ However, if not properly managed or granted to unauthorized users or processes, 
 net user ncv Passw0rd! /add
 ```
 
+3) Then open the "Server Manager" and select the option "Add roles and features":
+
+
