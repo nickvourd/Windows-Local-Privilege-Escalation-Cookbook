@@ -88,7 +88,7 @@ Outcome:
 
 ### Manual Enumeration
 
-After initial access via Web application as <> user, to perform manual enumeration, you can use the following command to enumerate the current privileges of the user:
+After initial access via Web application as `iisapppool\defaultapppool` user, to perform manual enumeration, you can use the following command to enumerate the current privileges of the user:
 
 ```
 whoami /priv
