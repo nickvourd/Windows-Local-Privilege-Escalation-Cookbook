@@ -105,7 +105,7 @@ Outcome:
 
 ### Tool Enumeration
 
-To run the [SharpUp](https://github.com/GhostPack/SharpUp) tool and perform an enumeration of the `SeBackupPrivilege` vulnerability, you can execute the following command with appropriate arguments:
+To run the SharpUp tool and perform an enumeration of the `SeBackupPrivilege` vulnerability, you can execute the following command with appropriate arguments:
 
 ```
 SharpUp.exe audit TokenPrivileges
