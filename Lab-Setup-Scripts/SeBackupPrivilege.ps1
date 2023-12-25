@@ -27,7 +27,7 @@ net localgroup "Remote Management Users" ncv /add
 
 Write-Host "[+] Enabling WinRM Service`n"
 #Enable WinRM Service
-Enable PS-Remoting -Force
+Enable-PSRemoting -Force
 
 Write-Host "[+] Installing Carbon module`n"
 #Install Carbon module
