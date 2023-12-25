@@ -51,7 +51,6 @@ This Cookbook presents the following Windows vulnerabilities:
 - [Logon Autostart Execution (Registry Run Keys)](/Notes/LogonAutostartExecutionRegistryRunKeys.md)
 - [Logon Autostart Execution (Startup Folder)](/Notes/LogonAutostartExecutionStartupFolder.md)
 - [Leaked Credentials (PowerShell History)](/Notes/LeakedCredentialsPowerShellHistory.md)
-- [Scheduled Task/Job](/Notes/ScheduledTaskJob.md)*
 - [SeBackupPrivilege](/Notes/SeBackupPrivilege.md)
 - SeImpersonatePrivilege
 - [Stored Credentials (Runas)](/Notes/StoredCredentialsRunas.md)
