@@ -112,6 +112,9 @@ Outcome:
 
 ## Exploitation
 
+To abuse this vulnerability you should follow these steps:
+
+
 ## Mitigation
 
 ## References
