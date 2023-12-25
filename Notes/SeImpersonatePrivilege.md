@@ -62,6 +62,6 @@ Outcome:
 
 ![SeImpersonatePrivilege-Labsetup-Manual-7](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-7.png)
 
-9) Delete all files from "C:\inetpub\wwwroot" and add the [index.html](/Lab-Source-Code/index.html) and [cmdasp.aspx](/Lab-Source-Code/cmdasp.aspx):
+9) Delete all files from "C:\inetpub\wwwroot" and add the [index.html](/Lab-Setup-Source-Code/index.html) and [cmdasp.aspx](/Lab-Setup-Source-Code/cmdasp.aspx):
 
 ![SeImpersonatePrivilege-Labsetup-Manual-8](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-8.png)
