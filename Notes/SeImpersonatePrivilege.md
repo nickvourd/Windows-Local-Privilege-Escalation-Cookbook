@@ -32,7 +32,11 @@ However, if not properly managed or granted to unauthorized users or processes, 
 2) Open a Command Prompt (cmd) and use the following command to create a new user:
 
 ```
-net user ncv Passw0rd! /add
+net user ncv2 Passw0rd! /add
 ```
 
-3) 
+3) Run the following command to enable WinRM service:
+
+```
+Enable-PSRemoting -Force
+```
