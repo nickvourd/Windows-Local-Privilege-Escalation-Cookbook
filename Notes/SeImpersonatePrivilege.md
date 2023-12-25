@@ -126,16 +126,16 @@ Outcome:
 
 Follow the steps below to remove the SeImpersonatePrivilege from a user:
 
-- Press Win + R to open the Run dialog, type secpol.msc, and hit Enter. This will open the Local Security Policy editor.
+1) Press Win + R to open the Run dialog, type secpol.msc, and hit Enter. This will open the Local Security Policy editor.
+  
+2) In the Local Security Policy editor, navigate to Local Policies > User Rights Assignment.
 
-- In the Local Security Policy editor, navigate to Local Policies > User Rights Assignment.
+3) Look for the Impersonate a client after authentication policy (which corresponds to SeImpersonatePrivilege).
 
-- Look for the Impersonate a client after authentication policy (which corresponds to SeImpersonatePrivilege).
+4) Double-click the policy, and a properties window will appear.
 
-- Double-click the policy, and a properties window will appear.
-
-- In the properties window, you can remove the user or group from the list to revoke the privilege.
-
-- Click Apply and then OK to save the changes.
+5) In the properties window, you can remove the user or group from the list to revoke the privilege. Click Apply and then OK to save the changes.
 
 ## References
+
+- [Special privileges assigned to new logon Microsoft](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4672)
