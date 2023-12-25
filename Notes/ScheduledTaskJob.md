@@ -25,7 +25,11 @@ Attackers can exploit pre-configured tasks associated with privileged accounts t
 
 :warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
-1) Create a folder named 'Jobs' in the C:\ directory.
+1) Open a Command Prompt with local Administrator privileges and run the following command to create a folder named 'Jobs' in the 'C:\' directory:
+
+```
+mkdir C:\Jobs
+```
 
 2) Download the file [Monitor_AMD64.exe](/Lab-Setup-Binary/Monitor_AMD64.exe) to the 'C:\Jobs' directory.
 
@@ -45,7 +49,7 @@ Outcome:
 
 ![Create-A-New-Task](/Pictures/Taskscheduler-2.png)
 
-6) Assign a task to the logged-in user to be executed with the highest privileges:
+6) Assign a task to the local Administrator to be executed with the highest privileges:
 
 ![Create-A-New-Task-2](/Pictures/Taskscheduler-3.png)
 
