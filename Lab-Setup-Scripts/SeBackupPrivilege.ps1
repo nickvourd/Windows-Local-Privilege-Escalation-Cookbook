@@ -36,3 +36,7 @@ Import-Module carbon
 Write-Host "[+] Granting SeBackupPrivilege to the new user`n"
 #Grant SeBackupPrivilege to the new user
 Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
+
+Write-Host "[+] New user's credentials"
+Write-Host "Username: ncv"
+Write-Host "Password: Passw0rd!`n"
