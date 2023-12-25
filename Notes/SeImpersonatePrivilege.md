@@ -124,4 +124,18 @@ Outcome:
 
 ## Mitigation
 
+Follow the steps below to remove the SeImpersonatePrivilege from a user:
+
+- Press Win + R to open the Run dialog, type secpol.msc, and hit Enter. This will open the Local Security Policy editor.
+
+- In the Local Security Policy editor, navigate to Local Policies > User Rights Assignment.
+
+- Look for the Impersonate a client after authentication policy (which corresponds to SeImpersonatePrivilege).
+
+- Double-click the policy, and a properties window will appear.
+
+- In the properties window, you can remove the user or group from the list to revoke the privilege.
+
+- Click Apply and then OK to save the changes.
+
 ## References
