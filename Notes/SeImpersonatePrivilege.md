@@ -108,7 +108,7 @@ SharpUp.exe audit TokenPrivileges
 
 Outcome:
 
-![SeImpersonatePrivilege-Tool-Enum](/Pictures/SeImpersonatePrivilege-Tool-Enum.png)
+![SeImpersonatePrivilege-Tool-Enum](/Pictures/SeImpersonatePrivilege-Tool-Enum1.png)
 
 ## Exploitation
 
