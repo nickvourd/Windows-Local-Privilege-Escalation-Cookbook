@@ -149,7 +149,7 @@ impacket-secretsdump -sam sam.hive -system system.hive LOCAL
 
 Outcome:
 
-![SeBackupPrivilege-Exploitation-Observe-NTLM-Hashes](/Pictures/SeBackUp-Exploitation-2.png)
+![SeBackupPrivilege-Exploitation-Observe-NTLM-Hashes](/Pictures/SeBackUp-Exploitation-22.png)
 
 4) Use again evil-winrm to pass the hash and connect as Local Administrator:
 
