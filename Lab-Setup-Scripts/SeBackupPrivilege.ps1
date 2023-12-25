@@ -27,8 +27,4 @@ Import-Module carbon
 
 Write-Host "[+] Granting SeBackupPrivilege to the current user`n"
 #Grant SeBackupPrivilege to the current user
-Grant-CPrivilege -Identity Administrator -Privilege SeBackupPrivilege
-
-Write-Host "[+] Enabling WinRM service`n"
-#Enable WinRM service
-Enable-PSRemoting -Force
+Grant-CPrivilege -Identity nickvourd -Privilege SeBackupPrivilege
