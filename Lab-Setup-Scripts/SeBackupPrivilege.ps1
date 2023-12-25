@@ -17,11 +17,6 @@ $ascii = @"
 
 Write-Host $ascii`n
 
-
-Write-Host "[+] Enabling WinRM service`n"
-#Enable WinRM service
-Enable-PSRemoting -Force
-
 Write-Host "[+] Installing Carbon module`n"
 #Install Carbon module
 Install-Module -Name carbon -Force
@@ -33,3 +28,7 @@ Import-Module carbon
 Write-Host "[+] Granting SeBackupPrivilege to the current user`n"
 #Grant SeBackupPrivilege to the current user
 Grant-CPrivilege -Identity Administrator -Privilege SeBackupPrivilege
+
+Write-Host "[+] Enabling WinRM service`n"
+#Enable WinRM service
+Enable-PSRemoting -Force
