@@ -139,7 +139,7 @@ reg save hklm\system C:\temp\system.hive
 
 Outcome:
 
-![SeBackupPrivilege-Exploitation-Copy-Hives](/Pictures/SeBackUp-Exploitation-1.png)
+![SeBackupPrivilege-Exploitation-Copy-Hives](/Pictures/SeBackUp-Exploitation-11.png)
 
 3) Use [impacket-secretsdump](https://github.com/fortra/impacket/blob/master/examples/secretsdump.py) tool (Kali Linux Default) and obtain ntlm hashes:
 
