@@ -39,7 +39,13 @@ net user ncv Passw0rd! /add
 Enable-PSRemoting -Force
 ```
 
-3) Then, run the following commands to install and import the Carbon module:
+3) Add the new user to "Remote Management Users" group:
+
+```
+net localgroup "Remote Management Users" ncv /add
+```
+  
+4) Then, run the following commands to install and import the Carbon module:
 
 ```
 Install-Module -Name carbon -Force
@@ -51,7 +57,7 @@ Install-Module -Name carbon -Force
  Import-Module carbon
  ```
 
- 4) Use the following cmdlets to grant the SeBackupPrivilege to the current user and verify the privilege:
+ 5) Use the following cmdlets to grant the SeBackupPrivilege to the current user and verify the privilege:
 
  ```
  Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
@@ -66,8 +72,6 @@ Install-Module -Name carbon -Force
 Outcome:
 
 ![SebackupPrivilege-Manual-Setup](/Pictures/SeBackUp-Manual-Setup1.png)
-
-5) Last but not least, restart the computer.
 
 ### PowerShell Script Lab Setup 
 
