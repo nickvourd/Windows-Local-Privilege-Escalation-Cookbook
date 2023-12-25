@@ -63,11 +63,11 @@ Install-Module -Name carbon -Force
  Test-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
  ```
 
-5) Last but not least, restart the computer.
-
 Outcome:
 
 ![SebackupPrivilege-Manual-Setup](/Pictures/SeBackUp-Manual-Setup1.png)
+
+5) Last but not least, restart the computer.
 
 ### PowerShell Script Lab Setup 
 
