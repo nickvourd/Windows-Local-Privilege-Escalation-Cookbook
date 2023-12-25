@@ -37,5 +37,5 @@ net user ncv2 Passw0rd! /add
 
 3) Then, open the "Server Manager" and select the option named "":
 
-[SeImpersonatePrivilege-Labsetup-Manual-1](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-1.png)
+![SeImpersonatePrivilege-Labsetup-Manual-1](/Pictures/SeImpersonatePrivilege-Labsetup-Manual-1.png)
 
