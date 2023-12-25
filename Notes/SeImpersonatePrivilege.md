@@ -74,4 +74,10 @@ To set up the lab with the 'SeImpersonatePrivilege' vulnerability is by using th
 
 1) Authenticate to the server as the local Administrator.
 
-2) 
+2) Open a PowerShelll and run the script:
+
+```
+.\SeImpersonatePrivilege.ps1
+```
+
+Outcome:
