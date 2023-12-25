@@ -40,3 +40,33 @@ net user ncv2 Passw0rd! /add
 ```
 Enable-PSRemoting -Force
 ```
+
+4) Add the new user to "Remote Management Users" group:
+
+```
+net localgroup "Remote Management Users" ncv2 /add
+```
+  
+5) Then, run the following commands to install and import the Carbon module:
+
+```
+Install-Module -Name carbon -Force
+```
+
+ and 
+
+ ```
+ Import-Module carbon
+ ```
+
+ 6) Use the following cmdlets to grant the SeImpersonatePrivilege to the current user and verify the privilege:
+
+ ```
+ Grant-CPrivilege -Identity ncv -Privilege SeImpersonatePrivilege
+ ```
+
+ and
+
+ ```
+ Test-CPrivilege -Identity ncv -Privilege SeImpersonatePrivilege
+ ```
