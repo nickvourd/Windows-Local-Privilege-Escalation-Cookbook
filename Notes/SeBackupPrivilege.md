@@ -71,7 +71,7 @@ Install-Module -Name carbon -Force
 
 Outcome:
 
-![SebackupPrivilege-Manual-Setup](/Pictures/SeBackUp-Manual-Setup1.png)
+![SebackupPrivilege-Manual-Setup](/Pictures/SeBackUp-Manual-Setup2.png)
 
 ### PowerShell Script Lab Setup 
 
