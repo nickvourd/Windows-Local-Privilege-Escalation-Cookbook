@@ -87,3 +87,9 @@ Outcome:
 ## Enumeration
 
 ### Manual Enumeration
+
+After initial access via Web application as <> user, you can use the following command to find the privileges:
+
+```
+whoami /priv
+```
