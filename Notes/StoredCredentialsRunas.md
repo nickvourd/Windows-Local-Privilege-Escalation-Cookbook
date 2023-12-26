@@ -67,7 +67,7 @@ cmdkey /list
 
 Outcome:
 
-![Stored-Creds-Enum](/Pictures/Stored-Creds-Enum.png)
+![Stored-Creds-Enum](/Pictures/Stored-Creds-Enum1.png)
 
 ## Exploitaion
 
