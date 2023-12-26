@@ -53,7 +53,7 @@ This Cookbook presents the following Windows vulnerabilities:
 - [Leaked Credentials (PowerShell History)](/Notes/LeakedCredentialsPowerShellHistory.md)
 - [SeBackupPrivilege](/Notes/SeBackupPrivilege.md)
 - [SeImpersonatePrivilege](/Notes/SeImpersonatePrivilege.md)
-- [Stored Credentials (Runas)](/Notes/StoredCredentialsRunas.md)*
+- [Stored Credentials (Runas)](/Notes/StoredCredentialsRunas.md)
 - Unquoted Service Path
 - Weak Service Binary Permissions
 - Weak Service Permissions
