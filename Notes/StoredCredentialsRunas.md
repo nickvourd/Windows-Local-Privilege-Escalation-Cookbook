@@ -55,7 +55,7 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
-![Stored-Creds-Tool-Lab-Setup](/Pictures/Stored-Creds-Tool-Lab-Set-Up.png)
+![Stored-Creds-Tool-Lab-Setup](/Pictures/Stored-Creds-Script-Lab-Set-Up.png)
 
 ## Enumeration
 
