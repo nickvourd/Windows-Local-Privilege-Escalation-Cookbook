@@ -37,7 +37,7 @@ Outcome:
 
 2) Verify the new stored credentials on Windows Credentials Manager (**Control Panel** > **User Accounts** > **Credential Manager**):
 
-![Stored-Creds-Verify-New-Windows-Creds](/Pictures/Stored-Creds-Control-Panel-5.png)
+![Stored-Creds-Verify-New-Windows-Creds](/Pictures/Stored-Creds-Control-Panel-69.png)
 
 ### PowerShell Script Lab Setup
 
