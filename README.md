@@ -3,6 +3,15 @@
   <img src="/Pictures/Windows-Funny.jpg">
 </p>
 
+## Table of Contents
+
+- [Windows Local Privilege Escalation Cookbook](#windows-local-privilege-escalation-cookbook)
+  - [Table of Contents](#table-of-contents)
+  - [Description (Keynote)](#description-keynote)
+  - [Useful Tools](#useful-tools)
+  - [Vulnerabilities](#vulnerabilities)
+  - [References](#references)
+
 ## Description (Keynote)
 
 This Cookbook was created with the main purpose of helping people understand local privilege escalation techniques on Windows environments. Moreover, it can be used for both attacking and defensive purposes.
@@ -21,15 +30,6 @@ The main structure of this Cookbook includes the following sections:
 - (Useful) References
 
 I hope to find this CookBook useful and learn new stuff 😉.
-
-## Table of Contents
-
-- [Windows Local Privilege Escalation Cookbook](#windows-local-privilege-escalation-cookbook)
-  - [Description (Keynote)](#description-keynote)
-  - [Table of Contents](#table-of-contents)
-  - [Useful Tools](#useful-tools)
-  - [Vulnerabilities](#vulnerabilities)
-  - [References](#references)
 
 ## Useful Tools
 
