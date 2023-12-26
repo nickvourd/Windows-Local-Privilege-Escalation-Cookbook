@@ -33,11 +33,11 @@ runas /savecred /user:WORKGROUP\Administrator cmd.exe
 
 Outcome:
 
-![Stored-Creds-Manual-Lab-Setup](/Pictures/Stored-Creds-Manual-Lab-Set-Up.png)
+![Stored-Creds-Manual-Lab-Setup](/Pictures/Stored-Creds-Manual-Lab-Set-Up1.png)
 
 2) Verify the new stored credentials on Windows Credentials Manager (**Control Panel** > **User Accounts** > **Credential Manager**):
 
-![Stored-Creds-Verify-New-Windows-Creds](/Pictures/Stored-Creds-Control-Panel-4.png)
+![Stored-Creds-Verify-New-Windows-Creds](/Pictures/Stored-Creds-Control-Panel-5.png)
 
 ### PowerShell Script Lab Setup
 
