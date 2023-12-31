@@ -42,6 +42,7 @@ In the following table, some popular and useful tools for Windows local privileg
 | [BeRoot](https://github.com/AlessandroZ/BeRoot) | Python | [AlessandroZ](https://github.com/AlessandroZ) | BeRoot(s) is a post exploitation tool to check common Windows misconfigurations to find a way to escalate our privilege |
 | [Privesc](https://github.com/enjoiz/Privesc) | PowerShell | [enjoiz](https://github.com/enjoiz) | Windows PowerShell script that finds misconfiguration issues which can lead to privilege escalation |
 | [Winpeas](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS/winPEASexe) | C# | [@hacktricks_live](https://twitter.com/hacktricks_live) | Windows local Privilege Escalation Awesome Script |
+| [PrivescCheck](https://github.com/itm4n/PrivescCheck) | PowerShell | [@itm4n](https://twitter.com/itm4n) | Privilege Escalation Enumeration Script for Windows |
 
 ## Vulnerabilities
 
