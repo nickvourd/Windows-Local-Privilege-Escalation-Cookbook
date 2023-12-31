@@ -64,7 +64,7 @@ This Cookbook presents the following Windows vulnerabilities:
 
 - [Privilege Escalation Wikipedia](https://en.wikipedia.org/wiki/Privilege_escalation)
 - [SharpCollection GitHub by Flangvik](https://github.com/Flangvik/SharpCollection)
-- [Metasploit Website](https://www.metasploit.com/)
+- [Metasploit Official Website](https://www.metasploit.com/)
 - [Evil-WinRM GitHub by Hackplayers](https://github.com/Hackplayers/evil-winrm)
 - [Windows Privilege Escalation Youtube Playlist by Conda](https://www.youtube.com/watch?v=WWE7VIpgd5I&list=PLDrNMcTNhhYrBNZ_FdtMq-gLFQeUZFzWV&index=13)
 - [Seatbelt GitHub by GhostPack](https://github.com/GhostPack/Seatbelt)
