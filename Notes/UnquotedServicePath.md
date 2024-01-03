@@ -51,7 +51,7 @@ icacls "C:\Program Files\Vulnerable Service1" /grant "BUILTIN\Users":W
 4) Create a Windows service named "Vulnerable Service 1" with a specified executable path:
 
 ```
-sc create "Vulnerable Service 1" binpath= "C:\Program Files\Vulnerable Service\Custom Srv1\App1_AMD64.exe" Displayname= "Vuln Service 1" start= auto
+ .\InstallUtil.exe 'C:\Program Files\Vulnerable Service1\Custom Srv1\App1.exe'
 ```
 
 Outcome:
