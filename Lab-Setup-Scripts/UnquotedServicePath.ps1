@@ -30,20 +30,30 @@ if (-not (Test-Path $folderPath)) {
 
 Write-Host "[+] Set new files to Service folder`n"
 # Set the URLs of the files to download
-$urlBinary = "https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Lab-Setup-Binary/App1_AMD64.exe"  
+$urlBinary = "https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Lab-Setup-Binary/App1.exe"  
 
 # Download index.html
-Invoke-WebRequest -Uri $urlBinary -OutFile "$folderPath\App1_AMD64.exe"
+Invoke-WebRequest -Uri $urlBinary -OutFile "$folderPath\App1.exe"
 
 Write-Host "[+] Granting writable privileges to BUILTIN\Users for the Vulnerable Service1 folder`n"
 # Grant writable privileges to BUILTIN\Users for the folder
-$folderPath = 'C:\Program Files\Vulnerable Service1'
-$permission = 'BUILTIN\Users'
-$rule = New-Object System.Security.AccessControl.FileSystemAccessRule($permission, 'Modify', 'ObjectInherit, ContainerInherit', 'None', 'Allow')
-$acl = Get-Acl -Path $folderPath
-$acl.SetAccessRule($rule)
-Set-Acl -Path $folderPath -AclObject $acl
+icacls "C:\Program Files\Vulnerable Service1" /grant BUILTIN\Users:W
 
 Write-Host "[+] Creating a Windows service with a specified executable path`n"
 # Create a Windows service named "Vulnerable Service 1" with a specified executable path
-sc create "Vulnerable Service 1" binpath= "C:\Program Files\Vulnerable Service\Custom Srv1\App1_AMD64.exe" Displayname= "Vuln Service 1" start= auto
+
+# Path to search for InstallUtil.exe
+$frameworkPath = "C:\Windows\Microsoft.NET\Framework\"
+
+# Path to the executable to be installed
+$appPath = "C:\Program Files\Vulnerable Service1\Custom Srv1\App1.exe"
+
+# Search for InstallUtil.exe in the specified directory
+$installUtilPath = Get-ChildItem -Path $frameworkPath -Filter "InstallUtil.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName -First 1
+
+if ($null -ne $installUtilPath) {
+    # Execute InstallUtil.exe with the specified executable path
+    Start-Process -FilePath $installUtilPath -ArgumentList "`"$appPath`"" -Wait
+} else {
+    Write-Host "InstallUtil.exe not found in the specified directory."
+}
