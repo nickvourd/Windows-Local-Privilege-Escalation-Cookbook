@@ -19,7 +19,7 @@
 
 The unquoted service path vulnerability in Windows occurs when services are installed using paths containing spaces without proper quotation marks. If attackers obtain write permissions in the service's installation directory, they can execute malicious code with elevated privileges.
 
-In Windows, when referencing file paths that contain spaces and are not enclosed within quotation marks, the system assumes the file's location using a specific set of rules.
+In Windows, when a file path contains spaces and isn't enclosed within quotation marks, the operating system assumes the file's location based on predetermined rules.
 
 This process involves checking potential paths in a sequence similar to the following:
 
