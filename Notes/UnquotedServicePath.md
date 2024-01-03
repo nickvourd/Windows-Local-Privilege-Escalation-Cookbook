@@ -27,11 +27,31 @@ This process involves checking potential paths in a sequence similar to the foll
 
 2) C:\Program Files\Vulnerable.exe
 
-3) C:\Program Files\Vulnerable Service\Custom.exe
+3) C:\Program Files\Vulnerable Service1\Custom.exe
 
-4) C:\Program Files\Vulnerable Service\Custom Srv\App1.exe (Finally arriving at the specified path)
+4) C:\Program Files\Vulnerable Service\Custom Srv1\App1.exe (Finally arriving at the specified path)
 
 ## Lab Setup
 
 ### Manual Lab Setup
 
+1) Open a PowerShell with local Administrator privileges and run the following command to create a new folder with a subfolder:
+
+```
+mkdir "C:\Program Files\Vulnerable Service\Custom Srv1"
+```
+2) Download the file App1.exe to the 'C:\Program Files\Vulnerable Service\Custom Srv1' directory.
+
+3) Grant writable privileges to BUILTIN\Users for the "Vulnerable Service" folder:
+
+```
+icacls "C:\Program Files\Vulnerable Service" /grant BUILTIN\Users:(OI)(CI)M /T /inheritance:r
+```
+
+4) Create a Windows service named "Vulnerable Service 1" with a specified executable path:
+
+```
+sc create "Vulnerable Service 1" binpath= "C:\Program Files\Vulnerable Service\Custom Srv1\App1.exe" Displayname= "Vuln Service 1" start= auto
+```
+
+Outcome:
