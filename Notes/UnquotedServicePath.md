@@ -69,6 +69,18 @@ Outcome:
 
 6) You can start the service manually from the service panel or reboot the machine because this vulnerable service starts automatically after the machine boots.
 
+### PowerShell Script Lab Setup
+
+To set up the lab with the 'Unquoted Service Path' vulnerability is by using the custom PowerShell script named [UnquotedServicePath.ps1](/Lab-Setup-Scripts/UnquotedServicePath.ps1).
+
+Open a PowerShelll with local Administrator privileges and run the script:
+
+```
+.\UnquotedServicePath.ps1
+```
+
+Outcome:
+
 ## References
 
 - [Fix Windows Unquoted Service Path Vulnerability by isgovern](https://isgovern.com/blog/how-to-fix-the-windows-unquoted-service-path-vulnerability/)
