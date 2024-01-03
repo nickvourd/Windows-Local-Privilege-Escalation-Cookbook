@@ -1,4 +1,4 @@
-namespace App1
+namespace App2
 {
     partial class ProjectInstaller
     {
@@ -40,8 +40,8 @@ namespace App1
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.Description = "Vulnerable Service 1";
-            this.serviceInstaller1.DisplayName = "Vuln Service 1";
+            this.serviceInstaller1.Description = "Vulnerable Service 2";
+            this.serviceInstaller1.DisplayName = "Vuln Service 2";
             this.serviceInstaller1.ServiceName = "Service1";
             // 
             // ProjectInstaller
