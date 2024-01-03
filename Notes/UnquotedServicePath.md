@@ -40,7 +40,7 @@ This process involves checking potential paths in a sequence similar to the foll
 ```
 mkdir "C:\Program Files\Vulnerable Service1\Custom Srv1"
 ```
-2) Download the file [App1_AMD64.exe](/Lab-Setup-Binary/App1_AMD64.exe) to the 'C:\Program Files\Vulnerable Service1\Custom Srv1' directory.
+2) Download the file [App1.exe](/Lab-Setup-Binary/App1.exe) to the 'C:\Program Files\Vulnerable Service1\Custom Srv1' directory.
 
 3) Grant writable privileges to BUILTIN\Users for the "Vulnerable Service1" folder:
 
