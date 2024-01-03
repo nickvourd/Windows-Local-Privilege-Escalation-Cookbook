@@ -48,7 +48,7 @@ mkdir "C:\Program Files\Vulnerable Service1\Custom Srv1"
 icacls "C:\Program Files\Vulnerable Service1" /grant "BUILTIN\Users":W
 ```
 
-4) Create a Windows service named "Vulnerable Service 1" with a specified executable path:
+4) Install the vulnerable service:
 
 ```
  .\InstallUtil.exe 'C:\Program Files\Vulnerable Service1\Custom Srv1\App1.exe'
