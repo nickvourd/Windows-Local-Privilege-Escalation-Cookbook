@@ -61,6 +61,14 @@ sc create "Vulnerable Service 1" binpath= "C:\Program Files\Vulnerable Service\C
 
 Outcome:
 
+![Unquoted-Service-Path-Manual-Lab-Setup](/Pictures/Unquoted-Service-Path-Manual-Lab-Setup.png)
+
+5) Verify the new vulnerable service (services.msc):
+
+![Unquoted-Service-Path-Manual-Lab-Setup-Verify](/Pictures/Unquoted-Service-Path-Manual-Lab-Setup-Verify.png)
+
+6) You can start the service manually from the service panel or reboot the machine because this vulnerable service starts automatically after the machine boots.
+
 ## References
 
 - [Fix Windows Unquoted Service Path Vulnerability by isgovern](https://isgovern.com/blog/how-to-fix-the-windows-unquoted-service-path-vulnerability/)
