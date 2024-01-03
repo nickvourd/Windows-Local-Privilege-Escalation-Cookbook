@@ -29,7 +29,7 @@ This process involves checking potential paths in a sequence similar to the foll
 
 3) C:\Program Files\Vulnerable Service1\Custom.exe
 
-4) C:\Program Files\Vulnerable Service\Custom Srv1\App1_AMD64.exe (Finally arriving at the specified path)
+4) C:\Program Files\Vulnerable Service1\Custom Srv1\App1_AMD64.exe (Finally arriving at the specified path)
 
 ## Lab Setup
 
@@ -45,12 +45,7 @@ mkdir "C:\Program Files\Vulnerable Service1\Custom Srv1"
 3) Grant writable privileges to BUILTIN\Users for the "Vulnerable Service1" folder:
 
 ```
-$folderPath = 'C:\Program Files\Vulnerable Service1'
-$permission = 'BUILTIN\Users'
-$rule = New-Object System.Security.AccessControl.FileSystemAccessRule($permission, 'Modify', 'ObjectInherit, ContainerInherit', 'None', 'Allow')
-$acl = Get-Acl -Path $folderPath
-$acl.SetAccessRule($rule)
-Set-Acl -Path $folderPath -AclObject $acl
+icacls "C:\Program Files\Vulnerable Service1" /grant "BUILTIN\Users":W
 ```
 
 4) Create a Windows service named "Vulnerable Service 1" with a specified executable path:
