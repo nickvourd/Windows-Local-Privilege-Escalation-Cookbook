@@ -20,7 +20,7 @@ Write-Host $ascii`n
 # Set the path for the NickvourdSrv folder
 $folderPath = "C:\Program Files\NickvourdSrv"
 
-# Create the Jobs folder if it doesn't exist
+# Create the folder if it doesn't exist
 if (-not (Test-Path $folderPath)) {
     New-Item -Path $folderPath -ItemType Directory | Out-Null
     Write-Host "[+] Folder created successfully at $folderPath`n"
