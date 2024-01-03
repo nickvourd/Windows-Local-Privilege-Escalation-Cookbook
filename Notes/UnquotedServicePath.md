@@ -45,7 +45,7 @@ mkdir "C:\Program Files\Vulnerable Service1\Custom Srv1"
 3) Grant writable privileges to BUILTIN\Users for the "Vulnerable Service1" folder:
 
 ```
-icacls "C:\Program Files\Vulnerable Service1" /grant "BUILTIN\Users":W
+icacls "C:\Program Files\Vulnerable Service1" /grant BUILTIN\Users:W
 ```
 
 4) Install the vulnerable service:
