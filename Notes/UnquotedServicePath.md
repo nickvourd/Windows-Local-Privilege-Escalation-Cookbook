@@ -87,6 +87,28 @@ Outcome:
 
 ### Manual Enumeration
 
+To perform manual enumeration, you can open a command prompt and use the following command to check if there is a service application vulnerable to an Unquoted Service Path:
+
+```
+wmic service get name,pathname,displayname,startmode | findstr /i auto | findstr /i /v "C:\Windows\\" | findstr /i /v """
+```
+
+Outcome:
+
+![Unquoted-Service-Manual-Enumeration](/Pictures/Unquoted-Service-Manual-Enumeration.png)
+
+### Tool Enumeration
+
+To run the SharpUp tool and perform an enumeration of the `Unquoted Service Path` vulnerability, you can execute the following command with appropriate arguments:
+
+```
+SharpUp.exe audit UnquotedServicePath
+```
+
+Outcome:
+
+
+
 ## References
 
 - [Fix Windows Unquoted Service Path Vulnerability by isgovern](https://isgovern.com/blog/how-to-fix-the-windows-unquoted-service-path-vulnerability/)
