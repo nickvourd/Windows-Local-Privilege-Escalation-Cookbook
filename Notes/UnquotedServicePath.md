@@ -81,6 +81,8 @@ Open a PowerShelll with local Administrator privileges and run the script:
 
 Outcome:
 
+![Unquoted-Service-Path-Script-Lab-Setup](/Pictures/Unquoted-Service-Path-Script-Lab-Setup.png)
+
 ## References
 
 - [Fix Windows Unquoted Service Path Vulnerability by isgovern](https://isgovern.com/blog/how-to-fix-the-windows-unquoted-service-path-vulnerability/)
