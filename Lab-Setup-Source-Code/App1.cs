@@ -11,7 +11,7 @@ using System.Timers;
 using System.IO;
 using System.Runtime.InteropServices.WindowsRuntime;
 
-namespace App1
+namespace App2
 {
     public partial class Service1 : ServiceBase
     {
