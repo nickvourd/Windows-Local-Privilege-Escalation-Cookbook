@@ -55,3 +55,9 @@ sc create "Vulnerable Service 1" binpath= "C:\Program Files\Vulnerable Service\C
 ```
 
 Outcome:
+
+## References
+
+- [Fix Windows Unquoted Service Path Vulnerability by isgovern](https://isgovern.com/blog/how-to-fix-the-windows-unquoted-service-path-vulnerability/)
+- [Unquoted Service Paths by CyberTec](https://kb.cybertecsecurity.com/knowledge/unquoted-service-paths)
+- [FixUnquotedPaths GitHub by NetSecJedi](https://github.com/NetSecJedi/FixUnquotedPaths)
