@@ -45,7 +45,12 @@ mkdir "C:\Program Files\Vulnerable Service1\Custom Srv1"
 3) Grant writable privileges to BUILTIN\Users for the "Vulnerable Service1" folder:
 
 ```
-icacls "C:\Program Files\Vulnerable Service1" /grant BUILTIN\Users:(OI)(CI)M /T /inheritance:r
+$folderPath = 'C:\Program Files\Vulnerable Service1'
+$permission = 'BUILTIN\Users'
+$rule = New-Object System.Security.AccessControl.FileSystemAccessRule($permission, 'Modify', 'ObjectInherit, ContainerInherit', 'None', 'Allow')
+$acl = Get-Acl -Path $folderPath
+$acl.SetAccessRule($rule)
+Set-Acl -Path $folderPath -AclObject $acl
 ```
 
 4) Create a Windows service named "Vulnerable Service 1" with a specified executable path:
