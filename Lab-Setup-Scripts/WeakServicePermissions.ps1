@@ -30,7 +30,7 @@ if (-not (Test-Path $folderPath)) {
 
 Write-Host "[+] Set new file to Service folder`n"
 # Set the URLs of the files to download
-$urlBinary = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Binary/Service2.exe"  
+$urlBinary = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Binary/Service3.exe"  
 
 # Download index.html
 Invoke-WebRequest -Uri $urlBinary -OutFile "$folderPath\Service3.exe"
@@ -41,4 +41,4 @@ New-Service -Name "Vulnerable Service 3" -BinaryPathName "C:\Program Files\Custo
 
 Write-Host "[+] Editing the permissions of the Service3"
 # Edit the permissions of the Service3
-cmd.exe /c 'sc sdset "Vulnerable Service 3" D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)(A;;RPWP;;;BU)'
+cmd.exe /c 'sc sdset "Vulnerable Service 3" D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)(A;;DCRPWP;;;BU)'

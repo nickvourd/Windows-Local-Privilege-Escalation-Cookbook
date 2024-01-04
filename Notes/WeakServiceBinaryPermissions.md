@@ -62,7 +62,7 @@ Outcome:
 :information_source: If you want to unistall the new service use the following command:
 
 ```
- Remove-Service -Name "Vulnerable Service 2"
+Remove-Service -Name "Vulnerable Service 2"
 ```
 
 ### PowerShell Script Lab Setup
@@ -84,7 +84,7 @@ Outcome:
 :information_source: If you want to unistall the new service use the following command:
 
 ```
- Remove-Service -Name "Vulnerable Service 2"
+Remove-Service -Name "Vulnerable Service 2"
 ```
 
 ## Enumeration
