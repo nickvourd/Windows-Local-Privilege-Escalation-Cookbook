@@ -56,7 +56,7 @@ This Cookbook presents the following Windows vulnerabilities:
 - [SeImpersonatePrivilege](/Notes/SeImpersonatePrivilege.md)
 - [Stored Credentials (Runas)](/Notes/StoredCredentialsRunas.md)
 - [Unquoted Service Path](/Notes/UnquotedServicePath.md)*
-- Weak Service Binary Permissions
+- [Weak Service Binary Permissions](/Notes/WeakServiceBinaryPermissions.md)
 - Weak Service Permissions
 - Weak Registry Permissions
 
