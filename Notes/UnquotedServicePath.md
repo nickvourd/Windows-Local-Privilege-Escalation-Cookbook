@@ -27,10 +27,9 @@ This process involves checking potential paths in a sequence similar to the foll
 
 2) C:\Program Files\Vulnerable.exe
 
-3) C:\Program Files\Vulnerable Service1\App.exe
+3) C:\Program Files\Vulnerable Service1\Service.exe
 
-4) C:\Program Files\Vulnerable Service1\App 1.exe (Finally arriving at the specified path)
-
+4) C:\Program Files\Vulnerable Service1\Service 1.exe (Finally arriving at the specified path)
 
 ## References
 
