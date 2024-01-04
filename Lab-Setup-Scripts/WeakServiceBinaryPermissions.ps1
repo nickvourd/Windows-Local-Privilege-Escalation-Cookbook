@@ -42,4 +42,4 @@ icacls "C:\Program Files\CustomSrv2\Service2.exe" /grant BUILTIN\Users:W
 Write-Host "[+] Installing the Service2`n"
 # Install the Service2
 New-Service -Name "Vulnerable Service 2" -BinaryPathName "C:\Program Files\CustomSrv2\Service2.exe" -D
-isplayName "Vuln Service 2" -Description "My Custom Vulnerable Service 2"
+isplayName "Vuln Service 2" -Description "My Custom Vulnerable Service 2" -StartupType Automatic
