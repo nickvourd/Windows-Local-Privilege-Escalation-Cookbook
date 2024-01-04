@@ -40,7 +40,7 @@ icacls "C:\Program Files\CustomSrv2\Service2.exe" /grant BUILTIN\Users:W
 4) Install the new Service:
 
 ```
-New-Service -Name "Vulnerable Service 2" -BinaryPathName "C:\Program Files\CustomSrv2\Service2.exe" -DisplayName "Vuln Service 2" -Description "My Custom Vulnerable Service 2" -StartupType Automatic
+New-Service -Name "Vulnerable Service 2" -BinaryPathName "C:\Program Files\CustomSrv2\Service2.exe" -DisplayName "Vuln Service 2" -Description "My Custom Vulnerable Service 2" -StartupType Manual
 ```
 
 Outcome:
@@ -138,3 +138,26 @@ Outcome:
 ![Weak-Service-Binary-Tool-Enumeration](/Pictures/Weak-Service-Binary-Tool-Enumeration.png)
 
 ## Exploitation
+
+To abuse this vulnerability you should follow these steps:
+
+1) If the service is running and you have permissions to stop it:
+
+```
+sc stop "Vulnerable Service 2"
+```
+
+2) 
+
+## Mitigation
+
+To defend against Weak Service Binary Permissions vulnerabilities, adjust permissions on Service executables initiated through this mechanism. This limits unauthorized access and strengthens security measures:
+
+```
+icacls "C:\Program Files\CustomSrv2\Service2.exe" /remove:g BUILTIN\Users:(W)
+```
+
+## References
+
+- [Access Control Overview Microsoft](https://learn.microsoft.com/en-us/windows/security/identity-protection/access-control/access-control)
+- [Establishing Windows File and Folder Level Permissions by UWEC](https://www.uwec.edu/kb/article/drives-establishing-windows-file-and-folder-level-permissions/)
