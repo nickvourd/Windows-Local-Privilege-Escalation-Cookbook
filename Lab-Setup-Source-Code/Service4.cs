@@ -9,7 +9,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service3
+namespace Service4
 {
     public partial class Service1 : ServiceBase
     {
@@ -20,9 +20,9 @@ namespace Service3
 
         protected override void OnStart(string[] args)
         {
-            string filename = "exe_files_log.txt";
-            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string[] exeFiles = Directory.GetFiles(desktopPath, "*.exe");
+            string filename = "xls_files_log.txt";
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string[] xlsFiles = Directory.GetFiles(documentsPath, "*.xls");
 
             // Open file for appending
             StreamWriter fptr;
@@ -40,11 +40,11 @@ namespace Service3
             DateTime now = DateTime.Now;
 
             // Write timestamp to the file
-            fptr.WriteLine("\nList of .exe files on the desktop");
+            fptr.WriteLine("\nList of .xls files in the Documents folder");
             fptr.WriteLine("Timestamp: " + now.ToString());
 
-            // Write executable file names to the log file
-            foreach (string file in exeFiles)
+            // Write Excel file names to the log file
+            foreach (string file in xlsFiles)
             {
                 fptr.WriteLine(file);
             }
