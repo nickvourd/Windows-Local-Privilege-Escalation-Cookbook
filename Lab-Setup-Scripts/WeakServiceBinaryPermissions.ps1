@@ -35,10 +35,14 @@ $urlBinary = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privileg
 # Download index.html
 Invoke-WebRequest -Uri $urlBinary -OutFile "$folderPath\Service2.exe"
 
-Write-Host "[+] Granting writable privileges to BUILTIN\Users for the Service2.exe binary`n"
-# Grant writable privileges to BUILTIN\Users for the binary
-icacls "C:\Program Files\CustomSrv2\Service2.exe" /grant BUILTIN\Users:W
+Write-Host "[+] Granting modify privileges to BUILTIN\Users for the binary`n"
+# Grant modify privileges to BUILTIN\Users for the binary
+icacls "C:\Program Files\CustomSrv2\Service2.exe" /grant BUILTIN\Users:M
 
 Write-Host "[+] Installing the Service2`n"
 # Install the Service2
-New-Service -Name "Vulnerable Service 2" -BinaryPathName "C:\Program Files\CustomSrv2\Service2.exe" -DisplayName "Vuln Service 2" -Description "My Custom Vulnerable Service 2" -StartupType Manual
+New-Service -Name "Vulnerable Service 2" -BinaryPathName "C:\Program Files\CustomSrv2\Service2.exe" -DisplayName "Vuln Service 2" -Description "My Custom Vulnerable Service 2" -StartupType Automatic
+
+Write-Host "[+] Editing the permissions of the Service2"
+# Edit the permissions of the Service2
+cmd.exe /c 'sc sdset "Vulnerable Service 2" D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)(A;;RPWP;;;BU)'
