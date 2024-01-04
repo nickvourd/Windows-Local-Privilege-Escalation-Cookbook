@@ -63,7 +63,7 @@ Outcome:
 
 To set up the lab with the 'Weak Service Binary Permissions' vulnerability is by using the custom PowerShell script named [WeakServiceBinaryPermissions.ps1](/Lab-Setup-Scripts/WeakServiceBinaryPermissions.ps1).
 
-Open a PowerShelll with local Administrator privileges and run the script:
+1) Open a PowerShelll with local Administrator privileges and run the script:
 
 ```
 .\WeakServiceBinaryPermissions.ps1
@@ -73,9 +73,68 @@ Outcome:
 
 ![Weak-Service-Binary-Script-Lab-Setup](/Pictures/Weak-Service-Binary-Script-Lab-Setup.png)
 
+2) Manually start the service from the service panel, or reboot the machine due to the service is set to start automatically upon machine boot.
 
 :information_source: If you want to unistall the new service use the following command:
 
 ```
  Remove-Service -Name "Vulnerable Service 2"
 ```
+
+## Enumeration
+
+### Manual Enumeration
+
+To perform manual enumeration of the `Weak Service Binary Permissions` vulnerability, you can use the following steps:
+
+1) Open a command prompt and use the following command to enumerate the permissions of the service binary:
+
+```
+icacls "C:\Program Files\CustomSrv2\Service2.exe"
+```
+
+Outcome:
+
+![Weak-Service-Binary-Manual-Enumeration](/Pictures/Weak-Service-Binary-Manual-Enumeration.png)
+
+2) Use the following command to find out the `START_TYPE` and `SERVICE_START_NAME`:
+
+```
+sc qc "Vulnerable Service 2"
+```
+
+Outcome:
+
+![Weak-Service-Binary-Manual-Enumeration-Part-2](/Pictures/Weak-Service-Binary-Manual-Enumeration-Part-2.png)
+
+3) Use the following command to find out the `STATE` and it's attributes:
+
+```
+sc query "Vulnerable Service 2"
+```
+
+Outcome:
+
+![Weak-Service-Binary-Manual-Enumeration-Part-3](/Pictures/Weak-Service-Binary-Manual-Enumeration-Part-3.png)
+
+:information_source: Finally, as you can see: 
+
+- The BUILTIN\Users can modify the Service2.exe.
+- The service automatically starts after machine boots.
+- The Local System runs the service.
+- The service is running.
+- The current user can stop the service.
+
+### Tool Enumeration
+
+To run the SharpUp tool and perform an enumeration of the `Weak Service Binary Permissions` vulnerability, you can execute the following command with appropriate arguments:
+
+```
+SharpUp.exe audit ModifiableServiceBinaries
+```
+
+Outcome:
+
+![Weak-Service-Binary-Tool-Enumeration](/Pictures/Weak-Service-Binary-Tool-Enumeration.png)
+
+## Exploitation
