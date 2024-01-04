@@ -26,7 +26,7 @@ Weak Service Binary Permissions indicate a vulnerability due to insufficient per
 1) Open a PowerShell with local Administrtor Privileges and use the following command to create a new folder:
 
 ```
-mkdir C:\Program Files\CustomSrv2\
+mkdir "C:\Program Files\CustomSrv2\"
 ```
 
 2) Download the file [Service2.exe](/Lab-Setup-Binary/Service2.exe) to the 'C:\Program Files\CustomSrv2' directory.
@@ -45,6 +45,37 @@ New-Service -Name "Vulnerable Service 2" -BinaryPathName "C:\Program Files\Custo
 
 Outcome:
 
+![Weak-Service-Binary-Manual-Lab-Setup](/Pictures/Weak-Service-Binary-Manual-Lab-Setup.png)
+
 5) Verify the new service (services.msc):
 
+![Weak-Service-Binary-Manual-Lab-Setup-Verify](/Pictures/Weak-Service-Binary-Manual-Lab-Setup-Verify.png)
+
 6) Manually start the service from the service panel, or reboot the machine due to the service is set to start automatically upon machine boot.
+
+:information_source: If you want to unistall the new service use the following command:
+
+```
+ Remove-Service -Name "Vulnerable Service 2"
+```
+
+### PowerShell Script Lab Setup
+
+To set up the lab with the 'Weak Service Binary Permissions' vulnerability is by using the custom PowerShell script named [WeakServiceBinaryPermissions.ps1](/Lab-Setup-Scripts/WeakServiceBinaryPermissions.ps1).
+
+Open a PowerShelll with local Administrator privileges and run the script:
+
+```
+.\WeakServiceBinaryPermissions.ps1
+```
+
+Outcome:
+
+![Weak-Service-Binary-Script-Lab-Setup](/Pictures/Weak-Service-Binary-Script-Lab-Setup.png)
+
+
+:information_source: If you want to unistall the new service use the following command:
+
+```
+ Remove-Service -Name "Vulnerable Service 2"
+```
