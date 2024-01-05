@@ -190,7 +190,7 @@ Outcome:
 
 ## Mitigation
 
-To defend against Unquoted Service Path vulnerabilities, adjust modify the service configuration to include proper quotation marks around the executable path. Moreover, review the permissions of service installation folder and binary file to prevent unauthorized changes.
+To defend against Unquoted Service Path vulnerabilities, modify the service configuration to include proper quotation marks around the executable path. Moreover, review the permissions of service installation folder and binary file to prevent unauthorized changes.
 
 ## References
 
