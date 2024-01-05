@@ -31,6 +31,23 @@ This process involves checking potential paths in a sequence similar to the foll
 
 4) C:\Program Files\Vulnerable Service1\Service 1.exe (Finally arriving at the specified path)
 
+## Lab Setup
+
+### Manual Lab Setup
+
+## Enumeration
+
+### Tool Enumeration
+
+
+To run the SharpUp tool and perform an enumeration of the `Unquoted Service Path` vulnerability, you can execute the following command with appropriate arguments:
+
+```
+SharpUp.exe audit UnquotedServicePath
+```
+
+Outcome:
+
 ## References
 
 - [Introduction to Windows Services applications Microsoft](https://learn.microsoft.com/en-us/dotnet/framework/windows-services/introduction-to-windows-service-applications)
