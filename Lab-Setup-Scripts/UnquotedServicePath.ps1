@@ -30,7 +30,7 @@ if (-not (Test-Path $folderPath)) {
 
 Write-Host "[+] Set new file to Service folder`n"
 # Set the URLs of the files to download
-$urlBinary = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Binary/Service 1.exe"  
+$urlBinary = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Binary/Service%201.exe"  
 
 # Download Service executable
 Invoke-WebRequest -Uri $urlBinary -OutFile "$folderPath\Service 1.exe"
