@@ -84,11 +84,12 @@ To set up the lab with the 'Unquoted Service Path' vulnerability is by using the
 1) Open a PowerShelll with local Administrator privileges and run the script:
 
 ```
-.\WeakServicePermissions.ps1
+.\UnquotedServicePath.ps1
 ```
 
 Outcome:
 
+![Unquoted-Service-Path-Script-Lab-Setup](/Pictures/Unquoted-Service-Path-Script-Lab-Setup.png)
 
 2) Manually start the service from the service panel, or reboot the machine due to the service is set to start automatically upon machine boot.
 
@@ -99,6 +100,8 @@ Remove-Service -Name "Vulnerable Service 1"
 ```
 
 ## Enumeration
+
+### Manual Enumeration
 
 ### Tool Enumeration
 
