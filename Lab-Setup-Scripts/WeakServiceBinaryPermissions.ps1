@@ -32,7 +32,7 @@ Write-Host "[+] Set new file to Service folder`n"
 # Set the URLs of the files to download
 $urlBinary = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Binary/Service2.exe"  
 
-# Download index.html
+# Download Service executable
 Invoke-WebRequest -Uri $urlBinary -OutFile "$folderPath\Service2.exe"
 
 Write-Host "[+] Granting modify privileges to BUILTIN\Users for the binary`n"
