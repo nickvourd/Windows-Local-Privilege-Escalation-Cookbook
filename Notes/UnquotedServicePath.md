@@ -125,6 +125,12 @@ Outcome:
 
 ![Unquoted-Service-Manual-Enumeration](/Pictures/Unquoted-Service-Manual-Enumeration.png)
 
+:information_source: Finally, as you can see: 
+
+- There is a vulnerable service named "Vulnerable Service 1".
+- The service automatically starts after machine boots.
+- The Local System runs the service.
+- The BUILTIN\Users can write in C:\Program Files\Vulnerable Service1 folder.
 
 ### Tool Enumeration
 
@@ -139,6 +145,8 @@ Outcome:
 ![Unquoted-Service-Tool-Enumeration](/Pictures/Unquoted-Service-Tool-Enumeration.png)
 
 ## Exploitation
+
+To abuse this vulnerability you should follow these steps:
 
 ## References
 
