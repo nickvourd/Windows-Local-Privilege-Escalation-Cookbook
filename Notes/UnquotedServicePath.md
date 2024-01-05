@@ -103,6 +103,29 @@ Remove-Service -Name "Vulnerable Service 1"
 
 ### Manual Enumeration
 
+1) Open a command prompt and use the following command to find out if there is any service application vulnerable to Unquoted Service Path:
+
+```
+wmic service get name,pathname,displayname,startmode | findstr /i auto | findstr /i /v "C:\Windows\\" | findstr /i /v """
+```
+
+2) Use the following command to find the `START_TYPE`, `SERVICE_START_NAME` and `BINARY_PATH_NAME`:
+
+```
+sc qc "Vulnerable Service 1"
+```
+
+3) Use icacls to identify the permissions of the service installation folder:
+
+```
+icacls "C:\Program Files\Vulnerable Service1"
+```
+
+Outcome:
+
+![Unquoted-Service-Manual-Enumeration](/Pictures/Unquoted-Service-Manual-Enumeration.png)
+
+
 ### Tool Enumeration
 
 To run the SharpUp tool and perform an enumeration of the `Unquoted Service Path` vulnerability, you can execute the following command with appropriate arguments:
@@ -114,6 +137,8 @@ SharpUp.exe audit UnquotedServicePath
 Outcome:
 
 ![Unquoted-Service-Tool-Enumeration](/Pictures/Unquoted-Service-Tool-Enumeration.png)
+
+## Exploitation
 
 ## References
 
