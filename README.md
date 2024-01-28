@@ -55,7 +55,7 @@ This Cookbook presents the following Windows vulnerabilities:
 - [SeBackupPrivilege](/Notes/SeBackupPrivilege.md)
 - [SeImpersonatePrivilege](/Notes/SeImpersonatePrivilege.md)
 - [Stored Credentials (Runas)](/Notes/StoredCredentialsRunas.md)
-- [User Account Control (UAC) Bypass](/Notes/UACBypass.md)
+- [UAC Bypass](/Notes/UACBypass.md)
 - [Unquoted Service Path](/Notes/UnquotedServicePath.md)
 - [Weak Service Binary Permissions](/Notes/WeakServiceBinaryPermissions.md)
 - [Weak Service Permissions](/Notes/WeakServicePermissions.md)
