@@ -153,8 +153,33 @@ C:\Windows\System32\fodhelper.exe
 
 ## Mitigation
 
+To defend against UAC bypass, it is highly recommended to utilize the `Prompt for credentials` concept in UAC configuration settings and keep update your system.
+
+In order to set up this follow these steps:
+
+1) Open a Powershell with local Administartor privileges and run the following command:
+
+```
+secpol.msc
+```
+
+2) In the Local Security Policy window, go to **Security Settings** -> **Local Policies** -> **Security Options**.
+
+3) Look for the setting named **User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode** and double-click on it to open its properties.
+
+4) In the properties window, select the desired option. In this case, choose the option that says "Prompt for credentials".
+
+Outcome:
+
+![UAC-Mitigation](/Pictures/UAC-Mitigation.png)
+
+5) Verify the new UAC configuration:
+
+![UAC-Verify](/Pictures/UAC-Verify.png)
+
 ## References
 
+- [How User Account Control works Microsoft](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works)
 - [Integrity Levels by HackTricks](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/integrity-levels)
 - [UAC by HackTricks](https://book.hacktricks.xyz/windows-hardening/authentication-credentials-uac-and-efs/uac-user-account-control)
 - [User Account Control settings and configuration Microsoft](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/settings-and-configuration?tabs=intune)
