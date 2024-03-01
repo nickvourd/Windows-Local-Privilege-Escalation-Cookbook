@@ -49,9 +49,9 @@ In the following table, some popular and useful tools for Windows local privileg
 This Cookbook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](/Notes/AlwaysInstallElevated.md)
-- Hardcoding Credentials
 - [Logon Autostart Execution (Registry Run Keys)](/Notes/LogonAutostartExecutionRegistryRunKeys.md)
 - [Logon Autostart Execution (Startup Folder)](/Notes/LogonAutostartExecutionStartupFolder.md)
+- Leaked Credentials (Hardcoded Credentials)
 - [Leaked Credentials (PowerShell History)](/Notes/LeakedCredentialsPowerShellHistory.md)
 - [SeBackupPrivilege](/Notes/SeBackupPrivilege.md)
 - [SeImpersonatePrivilege](/Notes/SeImpersonatePrivilege.md)
