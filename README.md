@@ -73,3 +73,4 @@ This Cookbook presents the following Windows vulnerabilities:
 - [Sysinternals Suite Microsoft](https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
 - [Impacket GitHub by Forta](https://github.com/fortra/impacket)
 - [dnSpy GitHub by dnSpyEx](https://github.com/dnSpyEx/dnSpy)
+- [CS-Situational-Awareness-BOF GitHub by TrustedSec](https://github.com/trustedsec/CS-Situational-Awareness-BOF)
