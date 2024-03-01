@@ -72,3 +72,4 @@ This Cookbook presents the following Windows vulnerabilities:
 - [Seatbelt GitHub by GhostPack](https://github.com/GhostPack/Seatbelt)
 - [Sysinternals Suite Microsoft](https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
 - [Impacket GitHub by Forta](https://github.com/fortra/impacket)
+- [dnSpy GitHub by dnSpyEx](https://github.com/dnSpyEx/dnSpy)
