@@ -1,15 +1,20 @@
 using System;
-using System.Diagnostics;
 using System.IO;
+using System.ServiceProcess;
 
 namespace CustomDotNetApp
 {
-    class Program
+    public partial class Service1 : ServiceBase
     {
-        static void Main(string[] args)
+        public Service1()
         {
-            string username;
-            string password;
+            InitializeComponent();
+        }
+
+        protected override void OnStart(string[] args)
+        {
+            string username = "Adminstrator"; // Set your username
+            string password = "Asa31904#!"; // Set your password
 
             // Check if the provided credentials are correct
             if (Authenticate(username, password))
@@ -20,8 +25,8 @@ namespace CustomDotNetApp
 
                 using (StreamWriter writer = new StreamWriter(outputFile))
                 {
-                    Process[] processes = Process.GetProcesses();
-                    foreach (Process process in processes)
+                    System.Diagnostics.Process[] processes = System.Diagnostics.Process.GetProcesses();
+                    foreach (System.Diagnostics.Process process in processes)
                     {
                         writer.WriteLine($"Process Name: {process.ProcessName}, PID: {process.Id}, Memory: {process.WorkingSet64} bytes");
                     }
@@ -36,10 +41,15 @@ namespace CustomDotNetApp
             }
         }
 
-        static bool Authenticate(string username, string password)
+        protected override void OnStop()
+        {
+            // Clean up any resources if needed
+        }
+
+        private bool Authenticate(string username, string password)
         {
             // Hardcoded authentication (for demonstration purposes only)
-            if (username == "admin" && password == "password123")
+            if (username == "Adminstrator" && password == "Asa31904#!")
             {
                 return true;
             }

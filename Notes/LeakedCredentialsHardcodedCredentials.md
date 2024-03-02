@@ -24,3 +24,25 @@ An adversary can leverage hardcoded credentials to escalate to elevated privileg
 ### Manual Lab Setup (.NET App)
 
 :warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+
+1)  Open a PowerShell with local Administrator privileges and run the following command to create a new folder:
+
+```
+mkdir "C:\Program Files\CustomDotNetApp\"
+```
+
+2) Download the file [CustomDotNetApp.exe](/Lab-Setup-Binary/CustomDotNetApp.exe) to the 'C:\Program Files\CustomDotNetApp' directory.
+
+3) Install the new Service:
+
+```
+New-Service -Name "Custom Dot Net Service" -BinaryPathName "C:\Program Files\CustomDotNetApp\CustomDotNetApp.exe" -DisplayName "Custom .NET Service" -Description "My Custom .NET Service" -StartupType Automatic
+```
+
+Outcome:
+
+![Hardcoded-Creds-Manual-Lab-Set-Up-DotNetApp](/Pictures/Hardcoded-Creds-Manual-Lab-Set-Up-DotNetApp.png)
+
+4) Verify the new service (services.msc):
+
+![Hardcoded-Creds-Manual-Lab-Set-Up-DotNetApp-Verify-Service](/Pictures/Hardcoded-Creds-Manual-Lab-Set-Up-DotNetApp-2.png)

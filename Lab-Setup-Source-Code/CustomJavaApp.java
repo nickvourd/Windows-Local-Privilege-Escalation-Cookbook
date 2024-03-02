@@ -31,6 +31,6 @@ public class CustomJavaApp {
 
     static boolean authenticate(String username, String password) {
         // Hardcoded authentication (for demonstration purposes only)
-        return username.equals("admin") && password.equals("password123");
+        return username.equals("Administrator") && password.equals("Asa31904#!");
     }
 }
