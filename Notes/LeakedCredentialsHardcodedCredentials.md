@@ -6,8 +6,8 @@
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Lab Setup](#lab-setup)
-    - [Manual Lab Setup](#manual-lab-setup)
-    - [PowerShell Script Lab Setup](#powershell-script-lab-setup)
+    - [Manual Lab Setup (.NET App)](#manual-lab-setup-net-app)
+    - [PowerShell Script Lab Setup (.NET App)](#powershell-script-lab-setup-net-app)
   - [Enumeration](#enumeration)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
@@ -21,4 +21,4 @@ An adversary can leverage hardcoded credentials to escalate to elevated privileg
 
 ## Lab Setup
 
-### Manual Lab Setup
+### Manual Lab Setup (.NET App)
