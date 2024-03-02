@@ -22,3 +22,5 @@ An adversary can leverage hardcoded credentials to escalate to elevated privileg
 ## Lab Setup
 
 ### Manual Lab Setup (.NET App)
+
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
