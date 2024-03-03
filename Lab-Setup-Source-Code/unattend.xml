@@ -1,0 +1,8 @@
+<AutoLogon>
+  <Password>
+    <Value>QXNhMzE5MDQjIQ==</Value>
+    <PlainText>false</PlainText>
+  </Password>
+  <Enabled>true</Enabled>
+  <Username>Admin</Username>
+</AutoLogon>
