@@ -63,7 +63,7 @@ Remove-Service -Name "Custom Dot Net Service"
 
 To set up the lab with the 'Hardcoded Credentials (.NET App)' scenario use the custom PowerShell script named [HardcodedCredentialsDotNetApp.ps1](/Lab-Setup-Scripts/HardcodedCredentialsDotNetApp.ps1).
 
-1) Open a PowerShelll with local Administrator privileges and run the script:
+Open a PowerShelll with local Administrator privileges and run the script:
 
 ```
 .\HardcodedCredentialsDotNetApp.ps1
@@ -72,8 +72,6 @@ To set up the lab with the 'Hardcoded Credentials (.NET App)' scenario use the c
 Outcome:
 
 ![Hardcoded-Creds-Script-Lab-Set-Up-DotNetApp](/Pictures/Hardcoded-Creds-Script-Lab-Set-Up-DotNetApp.png)
-
-2) Reboot the machine due to the service is set to start automatically upon machine boot.
 
 :information_source: If you want to unistall the new service use the following command:
 
