@@ -1,6 +1,6 @@
 # Windows Local Privilege Escalation Cookbook
 <p align="center">
-  <img src="/Pictures/Windows-Funny.jpg">
+  <img src="/Pictures/Windows-OS-Funny-2.jpg.png">
 </p>
 
 ## Table of Contents
