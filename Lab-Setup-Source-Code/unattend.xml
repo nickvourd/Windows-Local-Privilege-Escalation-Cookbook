@@ -4,5 +4,5 @@
     <PlainText>false</PlainText>
   </Password>
   <Enabled>true</Enabled>
-  <Username>Admin</Username>
+  <Username>Administrator</Username>
 </AutoLogon>
