@@ -95,7 +95,29 @@ Outcome:
 
 ## Exploitation
 
+1) Read the content of the found answer file:
+
+```
+type  C:\Windows\Panther\Unattend\Unattend.xml
+```
+
+Outcome:
+
+![Answer-Files-Exploitation](/Pictures/Answer-Files-Exploitation.png)
+
+2) To decode the base64 password field, use the following command from your Linux attacking machine:
+
+```
+echo "<base64 string>" | base64 -d
+```
+
+Outcome:
+
+![Answer-Files-Exploitation-2](/Pictures/Answer-Files-Exploitation-2.png)
+
 ## Mitigation
+
+Please ensure that password fields utilize strong encryption formats, or consider removing them if they are not necessary for the use of these files.
 
 ## References
 
