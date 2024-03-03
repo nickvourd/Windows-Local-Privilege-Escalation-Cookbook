@@ -74,6 +74,7 @@ This Cookbook presents the following Windows vulnerabilities:
 - [NetExec GitHub by Pennyw0rth](https://github.com/Pennyw0rth/NetExec)
 - [Evil-WinRM GitHub by Hackplayers](https://github.com/Hackplayers/evil-winrm)
 - [Windows Privilege Escalation Youtube Playlist by Conda](https://www.youtube.com/watch?v=WWE7VIpgd5I&list=PLDrNMcTNhhYrBNZ_FdtMq-gLFQeUZFzWV&index=13)
+- [Windows Privilege Escalation by Bordergate](https://www.bordergate.co.uk/windows-privilege-escalation/)
 - [Seatbelt GitHub by GhostPack](https://github.com/GhostPack/Seatbelt)
 - [Sysinternals Suite Microsoft](https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
 - [Impacket GitHub by Forta](https://github.com/fortra/impacket)
