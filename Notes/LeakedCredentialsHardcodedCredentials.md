@@ -9,7 +9,7 @@
     - [Manual Lab Setup (.NET App)](#manual-lab-setup-net-app)
     - [PowerShell Script Lab Setup (.NET App)](#powershell-script-lab-setup-net-app)
     - [Manual Lab Setup (Java App)](#manual-lab-setup-java-app)
-    - PowerShell Script Lab Setup (Java App)
+    - [PowerShell Script Lab Setup (Java App)](#powershell-script-lab-setup-java-app)
   - [Enumeration](#enumeration)
     - [Enumeration (.NET App)](#enumeration-net-app)
     - Enumeration (Java App)
@@ -107,6 +107,30 @@ Outcome:
 4) Verify the new service (services.msc):
 
 ![Hardcoded-Creds-Manual-Lab-Set-Up-JavaApp-Verify-Service](/Pictures/Hardcoded-Creds-Manual-Lab-Set-Up-JavaApp-2.png)
+
+:information_source: If you want to unistall the new service use the following command:
+
+```
+Remove-Service -Name "Custom Java Service"
+```
+
+### PowerShell Script Lab Setup (Java App)
+
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+
+:warning: <b>In order to run this scenario, Java must be installed on the target workstation. You can download and install Java from the [Official Oracle Website](https://www.oracle.com/java/technologies/downloads/#jdk21-windows).</b>
+
+To set up the lab with the 'Hardcoded Credentials (Java App)' scenario use the custom PowerShell script named [HardcodedCredentialsJavaApp.ps1](/Lab-Setup-Scripts/HardcodedCredentialsJavaApp.ps1).
+
+Open a PowerShelll with local Administrator privileges and run the script:
+
+```
+.\HardcodedCredentialsJavaApp.ps1
+```
+
+Outcome:
+
+![Hardcoded-Creds-Script-Lab-Set-Up-JavaApp](/Pictures/Hardcoded-Creds-Script-Lab-Set-Up-JavaApp.png)
 
 :information_source: If you want to unistall the new service use the following command:
 
