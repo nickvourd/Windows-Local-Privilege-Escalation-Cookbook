@@ -101,12 +101,21 @@ Some of the common services are:
 - Remote Desktop Protocol (RDP)
 - Windows Remote Management (WinRM) (If it is enabled)
 - Server Message Block (SMB)
+- Windows Management Instrumentation (WMI)
+- Virtual Network Computing (VNC) (If it is enabled)
+- Remote Procedure Call (RPC) 
 
 To identify a valid authentication method, you can use [NetExec](https://github.com/Pennyw0rth/NetExec).
 
+This is an example of using the SMB service to authenticate against the workstation and execute a command:
+
+```
+nxc smb <ip> -u <username> -p '<password>' -x whoami
+```
+
 Outcome:
 
-
+![Hardcoded-Credentials-Exploitation](/Pictures/Hardcoded-Credentials-Exploitation.png)
 
 ## References
 
