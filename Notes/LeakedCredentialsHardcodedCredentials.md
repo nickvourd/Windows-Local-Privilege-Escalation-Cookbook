@@ -46,3 +46,33 @@ Outcome:
 4) Verify the new service (services.msc):
 
 ![Hardcoded-Creds-Manual-Lab-Set-Up-DotNetApp-Verify-Service](/Pictures/Hardcoded-Creds-Manual-Lab-Set-Up-DotNetApp-2.png)
+
+:information_source: If you want to unistall the new service use the following command:
+
+```
+Remove-Service -Name "Custom Dot Net Service"
+```
+
+### PowerShell Script Lab Setup (.NET App)
+
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+
+To set up the lab with the 'Hardcoded Credentials (.NET App)' scenario use the custom PowerShell script named [HardcodedCredentialsDotNetApp.ps1](/Lab-Setup-Scripts/HardcodedCredentialsDotNetApp.ps1).
+
+1) Open a PowerShelll with local Administrator privileges and run the script:
+
+```
+.\HardcodedCredentialsDotNetApp.ps1
+```
+
+Outcome:
+
+![Hardcoded-Creds-Script-Lab-Set-Up-DotNetApp](/Pictures/Hardcoded-Creds-Script-Lab-Set-Up-DotNetApp.png)
+
+2) Reboot the machine due to the service is set to start automatically upon machine boot.
+
+:information_source: If you want to unistall the new service use the following command:
+
+```
+Remove-Service -Name "Custom Dot Net Service"
+```
