@@ -83,3 +83,15 @@ Remove-Service -Name "Custom Dot Net Service"
 :information_source: The binaries of most custom applications commonly exist in `C:\Program Files\` or `C:\Program Files (x86)\`.
 
 ### Enumeration (.NET App)
+
+After locating the directory of a custom corporate binary, download it onto your attacking machine and open it in [dnSpy](https://github.com/dnSpyEx/dnSpy).
+
+Go to `Assembly Explorer` -> `CustomDotNetApp` (Assembly) -> `CustomDotNetApp.exe` -> `CustomDotNetApp` (Namespace) -> `Service1` (Class) -> `Authenticate` (Method).
+
+Outcome:
+
+![Hardcoded-Creds-Enumeration-DotNetApp](/Pictures/Hardcoded-Creds-Enumeration-Up-DotNetApp.png)
+
+## References
+
+- [Use of hard-coded password by OWASP](https://owasp.org/www-community/vulnerabilities/Use_of_hard-coded_password)
