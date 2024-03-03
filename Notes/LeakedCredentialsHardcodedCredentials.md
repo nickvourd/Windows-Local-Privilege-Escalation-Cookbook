@@ -99,7 +99,7 @@ Obtaining the hardcoded credentials can be accomplished through several methods,
 Some of the common services are:
 
 - Remote Desktop Protocol (RDP)
-- Windows Remote Management (WinRM)
+- Windows Remote Management (WinRM) (If it is enabled)
 - Server Message Block (SMB)
 
 To identify a valid authentication method, you can use [NetExec](https://github.com/Pennyw0rth/NetExec).
