@@ -8,7 +8,7 @@
   - [Lab Setup](#lab-setup)
     - [Manual Lab Setup (.NET App)](#manual-lab-setup-net-app)
     - [PowerShell Script Lab Setup (.NET App)](#powershell-script-lab-setup-net-app)
-    - Manual Lab Setup (Java App)
+    - [Manual Lab Setup (Java App)](#manual-lab-setup-java-app)
     - PowerShell Script Lab Setup (Java App)
   - [Enumeration](#enumeration)
     - [Enumeration (.NET App)](#enumeration-net-app)
@@ -81,6 +81,12 @@ Outcome:
 Remove-Service -Name "Custom Dot Net Service"
 ```
 
+### Manual Lab Setup (Java App)
+
+:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+
+:warning: In order to run this scenario, Java must be installed on the target workstation. You can download and install Java from the [Official Oracle Website](https://www.oracle.com/java/technologies/downloads/#jdk21-windows).
+
 ## Enumeration
 
 :information_source: The binaries of most custom applications commonly exist in `C:\Program Files\` or `C:\Program Files (x86)\`.
@@ -135,3 +141,4 @@ Moreover, you can apply the above steps to harden your .NET/Java application aga
 - [Use of Hard-coded Credentials by CWE Mitre](https://cwe.mitre.org/data/definitions/798.html)
 - [Protect .NET code from reverse engineering by Stackoverflow](https://stackoverflow.com/questions/506282/protect-net-code-from-reverse-engineering)
 - [Protect Your Java Code from Reverse Engineering by The Geek Stuff](https://www.thegeekstuff.com/2008/06/protect-your-java-code-from-reverse-engineering/)
+- [Create and execute a jar file by Tecmint](https://www.tecmint.com/create-and-execute-jar-file-in-linux/)
