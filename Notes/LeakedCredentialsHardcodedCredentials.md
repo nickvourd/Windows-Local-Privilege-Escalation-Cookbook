@@ -12,7 +12,7 @@
     - [PowerShell Script Lab Setup (Java App)](#powershell-script-lab-setup-java-app)
   - [Enumeration](#enumeration)
     - [Enumeration (.NET App)](#enumeration-net-app)
-    - Enumeration (Java App)
+    - [Enumeration (Java App)](#enumeration-java-app)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
   - [References](#references)
@@ -144,13 +144,23 @@ Remove-Service -Name "Custom Java Service"
 
 ### Enumeration (.NET App)
 
-After locating the directory of a custom corporate binary, download it onto your attacking machine and open it in [dnSpy](https://github.com/dnSpyEx/dnSpy).
+After locating the directory of a custom "corporate" binary, download it onto your attacking machine and open it in [dnSpy](https://github.com/dnSpyEx/dnSpy).
 
 Go to `Assembly Explorer` -> `CustomDotNetApp (1.0.0.0)` (Assembly) -> `CustomDotNetApp.exe` -> `CustomDotNetApp` (Namespace) -> `Service1` (Class) -> `Authenticate` (Method).
 
 Outcome:
 
 ![Hardcoded-Creds-Enumeration-DotNetApp](/Pictures/Hardcoded-Creds-Enumeration-Up-DotNetApp.png)
+
+### Enumeration (Java App)
+
+After locating the directory of a custom "corporate" binary, download it onto your attacking machine and open it in [JD-GUI](https://java-decompiler.github.io) Java Decompiler.
+
+Go to `CustomJavaApp.class` (Class file) -> `CustomJavaApp` (Class) -> `authenticate` (Method).
+
+Outcome:
+
+![Hardcoded-Creds-Enumeration-JavaApp](/Pictures/Hardcoded-Creds-Enumeration-Up-JavaApp.png)
 
 ## Exploitation
 
