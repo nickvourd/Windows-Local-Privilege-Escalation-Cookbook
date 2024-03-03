@@ -49,7 +49,7 @@ In the following table, some popular and useful tools for Windows local privileg
 This Cookbook presents the following Windows vulnerabilities:
 
 - [AlwaysInstallElevated](/Notes/AlwaysInstallElevated.md)
-- Answer files (Unattend files)
+- [Answer files (Unattend files)](/Notes/AnswerFiles.md)
 - DLL Hijacking
 - [Logon Autostart Execution (Registry Run Keys)](/Notes/LogonAutostartExecutionRegistryRunKeys.md)
 - [Logon Autostart Execution (Startup Folder)](/Notes/LogonAutostartExecutionStartupFolder.md)
