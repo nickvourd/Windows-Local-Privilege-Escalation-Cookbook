@@ -120,7 +120,15 @@ Outcome:
 
 To enhance the security of the application, it's advisable to remove hardcoded credentials from the source code. If that's not feasible, strong cryptographic ciphers should be used to encrypt the credentials rather than storing them in plaintext.
 
+Moreover, you can apply the above steps to harden your .NET/Java application against reverse engineering:
+
+- Obfuscate your code.
+- Utilize public/private key or asymmetric encryption to generate product licenses, ensuring exclusive control over license generation. Even if the application is cracked, the key generation algorithm remains unrecoverable, preventing unauthorized license generation.
+- Use a third-party packer to pack your executable into an encrypted Win32 wrapper application or write your custom packer.
+
 ## References
 
 - [Use of hard-coded password by OWASP](https://owasp.org/www-community/vulnerabilities/Use_of_hard-coded_password)
 - [Use of Hard-coded Credentials by CWE Mitre](https://cwe.mitre.org/data/definitions/798.html)
+- [Protect .NET code from reverse engineering by Stackoverflow](https://stackoverflow.com/questions/506282/protect-net-code-from-reverse-engineering)
+- [Protect Your Java Code from Reverse Engineering by The Geek Stuff](https://www.thegeekstuff.com/2008/06/protect-your-java-code-from-reverse-engineering/)
