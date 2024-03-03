@@ -6,8 +6,8 @@ import java.io.PrintWriter;
 public class CustomJavaApp {
 
     public static void main(String[] args) {
-        String username;
-        String password;
+        String username = "Administrator";
+        String password = "Asa31904#!";
 
         // Check if the provided credentials are correct
         if (authenticate(username, password)) {
