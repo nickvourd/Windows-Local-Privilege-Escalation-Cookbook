@@ -86,7 +86,7 @@ Remove-Service -Name "Custom Dot Net Service"
 
 After locating the directory of a custom corporate binary, download it onto your attacking machine and open it in [dnSpy](https://github.com/dnSpyEx/dnSpy).
 
-Go to `Assembly Explorer` -> `CustomDotNetApp` (Assembly) -> `CustomDotNetApp.exe` -> `CustomDotNetApp` (Namespace) -> `Service1` (Class) -> `Authenticate` (Method).
+Go to `Assembly Explorer` -> `CustomDotNetApp (1.0.0.0)` (Assembly) -> `CustomDotNetApp.exe` -> `CustomDotNetApp` (Namespace) -> `Service1` (Class) -> `Authenticate` (Method).
 
 Outcome:
 
