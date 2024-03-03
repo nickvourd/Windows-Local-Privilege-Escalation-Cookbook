@@ -103,7 +103,6 @@ Some of the common services are:
 - Server Message Block (SMB)
 - Windows Management Instrumentation (WMI)
 - Virtual Network Computing (VNC) (If it is enabled)
-- Remote Procedure Call (RPC) 
 
 To identify a valid authentication method, you can use [NetExec](https://github.com/Pennyw0rth/NetExec).
 
