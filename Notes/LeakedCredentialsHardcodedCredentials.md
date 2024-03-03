@@ -9,7 +9,7 @@
     - [Manual Lab Setup (.NET App)](#manual-lab-setup-net-app)
     - [PowerShell Script Lab Setup (.NET App)](#powershell-script-lab-setup-net-app)
   - [Enumeration](#enumeration)
-    -[Enumeration (.NET App)](#enumeration-net-app)
+    - [Enumeration (.NET App)](#enumeration-net-app)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
   - [References](#references)
