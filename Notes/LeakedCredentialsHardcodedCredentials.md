@@ -9,6 +9,7 @@
     - [Manual Lab Setup (.NET App)](#manual-lab-setup-net-app)
     - [PowerShell Script Lab Setup (.NET App)](#powershell-script-lab-setup-net-app)
   - [Enumeration](#enumeration)
+    -[Enumeration (.NET App)](#enumeration-net-app)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
   - [References](#references)
@@ -76,3 +77,9 @@ Outcome:
 ```
 Remove-Service -Name "Custom Dot Net Service"
 ```
+
+## Enumeration
+
+:information_source: The binaries of most custom applications commonly exist in `C:\Program Files\` or `C:\Program Files (x86)\`.
+
+### Enumeration (.NET App)
