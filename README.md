@@ -58,7 +58,7 @@ This Cookbook presents the following Windows vulnerabilities:
 - [SeBackupPrivilege](/Notes/SeBackupPrivilege.md)
 - [SeImpersonatePrivilege](/Notes/SeImpersonatePrivilege.md)
 - [Stored Credentials (Runas)](/Notes/StoredCredentialsRunas.md)
-- Task Scheduler
+- Scheduled Task/Job
 - [UAC Bypass](/Notes/UACBypass.md)
 - [Unquoted Service Path](/Notes/UnquotedServicePath.md)
 - [Weak Service Binary Permissions](/Notes/WeakServiceBinaryPermissions.md)
@@ -80,3 +80,4 @@ This Cookbook presents the following Windows vulnerabilities:
 - [dnSpy GitHub by dnSpyEx](https://github.com/dnSpyEx/dnSpy)
 - [Java Decompiler Official Website](https://java-decompiler.github.io)
 - [CS-Situational-Awareness-BOF GitHub by TrustedSec](https://github.com/trustedsec/CS-Situational-Awareness-BOF)
+- [HavocFramework GitHub by C5pider](https://github.com/HavocFramework/Havoc)
