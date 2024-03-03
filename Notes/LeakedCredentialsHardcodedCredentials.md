@@ -92,6 +92,22 @@ Outcome:
 
 ![Hardcoded-Creds-Enumeration-DotNetApp](/Pictures/Hardcoded-Creds-Enumeration-Up-DotNetApp.png)
 
+## Exploitation
+
+Obtaining the hardcoded credentials can be accomplished through several methods, which you can then utilize to elevate privileges if these credentials are valid.
+
+Some of the common services are:
+
+- Remote Desktop Protocol (RDP)
+- Windows Remote Management (WinRM)
+- Server Message Block (SMB)
+
+To identify a valid authentication method, you can use [NetExec](https://github.com/Pennyw0rth/NetExec).
+
+Outcome:
+
+
+
 ## References
 
 - [Use of hard-coded password by OWASP](https://owasp.org/www-community/vulnerabilities/Use_of_hard-coded_password)
