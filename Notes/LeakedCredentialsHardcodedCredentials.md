@@ -117,6 +117,11 @@ Outcome:
 
 ![Hardcoded-Credentials-Exploitation](/Pictures/Hardcoded-Credentials-Exploitation.png)
 
+## Mitigation
+
+To enhance the security of the application, it's advisable to remove hardcoded credentials from the source code. If that's not feasible, strong cryptographic ciphers should be used to encrypt the credentials rather than storing them in plaintext.
+
 ## References
 
 - [Use of hard-coded password by OWASP](https://owasp.org/www-community/vulnerabilities/Use_of_hard-coded_password)
+- [Use of Hard-coded Credentials by CWE Mitre](https://cwe.mitre.org/data/definitions/798.html)
