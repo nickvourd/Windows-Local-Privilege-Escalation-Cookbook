@@ -87,6 +87,35 @@ Remove-Service -Name "Custom Dot Net Service"
 
 :warning: <b>In order to run this scenario, Java must be installed on the target workstation. You can download and install Java from the [Official Oracle Website](https://www.oracle.com/java/technologies/downloads/#jdk21-windows).</b>
 
+1)  Open a PowerShell with local Administrator privileges and run the following command to create a new folder:
+
+```
+mkdir "C:\Program Files\CustomJavaApp\"
+```
+
+2) Download the file [CustomJavaApp.jar](/Lab-Setup-Binary/CustomJavaApp.jar) to the 'C:\Program Files\CustomJavaApp' directory.
+
+
+3) Install the new Service:
+
+```
+New-Service -Name "Custom Java Service" -BinaryPathName "C:\Program Files\CustomJavaApp\CustomJavaApp.jar" -DisplayName "Custom Java Service" -Description "My Custom Java Service" -StartupType Automatic
+```
+
+Outcome:
+
+![Hardcoded-Creds-Manual-Lab-Set-Up-JavaApp](/Pictures/Hardcoded-Creds-Manual-Lab-Set-Up-JavaApp.png)
+
+4) Verify the new service (services.msc):
+
+![Hardcoded-Creds-Manual-Lab-Set-Up-JavaApp-Verify-Service](/Pictures/Hardcoded-Creds-Manual-Lab-Set-Up-JavaApp-2.png)
+
+:information_source: If you want to unistall the new service use the following command:
+
+```
+Remove-Service -Name "Custom Java Service"
+```
+
 ## Enumeration
 
 :information_source: The binaries of most custom applications commonly exist in `C:\Program Files\` or `C:\Program Files (x86)\`.
