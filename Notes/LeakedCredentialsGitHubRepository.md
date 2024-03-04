@@ -33,6 +33,30 @@ In this scenario, the focus shifts from public GitHub repositories to instances 
 git clone 
 ```
 
+## Exploitation
+
+Obtaining the hardcoded credentials can be accomplished through several methods, which you can then utilize to elevate privileges if these credentials are valid.
+
+Some of the common services are:
+
+- Remote Desktop Protocol (RDP)
+- Windows Remote Management (WinRM) (If it is enabled)
+- Server Message Block (SMB)
+- Windows Management Instrumentation (WMI)
+- Virtual Network Computing (VNC) (If it is enabled)
+
+To identify a valid authentication method, you can use [NetExec](https://github.com/Pennyw0rth/NetExec).
+
+This is an example of using the SMB service to authenticate against the workstation and execute a command:
+
+```
+nxc smb <ip> -u <username> -p '<password>' -x whoami
+```
+
+Outcome:
+
+![Hardcoded-Credentials-Exploitation](/Pictures/Hardcoded-Credentials-Exploitation.png)
+
 ## References
 
 - [Git diff Documentation](https://git-scm.com/docs/git-diff)
