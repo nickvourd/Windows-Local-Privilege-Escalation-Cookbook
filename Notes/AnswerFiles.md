@@ -115,6 +115,28 @@ Outcome:
 
 ![Answer-Files-Exploitation-2](/Pictures/Answer-Files-Exploitation-2.png)
 
+3) Obtaining the credentials can be accomplished through several methods, which you can then utilize to elevate privileges if these credentials are valid.
+
+Some of the common services are:
+
+- Remote Desktop Protocol (RDP)
+- Windows Remote Management (WinRM) (If it is enabled)
+- Server Message Block (SMB)
+- Windows Management Instrumentation (WMI)
+- Virtual Network Computing (VNC) (If it is enabled)
+
+To identify a valid authentication method, you can use [NetExec](https://github.com/Pennyw0rth/NetExec).
+
+This is an example of using the SMB service to authenticate against the workstation and execute a command:
+
+```
+nxc smb <ip> -u <username> -p '<password>' -x whoami
+```
+
+Outcome:
+
+![Credentials-Exploitation](/Pictures/Hardcoded-Credentials-Exploitation.png)
+
 ## Mitigation
 
 Please ensure that password fields utilize strong encryption formats, or consider removing them if they are not necessary for the use of these files.
