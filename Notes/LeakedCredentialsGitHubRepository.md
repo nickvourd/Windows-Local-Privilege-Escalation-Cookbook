@@ -37,3 +37,4 @@ git clone
 
 - [Git diff Documentation](https://git-scm.com/docs/git-diff)
 - [Remove sensitive files and their commits from Git history by Stackoverflow](https://stackoverflow.com/questions/872565/remove-sensitive-files-and-their-commits-from-git-history)
+- [Why secrets in git are such a problem - Secrets in source code by Gitguardian](https://blog.gitguardian.com/secrets-credentials-api-git/)
