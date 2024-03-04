@@ -32,3 +32,8 @@ In this scenario, the focus shifts from public GitHub repositories to instances 
 ```
 git clone 
 ```
+
+## References
+
+- [Git diff Documentation](https://git-scm.com/docs/git-diff)
+- [Remove sensitive files and their commits from Git history by Stackoverflow](https://stackoverflow.com/questions/872565/remove-sensitive-files-and-their-commits-from-git-history)
