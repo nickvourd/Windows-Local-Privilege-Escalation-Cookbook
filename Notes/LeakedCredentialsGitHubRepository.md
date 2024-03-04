@@ -27,3 +27,8 @@ In this scenario, the focus shifts from public GitHub repositories to instances 
 
 :warning: <b>For this scenario, you will need to install the Git tool from the [Official Website](https://git-scm.com/downloads).</b>
 
+1) Open a PowerShell with local Administrator privileges and run the following command to clone the scenario repository:
+
+```
+git clone 
+```
