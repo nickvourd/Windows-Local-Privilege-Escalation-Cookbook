@@ -29,4 +29,7 @@ Outcome:
 
 ![Dll-Hijacking-Manual-Setup](/Pictures/Dll-Hijacking-Manual-Setup.png)
 
+![Dll-Hijacking-Manual-Setup-2](/Pictures/Dll-Hijacking-Manual-Setup-2.png)
+
 ## Enumeration
+
