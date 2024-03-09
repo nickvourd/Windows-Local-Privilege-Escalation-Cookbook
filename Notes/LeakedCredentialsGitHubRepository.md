@@ -6,8 +6,6 @@
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Lab Setup](#lab-setup)
-    - [Manual Lab Setup](#manual-lab-setup)
-    - [PowerShell Script Lab Setup](#powershell-script-lab-setup)
   - [Enumeration](#enumeration)
   - [Exploitation](#exploitation)
   - [Mitigation](#mitigation)
@@ -21,17 +19,48 @@ In this scenario, the focus shifts from public GitHub repositories to instances 
 
 ## Lab Setup
 
-### Manual Lab Setup
-
 :warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
 :warning: <b>For this scenario, you will need to install the Git tool from the [Official Website](https://git-scm.com/downloads).</b>
 
-1) Open a PowerShell with local Administrator privileges and run the following command to clone the scenario repository:
+Open a PowerShell with local Administrator privileges and run the following command to clone the scenario repository:
 
 ```
-git clone 
+git clone https://github.com/nickvourd/Demo-App.git
 ```
+
+## Enumeration
+
+When you identify a folder containing a `.git` directory, it signifies that the folder is a Git repository. One way to enumerate a GitHub repository, besides reading the `source code` of files within it, is to explore its history and inspect past commits.
+
+1) View the IDs of all commits by using the following command:
+```
+git log
+```
+
+Outcome:
+
+![Github-Enumeration-Commits-Log-History](/Pictures/Github-Enumeration.png)
+
+2) Compare the commit IDs to identify the changes in the code:
+
+```
+git diff <commit-id-1> <commit-id-2>
+```
+
+Outcome:
+
+![Github-Enumeration-Compare-Commmits](/Pictures/Github-Enumeration-2.png)
+
+:information_source: However, you can use the following command to show the changes in the most recent commit:
+
+```
+git show
+```
+
+Outcome:
+
+![Github-Enumeration-Show-Recent-Commit-Changes](/Pictures/Github-Enumeration-3.png)
 
 ## Exploitation
 
@@ -56,6 +85,14 @@ nxc smb <ip> -u <username> -p '<password>' -x whoami
 Outcome:
 
 ![Hardcoded-Credentials-Exploitation](/Pictures/Hardcoded-Credentials-Exploitation.png)
+
+## Mitigation
+
+If credentials have been accidentally committed to the repository, consider rewriting history to remove them entirely. Tools like `git filter-branch` or `git filter-repo` can help sanitize the commit history.
+
+Moreover, create a `.gitignore` file and include patterns for files or directories that contain sensitive information. This prevents them from being accidentally committed to the repository.
+
+Last but not least, change the leaked account credentials immediately.
 
 ## References
 
