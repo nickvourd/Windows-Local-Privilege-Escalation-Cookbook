@@ -36,6 +36,11 @@ The main structure of this Cookbook includes the following sections:
 
 I hope to find this CookBook useful and learn new stuff 😉.
 
+
+#### Local Privilege Escalation Definintion
+
+Local Privilege Escalation (Short term: LPE) refers to the process of elevating user privileges on a computing system or network, granting access to resources or capabilities typically restricted to higher privilege levels.
+
 ## Useful Tools
 
 In the following table, some popular and useful tools for Windows local privilege escalation are presented:
