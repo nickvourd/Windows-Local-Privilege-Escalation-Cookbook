@@ -48,7 +48,7 @@ In the following table, some popular and useful tools for Windows local privileg
 | [Privesc](https://github.com/enjoiz/Privesc) | PowerShell | [enjoiz](https://github.com/enjoiz) | Windows PowerShell script that finds misconfiguration issues which can lead to privilege escalation |
 | [Winpeas](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS/winPEASexe) | C# | [@hacktricks_live](https://twitter.com/hacktricks_live) | Windows local Privilege Escalation Awesome Script |
 | [PrivescCheck](https://github.com/itm4n/PrivescCheck) | PowerShell | [@itm4n](https://twitter.com/itm4n) | Privilege Escalation Enumeration Script for Windows |
-| [PrivKit](https://github.com/mertdas/PrivKit) | C (Applicable for Cobalt Strike) | (@merterpreter)[https://twitter.com/merterpreter] | PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS |
+| [PrivKit](https://github.com/mertdas/PrivKit) | C (Applicable for Cobalt Strike) | [@merterpreter](https://twitter.com/merterpreter) | PrivKit is a simple beacon object file that detects privilege escalation vulnerabilities caused by misconfigurations on Windows OS |
 
 ## Vulnerabilities
 
