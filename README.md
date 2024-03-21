@@ -21,7 +21,7 @@
 
 ## Cookbook Version
 
-:scroll: The current version of this cookbook is **1.9**
+:scroll: The current version of this cookbook is **1.9**.
 
 ## Description (Keynote)
 
