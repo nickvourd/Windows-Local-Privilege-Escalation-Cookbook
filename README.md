@@ -40,7 +40,7 @@ I hope to find this CookBook useful and learn new stuff 😉.
 
 ## Definition
 
-Local Privilege Escalation, known as LPE, refers to the process of elevating user privileges on a computing system or network beyond what is intended, granting unauthorized access to resources or capabilities typically restricted to higher privilege levels. This security vulnerability occurs when attackers exploit weaknesses, vulnerabilities, or misconfigurations within the operating system, applications, or device drivers. By exploiting these flaws, attackers can bypass security controls and escalate their privileges, potentially gaining control over the system and accessing sensitive data.
+Local Privilege Escalation, also known as LPE, refers to the process of elevating user privileges on a computing system or network beyond what is intended, granting unauthorized access to resources or capabilities typically restricted to higher privilege levels. This security vulnerability occurs when attackers exploit weaknesses, vulnerabilities, or misconfigurations within the operating system, applications, or device drivers. By exploiting these flaws, attackers can bypass security controls and escalate their privileges, potentially gaining control over the system and accessing sensitive data.
 
 ## Useful Tools
 
