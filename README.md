@@ -33,7 +33,7 @@ This Cookbook was created with the main purpose of helping people understand loc
 
 The main structure of this Cookbook includes the following sections for any vulnerability:
 
-- Description (of the vulnerability)
+- Description
 - Lab Setup
 - Enumeration
 - Exploitation
