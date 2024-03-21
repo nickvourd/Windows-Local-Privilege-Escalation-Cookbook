@@ -21,7 +21,7 @@
 
 ## Cookbook Version
 
-:scroll: The current version of this cookbook is: **1.9**
+:scroll: The current version of this cookbook is **1.9**
 
 ## Description (Keynote)
 
@@ -41,7 +41,6 @@ The main structure of this Cookbook includes the following sections for any vuln
 - (Useful) References
 
 I hope to find this CookBook useful and learn new stuff 😉.
-
 
 ## Definition
 
