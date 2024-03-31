@@ -1,6 +1,7 @@
 # Windows Local Privilege Escalation Cookbook
 <p align="center">
-  <img width="500" height="350" src="/Pictures/Windows-OS-Funny-2.jpg.png">
+  <img width="500" height="350" src="/Pictures/Windows-OS-Funny-2.jpg.png"><br /><br >
+  <img alt="Static Badge" src="https://img.shields.io/badge/Version-1.9-blue?link=https%3A%2F%2Fgithub.com%2Fnickvourd%2FWindows-Local-Privilege-Escalation-Cookbook%2Freleases">
 </p>
 
 ## Table of Contents
