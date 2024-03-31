@@ -1,7 +1,7 @@
 # Windows Local Privilege Escalation Cookbook
 <p align="center">
   <img width="500" height="350" src="/Pictures/Windows-OS-Funny-2.jpg.png"><br /><br >
-  <img alt="Static Badge" src="https://img.shields.io/badge/Version-1.9-blue?link=https%3A%2F%2Fgithub.com%2Fnickvourd%2FWindows-Local-Privilege-Escalation-Cookbook%2Freleases">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Version-1.9-blue?link=https%3A%2F%2Fgithub.com%2Fnickvourd%2FWindows-Local-Privilege-Escalation-Cookbook%2Freleases"><br /><br />
   <img alt="Static Badge" src="https://img.shields.io/badge/License-MIT-orange?link=https%3A%2F%2Fgithub.com%2Fnickvourd%2FWindows-Local-Privilege-Escalation-Cookbook%2Fblob%2Fmaster%2FLICENSE">
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?logoColor=yellow">
   <img alt="GitHub forks" src="https://img.shields.io/github/forks/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?logoColor=red">
