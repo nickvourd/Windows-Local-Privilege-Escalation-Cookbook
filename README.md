@@ -42,6 +42,8 @@ The main structure of this Cookbook includes the following sections for any vuln
 
 I hope to find this CookBook useful and learn new stuff 😉.
 
+> If you find any bugs, don’t hesitate to [report them](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/issues). Your feedback is valuable in improving the quality of this project! 
+
 ## Definition
 
 Local Privilege Escalation, also known as LPE, refers to the process of elevating user privileges on a computing system or network beyond what is intended, granting unauthorized access to resources or capabilities typically restricted to higher privilege levels. This process occurs when attackers exploit weaknesses, vulnerabilities, or misconfigurations within the operating system, applications, or device drivers. By exploiting these flaws, attackers can bypass security controls and escalate their privileges, potentially gaining control over the system and accessing sensitive data.
