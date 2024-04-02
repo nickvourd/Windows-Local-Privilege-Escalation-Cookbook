@@ -17,5 +17,11 @@ $ascii = @"
 
 Write-Host $ascii`n
 
-Write-Host "[+] Use runas to save credentials on the Windows Credentials Manager (Interactive logon)`n"
-runas /savecred /user:WORKGROUP\Administrator cmd.exe
+Write-Host "[+] Installing CredentialManager module`n"
+Install-Module -Name CredentialManager -Force
+
+Write-Host "[+] Importing CredentialManager module`n"
+Import-Module CredentialManager
+
+Write-Host "[+] Saving credentials to the Windows Credentials Manager`n"
+New-StoredCredential -Target "WORKGROUP\Administrator" -UserName "WORKGROUP\Administrator" -Password "Asa31904#!" -Persist LocalMachine -Type DomainPassword
