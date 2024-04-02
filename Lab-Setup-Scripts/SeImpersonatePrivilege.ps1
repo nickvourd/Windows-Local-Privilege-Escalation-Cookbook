@@ -18,15 +18,21 @@ $ascii = @"
 Write-Host $ascii`n
 
 Write-Host "[+] Installing IIS Web Server with required features`n"
-# Install IIS Web Server with required features
-Install-WindowsFeature -Name Web-Server, Web-Asp-Net45, NET-WCF-Services45, NET-HTTP-Activation
+
+# Check if Server or Workstation SKU
+$os = Get-WmiObject -Class Win32_OperatingSystem
+if ($os.Caption -match "Server") {
+        Install-WindowsFeature -Name Web-Server, Web-Asp-Net45, NET-WCF-Services45, NET-HTTP-Activation
+} else {
+        Enable-WindowsOptionalFeature -Online -FeatureName "IIS-WebServer", "IIS-ASPNET45", "WCF-Services45", "WCF-HTTP-Activation" -All -NoRestart
+}
 
 Write-Host "[+] Cleaning the C:\inetpub\wwwroot\`n"
-# Remove all files and directories from C:\Inetpub\wwwroot except aspnet_client
 $excludedFolder = "C:\Inetpub\wwwroot\aspnet_client"
 Get-ChildItem -Path C:\Inetpub\wwwroot\* | Where-Object { $_.FullName -ne $excludedFolder } | Remove-Item -Force -Recurse
 
 Write-Host "[+] Set new files to IIS Web Server`n"
+
 # Set the URLs of the files to download
 $urlIndexHtml = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Source-Code/index.html"  
 $urlCmdAspx = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Source-Code/cmdasp.aspx"  
