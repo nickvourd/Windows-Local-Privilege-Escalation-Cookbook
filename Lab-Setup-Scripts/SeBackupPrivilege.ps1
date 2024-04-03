@@ -17,30 +17,37 @@ $ascii = @"
 
 Write-Host $ascii`n
 
+$backupUser = "ncv"
+$backupPass = "Passw0rd!"
+
 Write-Host "[+] Creating a new user`n"
-#Create a new user
-net user ncv Passw0rd! /add
+$SecurePassword = ConvertTo-SecureString -String $backupPass -AsPlainText -Force
+
+$userParams = @{
+    Name = $backupUser
+    Password = $SecurePassword
+    Description = "SeBackupPrivilege User"
+    PasswordNeverExpires = $true
+}
+
+New-LocalUser @userParams
 
 Write-Host "[+] Adding the new user to Remote Management Users group`n"
-#Add the new user to Remote Management Users group
-net localgroup "Remote Management Users" ncv /add
+Add-LocalGroupMember -Group "Remote Management Users" -Member $backupUser
 
 Write-Host "[+] Enabling WinRM Service`n"
-#Enable WinRM Service
 Enable-PSRemoting -Force
 
-Write-Host "[+] Installing Carbon module`n"
-#Install Carbon module
-Install-Module -Name carbon -Force
+Write-Host "[+] Installing PSPrivilege module`n"
+Install-PackageProvider -Name NuGet -Force
+Install-Module -Name PSPrivilege -Force 
 
-Write-Host "[+] Importing Carbon module`n"
-#Import Carbon module
-Import-Module carbon
+Write-Host "[+] Importing PSPrivilege module`n"
+Import-Module PSPrivilege
 
 Write-Host "[+] Granting SeBackupPrivilege to the new user`n"
-#Grant SeBackupPrivilege to the new user
-Grant-CPrivilege -Identity ncv -Privilege SeBackupPrivilege
+Add-WindowsRight -Name SeBackupPrivilege -Account (Get-LocalUser -Name $backupUser).Sid
 
 Write-Host "[+] New user's credentials"
-Write-Host "Username: ncv"
-Write-Host "Password: Passw0rd!`n"
+Write-Host "Username: $backupUser"
+Write-Host "Password: $backupPass`n"

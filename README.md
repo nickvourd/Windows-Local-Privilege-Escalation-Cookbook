@@ -99,3 +99,4 @@ This Cookbook presents the following Windows vulnerabilities:
 - [Java Decompiler Official Website](https://java-decompiler.github.io)
 - [CS-Situational-Awareness-BOF GitHub by TrustedSec](https://github.com/trustedsec/CS-Situational-Awareness-BOF)
 - [HavocFramework GitHub by C5pider](https://github.com/HavocFramework/Havoc)
+- [LPE Cookbook AutomatedLab Build Template](https://github.com/spyr0-sec/AutomatedBadLab/blob/main/Labs/1.%20Template%20LocalPrivEscWorkhop.ps1)
