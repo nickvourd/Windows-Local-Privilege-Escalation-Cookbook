@@ -25,8 +25,8 @@ $password = ConvertTo-SecureString "Asa31904#!" -AsPlainText -Force
 Set-LocalUser -Name "Administrator" -Password $password
 
 Write-Host "`n[+] Admin Credentials:"
-Write-Host "Username: Administrator"
-Write-Host "Password: Asa31904#!`n"
+Write-Host "`n[+] Username: Administrator"
+Write-Host "`n[+] Password: Asa31904#!`n"
 
 # Display a message to users
 $msg = "[!] The computer will restart in 20 seconds. Please save your credentials!`n"
