@@ -27,21 +27,25 @@ if ($os.Caption -match "Server") {
         Enable-WindowsOptionalFeature -Online -FeatureName "IIS-WebServer", "IIS-ASPNET45", "WCF-Services45", "WCF-HTTP-Activation" -All -NoRestart
 }
 
-Write-Host "[+] Cleaning the C:\inetpub\wwwroot\`n"
-$excludedFolder = "C:\Inetpub\wwwroot\aspnet_client"
-Get-ChildItem -Path C:\Inetpub\wwwroot\* | Where-Object { $_.FullName -ne $excludedFolder } | Remove-Item -Force -Recurse
+# Set the destination path
+$wwwRoot = "C:\inetpub\wwwroot"
+
+Write-Host "[+] Cleaning $wwwRoot`n"
+$excludedFolder = "$wwwRoot\aspnet_client"
+Get-ChildItem -Path "$wwwRoot\*" | Where-Object { $_.FullName -ne $excludedFolder } | Remove-Item -Force -Recurse
 
 Write-Host "[+] Set new files to IIS Web Server`n"
+
+# Disable AV
+Write-Host "[+] Adding AV exclusion for $wwwRoot`n"
+Add-MpPreference -ExclusionPath $wwwRoot
 
 # Set the URLs of the files to download
 $urlIndexHtml = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Source-Code/index.html"  
 $urlCmdAspx = "https://raw.githubusercontent.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/master/Lab-Setup-Source-Code/cmdasp.aspx"  
 
-# Set the destination path
-$destination = "C:\inetpub\wwwroot\"
-
 # Download index.html
-Invoke-WebRequest -Uri $urlIndexHtml -OutFile "$destination\index.html"
+Invoke-WebRequest -Uri $urlIndexHtml -OutFile "$wwwRoot\index.html"
 
 # Download cmdasp.aspx
-Invoke-WebRequest -Uri $urlCmdAspx -OutFile "$destination\cmdasp.aspx"
+Invoke-WebRequest -Uri $urlCmdAspx -OutFile "$wwwRoot\cmdasp.aspx"
