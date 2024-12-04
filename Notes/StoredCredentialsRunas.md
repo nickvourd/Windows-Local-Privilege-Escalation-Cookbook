@@ -1,5 +1,7 @@
 # Stored Credentials (Runas)
 
+[Back to Main](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?tab=readme-ov-file#vulnerabilities)
+
 ## Table of Contents
 
 - [Stored Credentials (Runas)](#stored-credentials-runas)
@@ -23,7 +25,7 @@ In a scenario where an attacker has compromised an account with access to the Wi
 
 ### Manual Lab Setup
 
-:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+:warning: <b>If you are using Windows 10 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
 1) Open a command prompt with local Administrator privileges and execute the following command to store credentials in the Windows Credentials Manager:
 
