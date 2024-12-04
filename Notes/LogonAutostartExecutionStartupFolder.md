@@ -1,5 +1,7 @@
 # Logon Autostart Execution (Startup Folder)
 
+[Back to Main](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?tab=readme-ov-file#vulnerabilities)
+
 ## Table of Contents
 
 - [Logon Autostart Execution (Startup Folder)](#logon-autostart-execution-startup-folder)
