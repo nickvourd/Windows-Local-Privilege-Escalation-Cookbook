@@ -1,5 +1,7 @@
 # AlwaysInstallElevated
 
+[Back to main](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?tab=readme-ov-file#vulnerabilities)
+
 ## Table of Contents
 
 - [AlwaysInstallElevated](#alwaysinstallelevated)
@@ -16,7 +18,7 @@
     - [Tool Exploitation](#tool-Exploitation)
   - [Mitigation](#mitigation)
   - [References](#references)
-
+ 
 ## Description
 
 "AlwaysInstallElevated" is a Windows Registry setting that affects the behavior of the Windows Installer service. The vulnerability arises when the "AlwaysInstallElevated" registry key is configured with a value of "1" in the Windows Registry.
