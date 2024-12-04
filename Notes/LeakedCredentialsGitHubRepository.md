@@ -1,5 +1,7 @@
 # Leaked Credentials (GitHub Repository)
 
+[Back to Main](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?tab=readme-ov-file#vulnerabilities)
+
 ## Table of Contents
 
 - [Leaked Credentials (GitHub Repository)](#leaked-credentials-github-repository)
@@ -19,7 +21,7 @@ In this scenario, the focus shifts from public GitHub repositories to instances 
 
 ## Lab Setup
 
-:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+:warning: <b>If you are using Windows 10 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
 :warning: <b>For this scenario, you will need to install the Git tool from the [Official Website](https://git-scm.com/downloads).</b>
 
