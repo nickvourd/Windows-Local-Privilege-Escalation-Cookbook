@@ -1,5 +1,7 @@
 # Weak Service Binary Permissions
 
+[Back to Main](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?tab=readme-ov-file#vulnerabilities)
+
 ## Table of Contents
 
 - [Weak Service Binary Permissions](#weak-service-binary-permissions)
