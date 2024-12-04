@@ -29,8 +29,6 @@ When this registry key is enabled, it allows non-administrator users to install 
 
 ### Manual Lab Setup
 
-:warning: <b>If you are using Windows 10 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
-
 Open a cmd with local Administrator privileges and type `gpedit.msc` to open the Local Group Policy Editor.
 
 1) Navigate to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Windows Installer**:
