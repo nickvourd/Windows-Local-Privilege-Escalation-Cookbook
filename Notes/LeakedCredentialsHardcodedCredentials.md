@@ -1,5 +1,7 @@
 # Leaked Credentials (Hardcoded Credentials)
 
+[Back to Main](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?tab=readme-ov-file#vulnerabilities)
+
 ## Table of Contents
 
 - [Leaked Credentials (Hardcoded Credentials)](#leaked-credentials-hardcoded-credentials)
@@ -27,7 +29,7 @@ An adversary can leverage hardcoded credentials to escalate to elevated privileg
 
 ### Manual Lab Setup (.NET App)
 
-:warning: <b>If you are using Windows 10/11 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
+:warning: <b>If you are using Windows 10 to proceed with this scenario, the local Administrator account needs to be enabled. I have created a PowerShell script named [EnableLocalAdmin.ps1](/Lab-Setup-Scripts/EnableLocalAdmin.ps1), designed to enable the local Administrator account and set a password. Please run this script with elevated privileges.</b>
 
 1)  Open a PowerShell with local Administrator privileges and run the following command to create a new folder:
 
