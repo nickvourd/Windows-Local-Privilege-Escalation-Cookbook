@@ -6,6 +6,7 @@
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?logoColor=yellow">
   <img alt="GitHub forks" src="https://img.shields.io/github/forks/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?logoColor=red">
   <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?logoColor=green">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/nickvourd/Windows-Local-Privilege-Escalation-Cookbook?style=social&logo=GitHub&logoColor=purple">
 </p>
 
 ## Table of Contents
