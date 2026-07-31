@@ -86,6 +86,7 @@ This Cookbook presents the following Windows vulnerabilities:
 ## References
 
 - [Privilege Escalation Wikipedia](https://en.wikipedia.org/wiki/Privilege_escalation)
+- [Darkmoon](https://github.com/ASCIT31/Dark-Moon) - Open source (GPL-3.0) autonomous AI penetration testing platform covering web, API, Active Directory and Kubernetes, with proof of exploitation.
 - [SharpCollection GitHub by Flangvik](https://github.com/Flangvik/SharpCollection)
 - [Metasploit Official Website](https://www.metasploit.com/)
 - [CrackMapExec GitHub by byt3bl33d3r](https://github.com/byt3bl33d3r/CrackMapExec)
